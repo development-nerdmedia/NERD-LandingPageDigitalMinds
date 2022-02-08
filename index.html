@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
     <title>NERD - Landing Page Digital Minds</title>
   </head>
   <body>
@@ -33,8 +37,116 @@
       </div>
     </nav>
     <main>
-      <section class="menupage"></section>
-      <section class="home">
+      <section class="menupage">
+        <div class="top">
+          <img src="img/flechamenu.svg" alt="icon" />
+          <a class="menubtn"> <img src="img/closemenu.svg" alt="close" /></a>
+        </div>
+        <div class="menuContent">
+          <ul>
+            <li><a class="cerrarr" href="#home">Home</a></li>
+            <li><a class="cerrarr" href="#portafolio">Portafolio</a></li>
+            <li><a class="cerrarr" href="#servicios">Servicios</a></li>
+            <li id="contacto"><a class="cerrarr">Contacto</a></li>
+          </ul>
+          <div class="infoMenu">
+            <p>francesca@nerdmedia.pe</p>
+            <p>+51 942 464 074</p>
+            <p>Lima - Perú</p>
+          </div>
+        </div>
+      </section>
+      <section class="branding">
+        <div class="top">
+          <img src="img/logo.png" alt="icon" />
+          <a class="closebranding">
+            <img src="img/closemenu.svg" alt="close"
+          /></a>
+        </div>
+        <h2>Branding</h2>
+        <div class="contenido">
+          <p>
+            Nuestro arte consiste en transmitir a tu audiencia las emociones y
+            valores de lo que quieres proyectar.
+          </p>
+          <div class="text">
+            <span>Campañas</span>
+            <span>Creatividad</span>
+            <span>Packanging</span>
+            <span>Diseño</span>
+            <span>Imágen Corporativa</span>
+            <span>Ilustraciones</span>
+            <span>Storytelling</span>
+            <span>Logotipos</span>
+            <span>Merchandasing</span>
+            <span>Visual Merchandising</span>
+          </div>
+        </div>
+        <div class="btn">
+          <a href="#">Quiero que me contacten</a>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="top">
+          <img src="img/logo.png" alt="icon" />
+          <a class="closemarketing">
+            <img src="img/closemenu.svg" alt="close"
+          /></a>
+        </div>
+        <h2>Marketing</h2>
+        <div class="contenido">
+          <p>
+            Nuestro arte consiste en transmitir a tu audiencia las emociones y
+            valores de lo que quieres proyectar.
+          </p>
+          <div class="text">
+            <span>Campañas</span>
+            <span>Creatividad</span>
+            <span>Packanging</span>
+            <span>Diseño</span>
+            <span>Imágen Corporativa</span>
+            <span>Ilustraciones</span>
+            <span>Storytelling</span>
+            <span>Logotipos</span>
+            <span>Merchandasing</span>
+            <span>Visual Merchandising</span>
+          </div>
+        </div>
+        <div class="btn">
+          <a href="#">Quiero que me contacten</a>
+        </div>
+      </section>
+      <section class="disenoWeb">
+        <div class="top">
+          <img src="img/logo.png" alt="icon" />
+          <a class="closedisenoweb">
+            <img src="img/closemenu.svg" alt="close"
+          /></a>
+        </div>
+        <h2>Diseño Web</h2>
+        <div class="contenido">
+          <p>
+            Nuestro arte consiste en transmitir a tu audiencia las emociones y
+            valores de lo que quieres proyectar.
+          </p>
+          <div class="text">
+            <span>Campañas</span>
+            <span>Creatividad</span>
+            <span>Packanging</span>
+            <span>Diseño</span>
+            <span>Imágen Corporativa</span>
+            <span>Ilustraciones</span>
+            <span>Storytelling</span>
+            <span>Logotipos</span>
+            <span>Merchandasing</span>
+            <span>Visual Merchandising</span>
+          </div>
+        </div>
+        <div class="btn">
+          <a href="#">Quiero que me contacten</a>
+        </div>
+      </section>
+      <section id="home" class="home">
         <img class="logo" src="img/logo.png" alt="NERD-icon" />
         <div class="homeContent">
           <h1>
@@ -63,7 +175,7 @@
             <img src="img/Group 902.png" alt="" />
           </div>
         </div>
-        <div class="portafolio">
+        <div id="portafolio" class="portafolio">
           <h2>Portafolio</h2>
           <div class="galeria">
             <div class="galeriaItem">
@@ -87,7 +199,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section id="servicios" class="services">
         <div class="contenido">
           <h2>Lo que hacemos bien</h2>
           <p>
@@ -101,14 +213,18 @@
           <div class="card">
             <h3>Branding</h3>
             <p>¿Necesitas construir una marca que impacte y venda?</p>
-            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+            <a class="brandingbtn">
+              <img src="img/btn-services.svg" alt="mas"
+            /></a>
           </div>
           <div class="card">
             <h3>Marketing</h3>
             <p>
               ¿Necesitas estar en el lugar correcto para conseguir resultados?
             </p>
-            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+            <a class="marketingbtn">
+              <img src="img/btn-services.svg" alt="mas"
+            /></a>
           </div>
           <div class="card">
             <h3>Diseño web</h3>
@@ -116,7 +232,9 @@
               ¿Necesitas un sitio que atraiga más usuarios y te ayude a vender
               más?
             </p>
-            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+            <a class="disenowebbtn">
+              <img src="img/btn-services.svg" alt="mas"
+            /></a>
           </div>
         </div>
       </section>
@@ -131,6 +249,28 @@
           asegurar de que siempre se obtenga la mejor solución posible..
         </p>
       </section>
+      <section class="slider-partnerds">
+        <div class="owl-carousel owl-theme clients-carousel">
+          <div class="item box">
+            <img src="img/subway.svg" alt="subway" />
+          </div>
+          <div class="item box">
+            <img src="img/plazavea.svg" alt="plazavea" />
+          </div>
+          <div class="item box">
+            <img src="img/maestro.svg" alt="maestro" />
+          </div>
+          <div class="item box">
+            <img src="img/intralot.svg" alt="intralot" />
+          </div>
+          <div class="item box">
+            <img id="rappi" src="img/rappi.svg" alt="rappi" />
+          </div>
+          <div class="item box">
+            <img src="img/linea1.svg" alt="linea1" />
+          </div>
+        </div>
+      </section>
       <section class="contact">
         <div class="campos">
           <h2>Háblanos de tu proyecto</h2>
@@ -142,7 +282,7 @@
             id="fs-frm"
             name="complaint-form"
             accept-charset="utf-8"
-            action="php/thanks.php"
+            action=""
             method=""
           >
             <fieldset id="fs-frm-inputs">
@@ -180,9 +320,12 @@
         <div class="info">
           <p>+51 942 464 074</p>
           <p>hola@nerdmedia.pe</p>
-          <p>Instagram</p>
-          <p>Linkedin</p>
-          <p>Facebook</p>
+          <a href="#"> <p>Instagram</p></a>
+          <a href="#"> <p>Linkedin</p></a>
+          <a href="#"> <p>Facebook</p></a>
+        </div>
+        <div class="copy">
+          <h3>Hecha con ❤️ Todos los derechos resevados © 2022 NERD ®</h3>
         </div>
       </footer>
     </main>
@@ -194,6 +337,7 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@
 :root {
   --texto-epilogue: "Epilogue", sans-serif;
   --texto-manrope: "Manrope", sans-serif;
+  --texto-montserrat: "Montserrat", sans-serif;
   --color-azul: #3822e4;
   --color-verde: #24fe7c;
   --color-rosa: #d949f8; }
@@ -120,27 +122,160 @@ section.home {
       left: 50%;
       transform: translateX(-50%); }
 
-.menupage.open {
+.menupage.open,
+.branding.open,
+.marketing.open,
+.disenoWeb.open {
   transform: translateX(0%);
   z-index: 9;
   position: absolute, fixed;
   top: 0; }
 
 section.menupage {
-  background-color: var(--color-verde);
+  background-color: var(--color-azul);
   height: 100vh;
   z-index: 9;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 86px);
   top: 0;
   position: fixed;
   transition: transform 0.5s ease;
-  transform: translateX(-100%); }
+  transform: translateX(-100%);
+  padding: 87px; }
+  section.menupage .top {
+    display: flex;
+    justify-content: space-between; }
+    section.menupage .top a.menubtn {
+      cursor: pointer;
+      z-index: 5; }
+  section.menupage .menuContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: translateY(-70px); }
+    section.menupage .menuContent ul {
+      list-style: none; }
+      section.menupage .menuContent ul li {
+        padding: 0 10px; }
+        section.menupage .menuContent ul li a {
+          text-decoration: none;
+          color: #fff;
+          font-family: var(--texto-epilogue);
+          font-weight: 900;
+          font-size: 60px;
+          line-height: 110px; }
+      section.menupage .menuContent ul li#contacto {
+        background-color: var(--color-verde);
+        height: 98px;
+        width: 317px; }
+        section.menupage .menuContent ul li#contacto a {
+          color: var(--color-azul);
+          cursor: pointer; }
+  section.menupage .infoMenu {
+    padding-top: 70px; }
+    section.menupage .infoMenu p {
+      font-family: var(--texto-manrope);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #fff; }
+
+section.branding,
+section.marketing,
+section.disenoWeb {
+  background-color: var(--color-azul);
+  height: 100vh;
+  z-index: 9;
+  position: absolute;
+  width: calc(100% - 86px);
+  top: 0;
+  position: fixed;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  padding: 73px 87px;
+  color: #fff; }
+  section.branding .top,
+  section.marketing .top,
+  section.disenoWeb .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    section.branding .top a.menubtn,
+    section.marketing .top a.menubtn,
+    section.disenoWeb .top a.menubtn {
+      cursor: pointer;
+      z-index: 5; }
+    section.branding .top a,
+    section.marketing .top a,
+    section.disenoWeb .top a {
+      cursor: pointer;
+      z-index: 5; }
+  section.branding h2,
+  section.marketing h2,
+  section.disenoWeb h2 {
+    padding-top: 100px;
+    font-family: var(--texto-epilogue);
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 37px; }
+  section.branding .contenido,
+  section.marketing .contenido,
+  section.disenoWeb .contenido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px; }
+    section.branding .contenido p,
+    section.marketing .contenido p,
+    section.disenoWeb .contenido p {
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 45px;
+      width: 572px; }
+    section.branding .contenido .text,
+    section.marketing .contenido .text,
+    section.disenoWeb .contenido .text {
+      width: 785px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      section.branding .contenido .text span,
+      section.marketing .contenido .text span,
+      section.disenoWeb .contenido .text span {
+        margin: 7px 0;
+        padding: 7px 14px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 28.108px;
+        line-height: 33px; }
+  section.branding .btn,
+  section.marketing .btn,
+  section.disenoWeb .btn {
+    text-align: center; }
+    section.branding .btn a,
+    section.marketing .btn a,
+    section.disenoWeb .btn a {
+      background-color: #d949f8;
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      text-decoration: none;
+      padding: 10px 78px;
+      border-radius: 18px;
+      color: #fff; }
 
 section.about {
   padding: 130px 153px 130px 87px; }
   section.about .contenido {
-    display: flex; }
+    display: flex;
+    padding-bottom: 100px; }
     section.about .contenido .part1 {
       width: 73%;
       color: var(--color-azul); }
@@ -161,12 +296,12 @@ section.about {
         width: 269px;
         float: right; }
   section.about .portafolio {
-    padding-top: 186px;
+    padding-top: 71px;
     position: relative; }
     section.about .portafolio::before {
       content: url(../img/figura-verde.svg);
       position: absolute;
-      top: 0;
+      top: -115px;
       left: -173px; }
     section.about .portafolio h2 {
       font-family: var(--texto-epilogue);
@@ -246,7 +381,8 @@ section.services {
       section.services .cards .card a {
         position: absolute;
         bottom: 23px;
-        right: 23px; }
+        right: 23px;
+        cursor: pointer; }
     section.services .cards .card:nth-child(2) h3::before {
       content: "";
       width: 294px; }
@@ -256,7 +392,7 @@ section.services {
 
 section.partnerds {
   background-color: var(--color-azul);
-  padding: 100px 153px 100px 87px;
+  padding: 100px 153px 75px 87px;
   color: #fff; }
   section.partnerds .contenido {
     display: flex;
@@ -278,6 +414,26 @@ section.partnerds {
     line-height: 45px;
     width: 90%;
     padding-top: 50px; }
+
+section.slider-partnerds {
+  background-color: var(--color-azul);
+  padding-bottom: 100px; }
+  section.slider-partnerds .box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 60%;
+    height: auto;
+    transition: transform 0.5s ease-in;
+    margin: 8px auto; }
+    section.slider-partnerds .box img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%; }
+    section.slider-partnerds .box img#rappi {
+      max-width: 120px; }
+    section.slider-partnerds .box:hover {
+      transform: scale(1.2); }
 
 section.contact {
   padding: 200px 153px 200px 87px;
@@ -378,9 +534,12 @@ footer {
       line-height: 95px;
       padding-right: 50px; }
   footer .info {
-    padding: 70px 51px 70px 24px;
+    padding: 73px 51px 73px 24px;
     display: flex;
     justify-content: space-between; }
+    footer .info a {
+      text-decoration: none;
+      color: var(--color-azul); }
     footer .info p {
       font-family: var(--texto-manrope);
       font-weight: 700;
@@ -399,15 +558,22 @@ footer {
       content: "";
       width: 290px;
       left: -9px; }
-    footer .info p:nth-child(3)::before {
+    footer .info a p::before {
       content: "";
       width: 155px;
       left: -9px; }
-    footer .info p:nth-child(4)::before {
+    footer .info a:nth-child(4) p::before {
       content: "";
       width: 133px;
       left: -9px; }
-    footer .info p:nth-child(5)::before {
+    footer .info a:nth-child(5) p::before {
       content: "";
       width: 140px;
       left: -5px; }
+  footer .copy h3 {
+    font-family: var(--texto-montserrat);
+    font-weight: 400;
+    font-size: 18.6104px;
+    line-height: 26px;
+    text-align: center;
+    padding-bottom: 15px; }

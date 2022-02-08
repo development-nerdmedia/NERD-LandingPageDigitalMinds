@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -12,6 +13,7 @@
 :root {
   --texto-epilogue: "Epilogue", sans-serif;
   --texto-manrope: "Manrope", sans-serif;
+  --texto-montserrat: "Montserrat", sans-serif;
   --color-azul: #3822e4;
   --color-verde: #24fe7c;
   --color-rosa: #d949f8;
@@ -148,7 +150,10 @@ section.home {
   }
 }
 
-.menupage.open {
+.menupage.open,
+.branding.open,
+.marketing.open,
+.disenoWeb.open {
   transform: translateX(0%);
   z-index: 9;
   position: absolute, fixed;
@@ -156,21 +161,152 @@ section.home {
 }
 
 section.menupage {
-  background-color: var(--color-verde);
+  background-color: var(--color-azul);
   height: 100vh;
   z-index: 9;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 86px);
   top: 0;
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(-100%);
+  padding: 87px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    a.menubtn {
+      cursor: pointer;
+      z-index: 5;
+    }
+  }
+  .menuContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: translateY(-70px);
+    ul {
+      list-style: none;
+      li {
+        padding: 0 10px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-family: var(--texto-epilogue);
+          font-weight: 900;
+          font-size: 60px;
+          line-height: 110px;
+        }
+      }
+      li#contacto {
+        background-color: var(--color-verde);
+        height: 98px;
+        width: 317px;
+        a {
+          color: var(--color-azul);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .infoMenu {
+    padding-top: 70px;
+    p {
+      font-family: var(--texto-manrope);
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 34px;
+      color: #fff;
+    }
+  }
+}
+
+section.branding,
+section.marketing,
+section.disenoWeb {
+  background-color: var(--color-azul);
+  height: 100vh;
+  z-index: 9;
+  position: absolute;
+  width: calc(100% - 86px);
+  top: 0;
+  position: fixed;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  padding: 73px 87px;
+  color: #fff;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    a.menubtn {
+      cursor: pointer;
+      z-index: 5;
+    }
+    a {
+      cursor: pointer;
+      z-index: 5;
+    }
+  }
+  h2 {
+    padding-top: 100px;
+    font-family: var(--texto-epilogue);
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 37px;
+  }
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    p {
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 45px;
+      width: 572px;
+    }
+    .text {
+      width: 785px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      span {
+        margin: 7px 0;
+        padding: 7px 14px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 28.108px;
+        line-height: 33px;
+      }
+    }
+  }
+  .btn {
+    text-align: center;
+    a {
+      background-color: #d949f8;
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      text-decoration: none;
+      padding: 10px 78px;
+      border-radius: 18px;
+      color: #fff;
+    }
+  }
 }
 
 section.about {
   padding: 130px 153px 130px 87px;
   .contenido {
     display: flex;
+    padding-bottom: 100px;
     .part1 {
       width: 73%;
       color: var(--color-azul);
@@ -197,12 +333,12 @@ section.about {
     }
   }
   .portafolio {
-    padding-top: 186px;
+    padding-top: 71px;
     position: relative;
     &::before {
       content: url(../img/figura-verde.svg);
       position: absolute;
-      top: 0;
+      top: -115px;
       left: -173px;
     }
     h2 {
@@ -300,6 +436,7 @@ section.services {
         position: absolute;
         bottom: 23px;
         right: 23px;
+        cursor: pointer;
       }
     }
     .card:nth-child(2) {
@@ -323,7 +460,7 @@ section.services {
 
 section.partnerds {
   background-color: var(--color-azul);
-  padding: 100px 153px 100px 87px;
+  padding: 100px 153px 75px 87px;
   color: #fff;
   .contenido {
     display: flex;
@@ -348,6 +485,31 @@ section.partnerds {
     line-height: 45px;
     width: 90%;
     padding-top: 50px;
+  }
+}
+
+section.slider-partnerds {
+  background-color: var(--color-azul);
+  padding-bottom: 100px;
+  .box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 60%;
+    height: auto;
+    transition: transform 0.5s ease-in;
+    margin: 8px auto;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+    }
+    img#rappi {
+      max-width: 120px;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -473,9 +635,13 @@ footer {
     }
   }
   .info {
-    padding: 70px 51px 70px 24px;
+    padding: 73px 51px 73px 24px;
     display: flex;
     justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: var(--color-azul);
+    }
     p {
       font-family: var(--texto-manrope);
       font-weight: 700;
@@ -499,26 +665,36 @@ footer {
         left: -9px;
       }
     }
-    p:nth-child(3) {
-      &::before {
+    a {
+      p::before {
         content: "";
         width: 155px;
         left: -9px;
       }
     }
-    p:nth-child(4) {
-      &::before {
+    a:nth-child(4) {
+      p::before {
         content: "";
         width: 133px;
         left: -9px;
       }
     }
-    p:nth-child(5) {
-      &::before {
+    a:nth-child(5) {
+      p::before {
         content: "";
         width: 140px;
         left: -5px;
       }
+    }
+  }
+  .copy {
+    h3 {
+      font-family: var(--texto-montserrat);
+      font-weight: 400;
+      font-size: 18.6104px;
+      line-height: 26px;
+      text-align: center;
+      padding-bottom: 15px;
     }
   }
 }
