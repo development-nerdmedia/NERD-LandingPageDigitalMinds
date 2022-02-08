@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>nuevo prueba</title>
+    <title>NERD - Landing Page Digital Minds</title>
   </head>
   <body>
     <nav>
-      <a href="#" class="menubtn"><img src="img/Group 470.png" alt="menu" /></a>
+      <a class="menubtn"><img src="img/Group 470.png" alt="menu" /></a>
       <div class="btn-vertical">
-        <a href="#">Agenda una cita con un NERD</a>
+        <a href="#">Agenda una cita con un <span>NERD</span></a>
       </div>
       <div class="redes">
         <ul>
           <li>
-            <a href="#"> <img src="img/instagram.svg" alt="" /> </a>
+            <a href="#"> <img src="img/instagram.svg" alt="instagram" /> </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/linkedin.svg" alt="" />
+              <img src="img/linkedin.svg" alt="linkedin" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/Vector.svg" alt="" />
+              <img src="img/Vector.svg" alt="facebook" />
             </a>
           </li>
         </ul>
@@ -34,7 +35,7 @@
     <main>
       <section class="menupage"></section>
       <section class="home">
-        <img class="logo" src="img/logo.png" alt="" />
+        <img class="logo" src="img/logo.png" alt="NERD-icon" />
         <div class="homeContent">
           <h1>
             Creamos <br />
@@ -43,8 +44,147 @@
           </h1>
           <p>BRANDING - MARKETING - DISEÑO WEB</p>
           <button>Quiero que me contacten</button>
+          <img class="flecha" src="img/flecha.svg" alt="scroll" />
         </div>
       </section>
+      <section class="about">
+        <div class="contenido">
+          <div class="part1">
+            <h2>Nos presentamos ¡Encantadxs!</h2>
+            <p>
+              Somos una agencia que lleva la estrategia y creatividad a todo lo
+              que hace. Entendemos las necesidades de nuestros clientes para
+              ofrecerles soluciones que respondan a sus objetivos comerciales y
+              de marketing. Nuestra experiencia nos permite diseñar estrategias
+              que funcionen y disfrutar del proceso creativo.
+            </p>
+          </div>
+          <div class="part2">
+            <img src="img/Group 902.png" alt="" />
+          </div>
+        </div>
+        <div class="portafolio">
+          <h2>Portafolio</h2>
+          <div class="galeria">
+            <div class="galeriaItem">
+              <img src="img/mockus.png" alt="" />
+            </div>
+            <div class="galeriaItem">
+              <img src="img/ucal.png" alt="" />
+            </div>
+            <div class="galeriaItem">
+              <img src="img/olivosdelsur.png" alt="" />
+            </div>
+            <div class="galeriaItem">
+              <img src="img/cartel.png" alt="" />
+            </div>
+          </div>
+          <div class="btn-mas">
+            <a href="#">
+              <img src="img/btn-mas.svg" alt="" />
+              <span>Ver más proyectos</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="contenido">
+          <h2>Lo que hacemos bien</h2>
+          <p>
+            Somos comprometidos y curiosos. No tenemos miedo de cuestionar las
+            cosas. Hablar, cuando es posible que otros no lo hagan, para así,
+            asegurar de que siempre se obtenga la mejor solución posible a un
+            problema en nuestros diferentes lineas de acción.
+          </p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Branding</h3>
+            <p>¿Necesitas construir una marca que impacte y venda?</p>
+            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+          </div>
+          <div class="card">
+            <h3>Marketing</h3>
+            <p>
+              ¿Necesitas estar en el lugar correcto para conseguir resultados?
+            </p>
+            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+          </div>
+          <div class="card">
+            <h3>Diseño web</h3>
+            <p>
+              ¿Necesitas un sitio que atraiga más usuarios y te ayude a vender
+              más?
+            </p>
+            <a href="#"> <img src="img/btn-services.svg" alt="mas" /></a>
+          </div>
+        </div>
+      </section>
+      <section class="partnerds">
+        <div class="contenido">
+          <h2>Part</h2>
+          <img src="img/nerds.svg" alt="" /><span>s</span>
+        </div>
+        <p>
+          Somos comprometidos y curiosos. No tenemos miedo de cuestionar las
+          cosas. Hablar, cuando es posible que otros no lo hagan, para así,
+          asegurar de que siempre se obtenga la mejor solución posible..
+        </p>
+      </section>
+      <section class="contact">
+        <div class="campos">
+          <h2>Háblanos de tu proyecto</h2>
+          <p>Completa el formulario y nos contactaremos en breve</p>
+        </div>
+        <div class="form">
+          <form
+            class="formulario containerform"
+            id="fs-frm"
+            name="complaint-form"
+            accept-charset="utf-8"
+            action="php/thanks.php"
+            method=""
+          >
+            <fieldset id="fs-frm-inputs">
+              <input
+                type="text"
+                name="name"
+                id="full-name"
+                placeholder="Tu nombre"
+                required=""
+              />
+              <input
+                type="text"
+                name="name"
+                id="full-name"
+                placeholder="Teléfono o email"
+                required=""
+              />
+              <textarea
+                rows="6"
+                name="message"
+                id="complaint"
+                placeholder="Hablanos de tu proyecto"
+                required=""
+              ></textarea>
+              <input class="btn button" type="submit" value="Enviar" />
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="title">
+          <h2>PROUD TO BE</h2>
+          <img src="img/nerds-azul.svg" alt="" />
+        </div>
+        <div class="info">
+          <p>+51 942 464 074</p>
+          <p>hola@nerdmedia.pe</p>
+          <p>Instagram</p>
+          <p>Linkedin</p>
+          <p>Facebook</p>
+        </div>
+      </footer>
     </main>
     <script
       type="text/javascript"
