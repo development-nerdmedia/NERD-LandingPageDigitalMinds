@@ -47,12 +47,62 @@
             <li><a class="cerrarr" href="#home">Home</a></li>
             <li><a class="cerrarr" href="#portafolio">Portafolio</a></li>
             <li><a class="cerrarr" href="#servicios">Servicios</a></li>
-            <li id="contacto"><a class="cerrarr">Contacto</a></li>
+            <li id="btnMenuContacto">
+              <a class="cerrarr" href="#sectionContacto">Contacto</a>
+            </li>
           </ul>
           <div class="infoMenu">
             <p>francesca@nerdmedia.pe</p>
             <p>+51 942 464 074</p>
             <p>Lima - Perú</p>
+          </div>
+        </div>
+      </section>
+      <section class="contact pagecontact">
+        <div class="btn-close">
+          <a class="close-contact">
+            <img src="img/close-azul.svg" alt="cerrar" />
+          </a>
+        </div>
+        <div class="contenido-contacto">
+          <div class="campos">
+            <h2>Háblanos de tu proyecto</h2>
+            <p>Completa el formulario y nos contactaremos en breve</p>
+          </div>
+          <div class="form">
+            <form
+              class="formulario containerform"
+              id="fs-frm"
+              name="complaint-form"
+              accept-charset="utf-8"
+              action=""
+              method=""
+            >
+              <fieldset id="fs-frm-inputs">
+                <input
+                  type="text"
+                  name="name"
+                  id="full-name"
+                  placeholder="Tu nombre"
+                  required=""
+                />
+                <input
+                  type="text"
+                  name="name"
+                  id="full-name"
+                  placeholder="Teléfono o email"
+                  required=""
+                />
+                <textarea
+                  rows="6"
+                  name="message"
+                  id="complaint"
+                  placeholder="Hablanos de tu proyecto"
+                  required=""
+                ></textarea>
+                <input class="btn button" type="submit" value="Enviar" />
+              </fieldset>
+            </form>
           </div>
         </div>
       </section>
@@ -83,7 +133,7 @@
           </div>
         </div>
         <div class="btn">
-          <a href="#">Quiero que me contacten</a>
+          <a class="contacto-page">Quiero que me contacten</a>
         </div>
       </section>
       <section class="marketing">
@@ -113,7 +163,7 @@
           </div>
         </div>
         <div class="btn">
-          <a href="#">Quiero que me contacten</a>
+          <a class="contacto-page">Quiero que me contacten</a>
         </div>
       </section>
       <section class="disenoWeb">
@@ -143,7 +193,7 @@
           </div>
         </div>
         <div class="btn">
-          <a href="#">Quiero que me contacten</a>
+          <a class="contacto-page">Quiero que me contacten</a>
         </div>
       </section>
       <section id="home" class="home">
@@ -151,11 +201,11 @@
         <div class="homeContent">
           <h1>
             Creamos <br />
-            <span>experiencias</span>
-            <br />digitales<span class="memorables">memorables</span>
+            <span class="typing"></span>
+            <br />digitales <span class="typing2"></span>
           </h1>
           <p>BRANDING - MARKETING - DISEÑO WEB</p>
-          <button>Quiero que me contacten</button>
+          <button class="contacto-page">Quiero que me contacten</button>
           <img class="flecha" src="img/flecha.svg" alt="scroll" />
         </div>
       </section>
@@ -214,7 +264,8 @@
             <h3>Branding</h3>
             <p>¿Necesitas construir una marca que impacte y venda?</p>
             <a class="brandingbtn">
-              <img src="img/btn-services.svg" alt="mas"
+              <img src="img/btn-services.svg" alt="mas" />
+              <img src="img/btn-services-azul.svg" alt=""
             /></a>
           </div>
           <div class="card">
@@ -223,7 +274,9 @@
               ¿Necesitas estar en el lugar correcto para conseguir resultados?
             </p>
             <a class="marketingbtn">
-              <img src="img/btn-services.svg" alt="mas"
+              <img src="img/btn-services.svg" alt="mas" /><img
+                src="img/btn-services-azul.svg"
+                alt=""
             /></a>
           </div>
           <div class="card">
@@ -233,7 +286,9 @@
               más?
             </p>
             <a class="disenowebbtn">
-              <img src="img/btn-services.svg" alt="mas"
+              <img src="img/btn-services.svg" alt="mas" /><img
+                src="img/btn-services-azul.svg"
+                alt=""
             /></a>
           </div>
         </div>
@@ -253,25 +308,31 @@
         <div class="owl-carousel owl-theme clients-carousel">
           <div class="item box">
             <img src="img/subway.svg" alt="subway" />
+            <img src="img/subway-verde.svg" alt="subway" />
           </div>
           <div class="item box">
             <img src="img/plazavea.svg" alt="plazavea" />
+            <img src="img/plazavea-verde.svg" alt="plazavea" />
           </div>
           <div class="item box">
             <img src="img/maestro.svg" alt="maestro" />
+            <img src="img/maestro-verde.svg" alt="maestro" />
           </div>
           <div class="item box">
             <img src="img/intralot.svg" alt="intralot" />
+            <img src="img/intralot-verde.svg" alt="intralot" />
           </div>
           <div class="item box">
             <img id="rappi" src="img/rappi.svg" alt="rappi" />
+            <img id="rappi" src="img/rappi-verde.svg" alt="rappi" />
           </div>
           <div class="item box">
             <img src="img/linea1.svg" alt="linea1" />
+            <img src="img/linea1-verd.svg" alt="linea1" />
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section id="sectionContacto" class="contact">
         <div class="campos">
           <h2>Háblanos de tu proyecto</h2>
           <p>Completa el formulario y nos contactaremos en breve</p>
@@ -329,14 +390,8 @@
         </div>
       </footer>
     </main>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
   </body>

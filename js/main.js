@@ -1,3 +1,18 @@
+var typed = new Typed(".typing", {
+    strings: ["experiencias", "contenidos", "------"],
+    typeSpeed: 100,
+    backDelay: 2000,
+    backSpeed: 100,
+    loop: true
+});
+var typed = new Typed(".typing2", {
+    strings: ["memorables", "impactantes", "virales"],
+    typeSpeed: 100,
+    backDelay: 2000,
+    backSpeed: 100,
+    loop: true
+});
+
 document.addEventListener("click", function (e) {
     if (e.target.closest(".menubtn")) {
         document.querySelector(".menupage").classList.toggle("open");
@@ -15,7 +30,10 @@ document.addEventListener("click", function (e) {
         document.querySelector(".disenoWeb").classList.toggle("open");
         // jQuery('body').addClass('scrollhidden');
     }
-
+    if (e.target.closest(".contacto-page")) {
+        document.querySelector(".pagecontact").classList.toggle("open");
+        // jQuery('body').addClass('scrollhidden');
+    }
     /* cerrar */
     if (e.target.closest(".cerrarr")) {
         document.querySelector(".menupage").classList.toggle("open");
@@ -31,6 +49,10 @@ document.addEventListener("click", function (e) {
     }
     if (e.target.closest(".closedisenoweb")) {
         document.querySelector(".disenoWeb").classList.toggle("open");
+        // jQuery('body').removeClass('scrollhidden');
+    }
+    if (e.target.closest(".close-contact")) {
+        document.querySelector(".pagecontact").classList.toggle("open");
         // jQuery('body').removeClass('scrollhidden');
     }
 })

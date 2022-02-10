@@ -95,8 +95,11 @@ section.home {
         background-color: var(--color-verde);
         color: var(--color-azul);
         padding: 0 15px; }
-      section.home .homeContent h1 span.memorables {
-        margin-left: 20px; }
+      section.home .homeContent h1 span.typed-cursor {
+        animation: none !important;
+        color: #fff;
+        display: none;
+        padding-left: 5px; }
     section.home .homeContent p {
       font-family: var(--texto-manrope);
       font-weight: bold;
@@ -128,6 +131,12 @@ section.home {
 .disenoWeb.open {
   transform: translateX(0%);
   z-index: 9;
+  position: absolute, fixed;
+  top: 0; }
+
+.pagecontact.open {
+  transform: translateX(0%);
+  z-index: 10;
   position: absolute, fixed;
   top: 0; }
 
@@ -166,11 +175,11 @@ section.menupage {
           font-weight: 900;
           font-size: 60px;
           line-height: 110px; }
-      section.menupage .menuContent ul li#contacto {
+      section.menupage .menuContent ul li#btnMenuContacto {
         background-color: var(--color-verde);
         height: 98px;
         width: 317px; }
-        section.menupage .menuContent ul li#contacto a {
+        section.menupage .menuContent ul li#btnMenuContacto a {
           color: var(--color-azul);
           cursor: pointer; }
   section.menupage .infoMenu {
@@ -269,7 +278,8 @@ section.disenoWeb {
       text-decoration: none;
       padding: 10px 78px;
       border-radius: 18px;
-      color: #fff; }
+      color: #fff;
+      cursor: pointer; }
 
 section.about {
   padding: 130px 153px 130px 87px; }
@@ -357,6 +367,12 @@ section.services {
       padding: 30px;
       position: relative;
       border-radius: 10px; }
+      section.services .cards .card:hover {
+        border: 4px solid var(--color-azul); }
+        section.services .cards .card:hover a img:nth-child(1) {
+          display: none; }
+        section.services .cards .card:hover a img:nth-child(2) {
+          display: block; }
       section.services .cards .card h3 {
         font-family: var(--texto-epilogue);
         font-weight: 900;
@@ -383,6 +399,10 @@ section.services {
         bottom: 23px;
         right: 23px;
         cursor: pointer; }
+        section.services .cards .card a img:nth-child(1) {
+          display: block; }
+        section.services .cards .card a img:nth-child(2) {
+          display: none; }
     section.services .cards .card:nth-child(2) h3::before {
       content: "";
       width: 294px; }
@@ -432,11 +452,44 @@ section.slider-partnerds {
       width: 100%; }
     section.slider-partnerds .box img#rappi {
       max-width: 120px; }
+    section.slider-partnerds .box img:nth-child(2) {
+      display: none; }
     section.slider-partnerds .box:hover {
       transform: scale(1.2); }
+      section.slider-partnerds .box:hover img:nth-child(1) {
+        display: none; }
+      section.slider-partnerds .box:hover img:nth-child(2) {
+        display: block; }
+
+section.pagecontact {
+  background-color: #fff;
+  height: 100vh;
+  padding: 73px 87px !important;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  position: fixed;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  width: calc(100% - 86px); }
+  section.pagecontact .btn-close {
+    display: flex;
+    justify-content: flex-end; }
+    section.pagecontact .btn-close a {
+      cursor: pointer;
+      z-index: 5; }
+  section.pagecontact .contenido-contacto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transform: translateY(-44px); }
 
 section.contact {
-  padding: 200px 153px 200px 87px;
+  padding: 127px 153px 200px 87px;
   color: var(--color-azul);
   /* reset */ }
   section.contact .campos h2 {
