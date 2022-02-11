@@ -34,6 +34,11 @@ document.addEventListener("click", function (e) {
         document.querySelector(".pagecontact").classList.toggle("open");
         // jQuery('body').addClass('scrollhidden');
     }
+    if (e.target.closest(".openinterna")) {
+        document.querySelector(".portafolioInterna").classList.toggle("open");
+        // jQuery('body').addClass('scrollhidden');
+    }
+
     /* cerrar */
     if (e.target.closest(".cerrarr")) {
         document.querySelector(".menupage").classList.toggle("open");
@@ -53,6 +58,10 @@ document.addEventListener("click", function (e) {
     }
     if (e.target.closest(".close-contact")) {
         document.querySelector(".pagecontact").classList.toggle("open");
+        // jQuery('body').removeClass('scrollhidden');
+    }
+    if (e.target.closest(".closeinterna")) {
+        document.querySelector(".portafolioInterna").classList.toggle("open");
         // jQuery('body').removeClass('scrollhidden');
     }
 })

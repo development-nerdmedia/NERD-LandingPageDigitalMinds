@@ -10,6 +10,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
     />
+    <!-- <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" /> -->
+    <link
+      href="https://unpkg.com/video.js@7/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- City -->
+    <link
+      href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+      rel="stylesheet"
+    />
     <title>NERD - Landing Page Digital Minds</title>
   </head>
   <body>
@@ -228,17 +239,61 @@
         <div id="portafolio" class="portafolio">
           <h2>Portafolio</h2>
           <div class="galeria">
-            <div class="galeriaItem">
+            <div class="galeriaItem openinterna">
               <img src="img/mockus.png" alt="" />
+              <div class="textInfo">
+                <div>
+                  <span>Statkraft Péru</span>
+                  <h4>Conecta con el Futuro</h4>
+                  <p>Creatividad, Branding, UX, UI, Digital</p>
+                </div>
+                <!-- <div class="by">
+                  <span>by</span>
+                  <img src="img/nerd-hover.svg" alt="" />
+                </div> -->
+              </div>
             </div>
             <div class="galeriaItem">
               <img src="img/ucal.png" alt="" />
+              <div class="textInfo">
+                <div>
+                  <span>Statkraft Péru</span>
+                  <h4>Conecta con el Futuro</h4>
+                  <p>Creatividad, Branding, UX, UI, Digital</p>
+                </div>
+                <!-- <div class="by">
+                  <span>by</span>
+                  <img src="img/nerd-hover.svg" alt="" />
+                </div> -->
+              </div>
             </div>
             <div class="galeriaItem">
               <img src="img/olivosdelsur.png" alt="" />
+              <div class="textInfo">
+                <div>
+                  <span>Statkraft Péru</span>
+                  <h4>Conecta con el Futuro</h4>
+                  <p>Creatividad, Branding, UX, UI, Digital</p>
+                </div>
+                <!-- <div class="by">
+                  <span>by</span>
+                  <img src="img/nerd-hover.svg" alt="" />
+                </div> -->
+              </div>
             </div>
             <div class="galeriaItem">
               <img src="img/cartel.png" alt="" />
+              <div class="textInfo">
+                <div>
+                  <span>Statkraft Péru</span>
+                  <h4>Conecta con el Futuro</h4>
+                  <p>Creatividad, Branding, UX, UI, Digital</p>
+                </div>
+                <!-- <div class="by">
+                  <span>by</span>
+                  <img src="img/nerd-hover.svg" alt="" />
+                </div> -->
+              </div>
             </div>
           </div>
           <div class="btn-mas">
@@ -246,6 +301,42 @@
               <img src="img/btn-mas.svg" alt="" />
               <span>Ver más proyectos</span></a
             >
+          </div>
+        </div>
+      </section>
+      <section class="portafolioInterna">
+        <div class="top">
+          <a class="closeinterna">
+            <img src="img/closemenu.svg" alt="close"
+          /></a>
+        </div>
+        <div class="content">
+          <div class="part1">
+            <video
+              id="my-player"
+              class="video-js vjs-theme-city"
+              controls
+              preload="auto"
+              width="930px"
+              poster="/img/poster-video.png"
+              data-setup="{}"
+            >
+              <source src="/video/prueba.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="part2">
+            <div>
+              <span>Statkraft Péru</span>
+              <h4>Conecta con el Futuro</h4>
+              <p>Creatividad, Branding, UX, UI, Digital</p>
+              <a class="contacto-page">Quiero que me contacten</a>
+            </div>
+          </div>
+        </div>
+        <div class="by">
+          <div>
+            <span>by</span>
+            <img src="img/nerd-hover.svg" alt="nerd" />
           </div>
         </div>
       </section>
@@ -391,8 +482,9 @@
       </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
