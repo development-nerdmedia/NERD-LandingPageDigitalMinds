@@ -95,14 +95,21 @@ nav {
 }
 
 main {
-  margin-left: 86px;
+  // margin-left: 86px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  max-width: 1580px;
+  margin: 0 auto;
 }
 
 section.home {
   // height: calc(100vh - 146px);
   height: 100vh;
   background-color: var(--color-azul);
-  padding: 87px;
+  // padding: 87px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -115,17 +122,17 @@ section.home {
   img.logo {
     position: absolute;
     top: 73px;
-    width: 5.28vw;
+    // width: 5.28vw;
   }
   .homeContent {
     padding-left: calc(277px - 87px);
     h1 {
       font-family: var(--texto-epilogue);
       font-weight: 900;
-      // font-size: 80px;
-      font-size: 4.165vw;
-      // line-height: 100px;
-      line-height: 5.34vw;
+      font-size: 80px;
+      // font-size: 4.165vw;
+      line-height: 100px;
+      // line-height: 5.34vw;
       color: white;
       span {
         background-color: var(--color-verde);
@@ -180,14 +187,14 @@ section.home {
 .disenoWeb.open,
 .portafolioInterna.open {
   transform: translateX(0%);
-  z-index: 9;
+  z-index: 11;
   position: absolute, fixed;
   top: 0;
 }
 
 .pagecontact.open {
   transform: translateX(0%);
-  z-index: 10;
+  z-index: 12;
   position: absolute, fixed;
   top: 0;
 }
@@ -197,12 +204,13 @@ section.menupage {
   height: 100vh;
   z-index: 9;
   position: absolute;
-  width: calc(100% - 86px);
+  // width: calc(100% - 86px);
+  width: 100%;
   top: 0;
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(-100%);
-  padding: 87px;
+  padding: 87px 0;
   .top {
     display: flex;
     justify-content: space-between;
@@ -217,7 +225,7 @@ section.menupage {
     justify-content: center;
     align-items: center;
     height: 100%;
-    transform: translateY(-70px);
+    // transform: translateY(-70px);
     ul {
       list-style: none;
       li {
@@ -262,12 +270,13 @@ section.disenoWeb {
   height: 100vh;
   z-index: 9;
   position: absolute;
-  width: calc(100% - 86px);
+  // width: calc(100% - 86px);
+  width: 100%;
   top: 0;
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  padding: 73px 87px;
+  padding: 73px 0px;
   color: #fff;
   .top {
     display: flex;
@@ -345,16 +354,23 @@ section.portafolioInterna {
   z-index: 9;
   position: absolute;
   width: calc(100% - 86px);
+  width: 100%;
   top: 0;
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  padding: 61px 161px;
+  padding: 61px 0px;
   padding-left: 76px;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .top {
     display: flex;
     justify-content: flex-end;
@@ -433,7 +449,8 @@ section.portafolioInterna {
 }
 
 section.about {
-  padding: 130px 153px 130px 87px;
+  // padding: 130px 153px 130px 87px;
+  padding: 130px 0;
   .contenido {
     display: flex;
     padding-bottom: 100px;
@@ -568,7 +585,9 @@ section.about {
 }
 
 section.services {
-  padding: 60px 153px 200px 87px;
+  // padding: 60px 153px 200px 87px;
+  padding-top: 60px;
+  padding-bottom: 200px;
   color: var(--color-azul);
   .contenido {
     h2 {
@@ -666,7 +685,8 @@ section.services {
 
 section.partnerds {
   background-color: var(--color-azul);
-  padding: 100px 153px 75px 87px;
+  padding-top: 100px;
+  padding-bottom: 75px;
   color: #fff;
   .contenido {
     display: flex;
@@ -731,7 +751,7 @@ section.slider-partnerds {
 section.pagecontact {
   background-color: #fff;
   height: 100vh;
-  padding: 73px 87px !important;
+  padding: 73px 0px !important;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -761,8 +781,11 @@ section.pagecontact {
 }
 
 section.contact {
-  padding: 127px 153px 200px 87px;
+  // padding: 127px 153px 200px 87px;
+  padding-top: 127px;
+  padding-bottom: 200px;
   color: var(--color-azul);
+  width: 100%;
   .campos {
     h2 {
       font-family: var(--texto-epilogue);
@@ -864,6 +887,10 @@ section.contact {
     color: #fff !important;
     cursor: pointer;
     border-radius: 18.27px;
+    &:hover {
+      background-color: var(--color-verde);
+      color: var(--color-azul);
+    }
   }
 }
 
@@ -872,17 +899,19 @@ footer {
   .title {
     display: flex;
     align-items: flex-end;
+    padding-left: 100px;
     h2 {
-      padding-left: 17px;
       font-family: var(--texto-epilogue);
       font-weight: 900;
       font-size: 169.213px;
+      // font-size: 8.8vw;
       line-height: 95px;
       padding-right: 50px;
     }
   }
   .info {
     padding: 73px 51px 73px 24px;
+    padding-left: 115px;
     display: flex;
     justify-content: space-between;
     a {
