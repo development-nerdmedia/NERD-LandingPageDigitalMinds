@@ -24,29 +24,40 @@
     <title>NERD - Landing Page Digital Minds</title>
   </head>
   <body>
-    <nav>
-      <a class="menubtn"><img src="img/Group 470.png" alt="menu" /></a>
-      <div class="btn-vertical">
-        <a href="#sectionContacto">Agenda una cita con un <span>NERD</span></a>
+    <header>
+      <nav>
+        <a class="menubtn"><img src="img/Group 470.png" alt="menu" /></a>
+        <div class="btn-vertical">
+          <a href="#sectionContacto"
+            >Agenda una cita con un <span>NERD</span></a
+          >
+        </div>
+        <div class="redes">
+          <ul>
+            <li>
+              <a href="#"> <img src="img/instagram.svg" alt="instagram" /> </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/linkedin.svg" alt="linkedin" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/Vector.svg" alt="facebook" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="menu-movil">
+        <div class="container container-menu">
+          <a href="index.html"> <img src="img/nerd-blanco.svg" alt="Nerd" /></a>
+          <a class="menubtn"><img src="img/menu-mobil.svg" alt="Menu" /></a>
+        </div>
       </div>
-      <div class="redes">
-        <ul>
-          <li>
-            <a href="#"> <img src="img/instagram.svg" alt="instagram" /> </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/linkedin.svg" alt="linkedin" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="img/Vector.svg" alt="facebook" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </header>
+
     <main>
       <section class="menupage">
         <div class="container">
@@ -89,8 +100,8 @@
                 id="fs-frm"
                 name="complaint-form"
                 accept-charset="utf-8"
-                action="thanks.html"
-                method=""
+                action="php/thanks.php"
+                method="post"
               >
                 <fieldset id="fs-frm-inputs">
                   <input
@@ -102,7 +113,7 @@
                   />
                   <input
                     type="text"
-                    name="name"
+                    name="telephone"
                     id="full-name"
                     placeholder="Teléfono o email"
                     required=""
@@ -247,11 +258,13 @@
               </p>
             </div>
             <div class="part2">
-              <img src="img/Group 902.png" alt="" />
+              <img src="img/Group 902.png" alt="7años-de-experiencia" />
+              <img src="img/7-azul.png" alt="7años-de-experiencia" />
             </div>
           </div>
           <div id="portafolio" class="portafolio">
             <h2>Portafolio</h2>
+            <h3>destacado</h3>
             <div class="galeria">
               <div class="galeriaItem openinterna">
                 <img src="img/mockus.png" alt="" />
@@ -261,10 +274,6 @@
                     <h4>Conecta con el Futuro</h4>
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
-                  <!-- <div class="by">
-                    <span>by</span>
-                    <img src="img/nerd-hover.svg" alt="" />
-                  </div> -->
                 </div>
               </div>
               <div class="galeriaItem">
@@ -275,10 +284,6 @@
                     <h4>Conecta con el Futuro</h4>
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
-                  <!-- <div class="by">
-                    <span>by</span>
-                    <img src="img/nerd-hover.svg" alt="" />
-                  </div> -->
                 </div>
               </div>
               <div class="galeriaItem">
@@ -289,10 +294,6 @@
                     <h4>Conecta con el Futuro</h4>
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
-                  <!-- <div class="by">
-                    <span>by</span>
-                    <img src="img/nerd-hover.svg" alt="" />
-                  </div> -->
                 </div>
               </div>
               <div class="galeriaItem">
@@ -303,10 +304,6 @@
                     <h4>Conecta con el Futuro</h4>
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
-                  <!-- <div class="by">
-                    <span>by</span>
-                    <img src="img/nerd-hover.svg" alt="" />
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -456,8 +453,8 @@
               id="fs-frm"
               name="complaint-form"
               accept-charset="utf-8"
-              action="thanks.html"
-              method=""
+              action="php/thanks.php"
+              method="post"
             >
               <fieldset id="fs-frm-inputs">
                 <input
@@ -469,7 +466,7 @@
                 />
                 <input
                   type="text"
-                  name="name"
+                  name="telephone"
                   id="full-name"
                   placeholder="Teléfono o email"
                   required=""

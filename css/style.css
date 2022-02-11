@@ -38,6 +38,7 @@ button {
 nav {
   border-right: 1px solid var(--color-azul);
   width: 86px;
+  width: 4.48vw;
   height: 100vh;
   position: fixed;
   background-color: #fff;
@@ -102,7 +103,8 @@ section.home {
     position: absolute;
     top: 73px; }
   section.home .homeContent {
-    padding-left: calc(277px - 87px); }
+    padding-left: calc(277px - 87px);
+    padding-left: 9.89vw; }
     section.home .homeContent h1 {
       font-family: var(--texto-epilogue);
       font-weight: 900;
@@ -146,13 +148,18 @@ section.home {
       left: 50%;
       transform: translateX(-50%); }
 
-.menupage.open,
 .branding.open,
 .marketing.open,
 .disenoWeb.open,
 .portafolioInterna.open {
   transform: translateX(0%);
   z-index: 11;
+  position: absolute, fixed;
+  top: 0; }
+
+.menupage.open {
+  transform: translateX(0%);
+  z-index: 9;
   position: absolute, fixed;
   top: 0; }
 
@@ -319,7 +326,6 @@ section.portafolioInterna {
   transition: transform 0.5s ease;
   transform: translateX(100%);
   padding: 61px 0px;
-  padding-left: 76px;
   color: #fff; }
   section.portafolioInterna .container {
     height: 100%;
@@ -410,6 +416,10 @@ section.about {
       section.about .contenido .part2 img {
         width: 269px;
         float: right; }
+      section.about .contenido .part2 img:nth-child(1) {
+        display: block; }
+      section.about .contenido .part2 img:nth-child(2) {
+        display: none; }
   section.about .portafolio {
     padding-top: 71px;
     position: relative; }
@@ -698,7 +708,8 @@ section.contact {
   section.contact .form {
     display: flex;
     justify-content: center;
-    padding-top: 65px; }
+    padding-top: 65px;
+    width: 100%; }
   section.contact form {
     width: 1000px; }
   section.contact #fs-frm [type="text"],
@@ -832,3 +843,113 @@ section.thankspage {
       padding: 30px 0; }
     section.thankspage .text img {
       border-radius: 10px; }
+
+.menu-movil {
+  display: none; }
+
+section.about .portafolio h3 {
+  display: none; }
+
+@media (max-width: 1440px) {
+  nav {
+    width: 63.5px; } }
+
+@media (max-width: 425px) {
+  .menu-movil {
+    display: block; }
+  .menu-movil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 30px 0; }
+    .menu-movil .container-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+  section.home .container {
+    z-index: 1; }
+  section.home::after {
+    content: url(../img/figurahome-verde.svg);
+    position: absolute;
+    right: 0;
+    bottom: 20px; }
+  section.home .homeContent p {
+    padding-top: 15px;
+    padding-bottom: 30px; }
+  section.home .homeContent button {
+    display: flex;
+    margin: 0 auto; }
+  section.contact form {
+    width: 100%; }
+  section.contact #fs-frm fieldset {
+    display: flex;
+    flex-direction: column; }
+  nav,
+  section.home img.logo {
+    display: none; }
+  section.home .homeContent {
+    padding-left: 0; }
+  section.home .homeContent h1 {
+    font-size: 47.57px;
+    line-height: 59.6px; }
+  section.home .homeContent p {
+    font-size: 19px; }
+  section.home .homeContent button {
+    font-size: 18px;
+    padding: 5px 30px; }
+  .about .contenido {
+    flex-direction: column; }
+  section.about .contenido .part1 {
+    width: 100%; }
+  section.about .contenido .part2 {
+    width: 100%; }
+  section.about .contenido .part1 h2 {
+    font-size: 32px;
+    line-height: 45px; }
+  section.about {
+    padding: 65px 0; }
+  section.about .portafolio {
+    padding: 0; }
+  section.about .contenido .part1 p {
+    font-size: 18px;
+    line-height: unset;
+    padding-top: 28px; }
+  section.about .contenido .part2 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; }
+    section.about .contenido .part2 img:nth-child(1) {
+      display: none; }
+    section.about .contenido .part2 img:nth-child(2) {
+      display: block; }
+    section.about .contenido .part2 img {
+      width: 143px; }
+  section.about .portafolio::before {
+    display: none; }
+  section.about .portafolio h2,
+  section.about .portafolio h3 {
+    font-family: var(--texto-epilogue);
+    font-weight: 900;
+    display: block;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: inherit;
+    color: var(--color-azul); }
+  section.about .portafolio .galeria .galeriaItem .textInfo {
+    transform: translateY(0);
+    color: #fff;
+    padding: 20px; }
+  section.about .portafolio .galeria .galeriaItem {
+    height: 255px; }
+    section.about .portafolio .galeria .galeriaItem img {
+      width: 110%; }
+  section.about .portafolio .galeria .galeriaItem .textInfo h4 {
+    display: none; }
+  section.about .portafolio .galeria .galeriaItem .textInfo span {
+    font-size: 20px;
+    line-height: inherit; }
+  section.about .portafolio .galeria .galeriaItem .textInfo p {
+    font-size: 16px;
+    line-height: inherit; } }
