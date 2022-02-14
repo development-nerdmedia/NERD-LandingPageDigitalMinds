@@ -93,3 +93,64 @@ $('.clients-carousel').owlCarousel({
         },
     }
 })
+$('.footer-info').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin: 15,
+    dots: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 4500,
+    autoplayHoverPause: true,
+    autoplaySpeed: 4500,
+    responsive: {
+        0: {
+            items: 2
+        },
+        500: {
+            items: 2
+        },
+        600: {
+            items: 4
+        },
+        800: {
+            items: 4
+        },
+        1200: {
+            items: 5
+        },
+    }
+})
+
+$(document).ready(function () {
+    $('.slider-clientes2').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        // responsive: [
+        //     {
+        //         breakpoint: 426,
+        //         settings: {
+        //             slidesToShow: 2,
+        //             slidesToScroll: 1,
+        //             infinite: true,
+        //             dots: true
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 651,
+        //         settings: {
+        //             slidesToShow: 1,
+        //             slidesToScroll: 1
+        //         }
+        //     }
+        //     // You can unslick at a given breakpoint now by adding:
+        //     // settings: "unslick"
+        //     // instead of a settings object
+        // ]
+    });
+});

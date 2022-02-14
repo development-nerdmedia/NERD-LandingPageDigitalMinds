@@ -731,6 +731,10 @@ section.partnerds {
 section.slider-partnerds {
   background-color: var(--color-azul);
   padding-bottom: 100px;
+  .owl-stage {
+    display: flex;
+    align-items: center;
+  }
   .box {
     display: grid;
     align-items: center;
@@ -744,7 +748,9 @@ section.slider-partnerds {
       max-height: 100%;
       width: 100%;
     }
-    img#rappi {
+    img#rappi,
+    img#vivanda,
+    img#adidas {
       max-width: 120px;
     }
     img:nth-child(2) {
@@ -816,6 +822,11 @@ section.contact {
       text-align: center;
       padding-top: 20px;
     }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   /* reset */
   input[type="number"]::-webkit-inner-spin-button,
@@ -929,6 +940,10 @@ footer {
     padding-left: 115px;
     display: flex;
     justify-content: space-between;
+    .owl-carousel.owl-drag .owl-item {
+      display: flex;
+      justify-content: center;
+    }
     a {
       text-decoration: none;
       color: var(--color-azul);
@@ -979,13 +994,18 @@ footer {
     }
   }
   .copy {
-    h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    p {
       font-family: var(--texto-montserrat);
       font-weight: 400;
       font-size: 18.6104px;
       line-height: 26px;
       text-align: center;
-      padding-bottom: 15px;
+    }
+    p.corazon {
+      padding-right: 7px;
     }
   }
 }
@@ -1061,6 +1081,156 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 425px) {
+  section.portafolioInterna {
+    padding: 36px 0;
+  }
+  section.portafolioInterna .top img {
+    width: 62px;
+  }
+  section.portafolioInterna .content {
+    flex-direction: column;
+  }
+  section.portafolioInterna .content .part1 div {
+    width: 100%;
+    height: 300px;
+  }
+  section.portafolioInterna .content .part2 span {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 a {
+    font-size: 18px;
+    padding: 10px 26px;
+  }
+  section.portafolioInterna .by span {
+    font-size: 22px;
+    padding-right: 6px;
+  }
+  section.portafolioInterna .by img {
+    width: 79px;
+  }
+  section.branding,
+  section.marketing,
+  section.disenoWeb {
+    padding: 36px 0;
+    .top {
+      img {
+        width: 51px;
+      }
+      a {
+        img {
+          width: 62px;
+        }
+      }
+    }
+    .container {
+      height: 100%;
+    }
+  }
+  section.branding h2,
+  section.marketing h2,
+  section.disenoWeb h2 {
+    font-size: 32px;
+    line-height: inherit;
+    padding-top: 46px;
+    padding-bottom: 25px;
+  }
+  section.branding .contenido p,
+  section.marketing .contenido p,
+  section.disenoWeb .contenido p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  section.branding .contenido .text span,
+  section.marketing .contenido .text span,
+  section.disenoWeb .contenido .text span {
+    font-size: 18px;
+    line-height: 21px;
+    margin-right: 10px;
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    padding-top: 40px;
+  }
+  .content-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transform: translateY(-47px);
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    justify-content: flex-start;
+  }
+  section.branding .btn a,
+  section.marketing .btn a,
+  section.disenoWeb .btn a {
+    font-size: 18px;
+    padding: 10px 34px;
+  }
+  section.branding .contenido,
+  section.marketing .contenido,
+  section.disenoWeb .contenido {
+    flex-direction: column;
+  }
+  section.branding .contenido p,
+  section.marketing .contenido p,
+  section.disenoWeb .contenido p {
+    width: 100%;
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    width: 100%;
+  }
+  section.pagecontact {
+    padding: 36px 0 !important;
+    .container {
+      height: 100%;
+    }
+    .btn-close {
+      img {
+        width: 62px;
+      }
+    }
+    .campos h2 {
+      font-size: 36px;
+      line-height: 39px;
+      text-align: start;
+      width: 278px;
+    }
+    .campos p {
+      text-align: start;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  section.menupage {
+    padding: 36px 0;
+  }
+  section.menupage .top img {
+    width: 62px;
+  }
+  section.menupage .menuContent {
+    align-items: flex-start;
+    transform: translateY(-41px);
+  }
+  section.menupage .menuContent ul li a {
+    font-size: 40px;
+    line-height: inherit;
+  }
   .menu-movil {
     display: block;
   }
@@ -1069,8 +1239,9 @@ section.about .portafolio h3 {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     padding: 30px 0;
+    background-color: var(--color-azul);
     .container-menu {
       display: flex;
       justify-content: space-between;
@@ -1091,6 +1262,7 @@ section.about .portafolio h3 {
   section.home .homeContent p {
     padding-top: 15px;
     padding-bottom: 30px;
+    line-height: inherit;
   }
   section.home .homeContent button {
     display: flex;
@@ -1198,4 +1370,260 @@ section.about .portafolio h3 {
     font-size: 16px;
     line-height: inherit;
   }
+  section.services {
+    padding-top: 5px;
+    padding-bottom: 66px;
+  }
+  section.services .contenido h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  section.services .contenido p {
+    padding-top: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    width: 100%;
+    text-align: justify;
+  }
+  section.services .cards {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  section.services .cards .card {
+    width: 100%;
+    height: 62.5vw;
+    padding: 25px;
+    margin-bottom: 40px;
+  }
+  section.services .cards .card h3 {
+    font-size: 20px;
+    line-height: inherit;
+    padding-top: 0px;
+  }
+  section.services .cards .card p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  section.services .cards .card h3::before {
+    content: "";
+    width: 105px;
+    height: 11px;
+    bottom: 1px;
+    left: -5px;
+  }
+  section.services .cards .card:nth-child(2) h3::before {
+    content: "";
+    width: 120px;
+  }
+  section.services .cards .card:nth-child(3) h3::before {
+    content: "";
+    width: 130px;
+  }
+  section.services .cards .card a {
+    position: absolute;
+    bottom: 23px;
+    right: 23px;
+    cursor: pointer;
+    img {
+      width: 33px;
+    }
+  }
+  section.partnerds {
+    padding-top: 70px;
+  }
+  section.partnerds .contenido h2 {
+    font-size: 32px;
+    line-height: 18px;
+    padding-right: 2px;
+  }
+  section.partnerds .contenido img {
+    width: 104px;
+  }
+  section.partnerds .contenido span {
+    font-size: 32px;
+    line-height: 18px;
+  }
+  section.partnerds p {
+    display: none;
+  }
+  section.contact .onpage h2 {
+    font-size: 36px;
+    line-height: 39px;
+    text-align: start;
+    width: 278px;
+  }
+  section.contact {
+    // position: relative;
+    padding-top: 125px;
+  }
+  section.contact .onpage {
+    position: relative;
+  }
+  section.contact .onpage h2::before {
+    content: url(../img/estrella.svg);
+    position: absolute;
+    top: -81px;
+    right: -3px;
+  }
+
+  section.contact .onpage p {
+    text-align: start;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  section.contact #fs-frm fieldset {
+    align-items: flex-start;
+  }
+  section.contact #fs-frm [type="submit"] {
+    width: 80%;
+    text-align: center;
+  }
+  section.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.contact #fs-frm [type="submit"] {
+    font-size: 18px;
+    height: 48px;
+  }
+  section.contact #fs-frm textarea {
+    margin-bottom: 56px;
+  }
+  section.contact .form {
+    padding-top: 35px;
+  }
+  section.contact #fs-frm [type="text"] {
+    margin-bottom: 1rem;
+  }
+  section.contact #fs-frm textarea {
+    height: 100px;
+  }
+  section.contact {
+    padding-bottom: 89px;
+  }
+  footer .title {
+    padding-left: 0;
+    position: relative;
+    padding-left: 7vw;
+  }
+  footer .title h2 {
+    font-size: 71px;
+    padding-right: 0;
+    line-height: 70px;
+  }
+  footer .title img {
+    position: absolute;
+    width: 256px;
+    top: 72px;
+    left: 126px;
+  }
+  footer .info {
+    padding: 73px 0px 73px 0px;
+  }
+  footer .info p {
+    font-size: 25px;
+  }
+  footer .copy {
+    flex-direction: column;
+    padding-bottom: 25px;
+    p {
+      font-size: 14px;
+      line-height: inherit;
+      padding-bottom: 0;
+    }
+  }
+
+  footer .info .owl-item {
+    width: auto !important;
+    margin-right: 40px !important;
+  }
+
+  footer .info .footer-info div {
+    p.telefono::before {
+      width: 200px;
+      left: -3px;
+    }
+    p.correo::before {
+      width: 252px;
+      left: -3px;
+    }
+    p.instagram::before {
+      width: 134px;
+      left: -3px;
+    }
+    p.linkedin::before {
+      width: 108px;
+      left: -3px;
+    }
+    p.facebook::before {
+      width: 125px;
+      left: -3px;
+    }
+  }
+
+  .owl-carousel {
+    display: none !important;
+  }
+  .owl-carousel.footer-info {
+    display: block !important;
+  }
+  .slider-partnerds {
+    .container {
+      width: 99%;
+      max-width: 1679px;
+      margin: 0 auto;
+      .slider-clientes2 {
+        display: block;
+        .slick-prev,
+        .slick-next {
+          display: none !important;
+        }
+        .item {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          div {
+            width: 50%;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            img {
+              width: 70%;
+              max-height: 65px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-dots li button:before {
+    color: #fff !important;
+    transform: scale(2.5) !important;
+  }
+  .slick-dots li.slick-active button:before {
+    color: var(--color-verde) !important;
+  }
+  section.slider-partnerds {
+    padding-bottom: 75px;
+  }
+  section.menupage .menuContent ul li#btnMenuContacto {
+    background-color: var(--color-verde);
+    height: auto;
+    width: inherit;
+  }
+  section.menupage .menuContent ul li {
+    margin: 35px 0;
+  }
+  section.menupage .menuContent ul li {
+    padding: 0 4px;
+  }
+  .menupage .container {
+    height: 100%;
+  }
+}
+
+.container .slider-clientes2 {
+  display: none;
 }
