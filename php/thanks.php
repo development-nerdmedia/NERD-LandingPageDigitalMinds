@@ -26,7 +26,7 @@ mail($to, $email_subject, $email_body, $headers);
       <div class="container-thanks">
         <div class="content">
           <div class="top">
-            <a class="closeinterna">
+            <a class="closeinterna" href="../index.html">
               <img src="img/closemenu.svg" alt="close"
             /></a>
           </div>

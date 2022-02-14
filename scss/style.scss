@@ -462,9 +462,11 @@ section.about {
   .contenido {
     display: flex;
     padding-bottom: 100px;
+    align-items: center;
     .part1 {
-      width: 73%;
+      // width: 73%;
       color: var(--color-azul);
+      padding-right: 147px;
       h2 {
         font-family: var(--texto-epilogue);
         font-weight: 900;
@@ -480,7 +482,7 @@ section.about {
       }
     }
     .part2 {
-      width: 27%;
+      // width: 27%;
       img {
         width: 269px;
         float: right;
@@ -520,9 +522,26 @@ section.about {
         border-radius: 10px;
         position: relative;
         overflow: hidden;
+        // height: 550px;
         cursor: pointer;
+        &:nth-child(odd) {
+          margin-right: 15px;
+        }
+        &:nth-child(1),
+        &:nth-child(4) {
+          width: 59.6%;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 35%;
+        }
         img {
           transition: 0.2s linear;
+          width: 100%;
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+          // transform: translateX(-50%) translateY(-50%);
         }
         .textInfo {
           background: linear-gradient(
@@ -623,13 +642,17 @@ section.services {
     display: flex;
     justify-content: space-between;
     padding-top: 85px;
+    .card:nth-child(1),
+    .card:nth-child(2) {
+      margin-right: 35px;
+    }
     .card {
       border: 4px solid var(--color-verde);
       width: 500px;
       height: 490px;
       padding: 30px;
       position: relative;
-      border-radius: 10px;
+      border-radius: 15px;
       &:hover {
         border: 4px solid var(--color-azul);
         a {
@@ -925,7 +948,8 @@ footer {
   .title {
     display: flex;
     align-items: flex-end;
-    padding-left: 100px;
+    padding-left: 84px;
+    justify-content: center;
     h2 {
       font-family: var(--texto-epilogue);
       font-weight: 900;
@@ -936,8 +960,8 @@ footer {
     }
   }
   .info {
-    padding: 73px 51px 73px 24px;
-    padding-left: 115px;
+    padding: 73px 0px 73px 0px;
+    // padding-left: 115px;
     display: flex;
     justify-content: space-between;
     .owl-carousel.owl-drag .owl-item {
@@ -991,6 +1015,14 @@ footer {
         width: 140px;
         left: -5px;
       }
+    }
+    p.correo::before {
+      width: 280px;
+      left: -3px;
+    }
+    p.linkedin::before {
+      width: 123px;
+      left: -3px;
     }
   }
   .copy {
@@ -1074,13 +1106,183 @@ section.about .portafolio h3 {
   display: none;
 }
 
+.container .slider-clientes2 {
+  display: none;
+}
+
+@media (max-width: 1860px) {
+  footer .title h2 {
+    font-size: 140px;
+    line-height: 80px;
+  }
+  footer .title img {
+    width: 520px;
+  }
+
+  @media (max-width: 1605px) {
+    footer .title {
+      padding-left: 73px;
+    }
+    footer .title h2 {
+      font-size: 120px;
+      line-height: 68px;
+    }
+    footer .title img {
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 1833px) {
+  section.about .contenido .part1 h2 {
+    font-size: 60px;
+    line-height: 60px;
+    padding-right: 40px;
+  }
+  // section.about .portafolio .galeria .galeriaItem:nth-child(1) img,
+  // section.about .portafolio .galeria .galeriaItem:nth-child(4) img {
+  //   width: 900px;
+  // }
+  // section.about .portafolio .galeria .galeriaItem:nth-child(2) img,
+  // section.about .portafolio .galeria .galeriaItem:nth-child(3) img {
+  //   width: 500px;
+  // }
+  @media (max-width: 1640px) {
+    section.about .contenido .part1 h2 {
+      font-size: 50px;
+    }
+    section.about .contenido .part1 p {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+  @media (max-width: 1600px) {
+    section.services .cards .card {
+      height: 425px;
+    }
+    section.services .cards .card h3 {
+      font-size: 40px;
+      line-height: 63px;
+      padding-top: 40px;
+    }
+    section.services .cards .card h3::before {
+      width: 195px;
+    }
+    section.services .cards .card:nth-child(2) h3::before {
+      content: "";
+      width: 225px;
+    }
+    section.services .cards .card:nth-child(3) h3::before {
+      content: "";
+      width: 244px;
+    }
+  }
+  @media (max-width: 1457px) {
+    section.about .contenido .part2 img:nth-child(1) {
+      width: 200px;
+    }
+    section.about .contenido .part1 {
+      padding-right: 100px;
+    }
+    section.about {
+      padding: 93px 0;
+    }
+  }
+}
+
+@media (max-width: 1706px) {
+  // section.about .portafolio .galeria .galeriaItem:nth-child(1), section.about .portafolio .galeria .galeriaItem:nth-child(4){
+  //   height: ;
+  // }
+}
+
 @media (max-width: 1440px) {
   nav {
     width: 63.5px;
   }
+  section.home img.logo {
+    width: 80px;
+  }
+  section.home .homeContent h1 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+  section.home .homeContent p {
+    font-size: 35px;
+    padding-bottom: 50px;
+  }
+  section.home .homeContent button {
+    font-size: 25px;
+  }
+  section.services .contenido h2 {
+    font-size: 60px;
+  }
+  section.services .contenido p {
+    padding-top: 23px;
+    font-size: 25px;
+    line-height: 42px;
+  }
+  section.services .cards .card p {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+  section.home::after {
+    display: none;
+  }
+  section.home .homeContent {
+    padding-left: 12.89vw;
+  }
+  section.home img.logo {
+    top: 40px;
+  }
 }
 
 @media (max-width: 425px) {
+  section.about .portafolio .galeria .galeriaItem:nth-child(1),
+  section.about .portafolio .galeria .galeriaItem:nth-child(4) {
+    width: auto;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(odd) {
+    margin-right: 0;
+  }
+  section.about .portafolio .galeria .galeriaItem {
+    height: 255px !important;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(2),
+  section.about .portafolio .galeria .galeriaItem:nth-child(3) {
+    width: auto;
+  }
+  section.home::after {
+    content: url(../img/Group.svg);
+    position: absolute;
+    right: 0;
+    display: inline;
+  }
+  section.thankspage {
+    padding: 36px 0;
+  }
+  section.thankspage .top img {
+    width: 62px;
+  }
+  section.thankspage .text h2 {
+    font-size: 40px;
+    line-height: 36px;
+    padding: 0px 10px;
+  }
+  section.thankspage .text p {
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+  }
+  section.thankspage .text img {
+    width: 246px;
+  }
   section.portafolioInterna {
     padding: 36px 0;
   }
@@ -1090,9 +1292,12 @@ section.about .portafolio h3 {
   section.portafolioInterna .content {
     flex-direction: column;
   }
-  section.portafolioInterna .content .part1 div {
+  section.portafolioInterna .content .part1 {
+    margin-bottom: 35px;
+  }
+  section.portafolioInterna .content .part1 div#my-player {
     width: 100%;
-    height: 300px;
+    height: 200px !important;
   }
   section.portafolioInterna .content .part2 span {
     font-size: 22px;
@@ -1300,6 +1505,7 @@ section.about .portafolio h3 {
   }
   section.about .contenido .part1 {
     width: 100%;
+    padding-right: 0;
   }
   section.about .contenido .part2 {
     width: 100%;
@@ -1307,6 +1513,7 @@ section.about .portafolio h3 {
   section.about .contenido .part1 h2 {
     font-size: 32px;
     line-height: 45px;
+    padding-right: 0;
   }
   section.about {
     padding: 65px 0;
@@ -1506,12 +1713,12 @@ section.about .portafolio h3 {
   footer .title {
     padding-left: 0;
     position: relative;
-    padding-left: 7vw;
+    padding-left: 4vw;
   }
   footer .title h2 {
     font-size: 71px;
     padding-right: 0;
-    line-height: 70px;
+    line-height: 70.5px;
   }
   footer .title img {
     position: absolute;
@@ -1622,8 +1829,4 @@ section.about .portafolio h3 {
   .menupage .container {
     height: 100%;
   }
-}
-
-.container .slider-clientes2 {
-  display: none;
 }

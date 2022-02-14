@@ -117,7 +117,7 @@ $('.footer-info').owlCarousel({
         },
         1200: {
             items: 5
-        },
+        }
     }
 })
 
