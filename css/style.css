@@ -1440,7 +1440,8 @@ section.about .portafolio h3 {
   section.home .homeContent p {
     font-size: 23px;
     padding-bottom: 25px;
-    padding-top: 23px; }
+    padding-top: 23px;
+    line-height: 30px; }
   section.home .homeContent button {
     font-size: 20px; }
   section.home .homeContent button {
@@ -1585,6 +1586,14 @@ section.about .portafolio h3 {
   section.portafolioInterna .content .part2 a {
     font-size: 18px;
     padding: 10px 26px; } }
+
+@media (max-width: 602px) {
+  .container {
+    padding-left: 0px; } }
+
+@media (max-width: 602px) and (max-width: 580px) and (min-width: 426px) {
+  section.home .homeContent button {
+    padding: 5px 35px; } }
 
 @media (max-width: 602px) and (max-width: 580px) and (min-width: 426px) and (max-width: 583px) {
   section.branding .top img,
@@ -1879,7 +1888,7 @@ section.about .portafolio h3 {
     font-size: 47.57px;
     line-height: 59.6px; }
   section.home .homeContent p {
-    font-size: 19px; }
+    font-size: 18px; }
   section.home .homeContent button {
     font-size: 18px;
     padding: 5px 30px; }

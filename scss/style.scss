@@ -1888,6 +1888,7 @@ section.about .portafolio h3 {
     font-size: 23px;
     padding-bottom: 25px;
     padding-top: 23px;
+    line-height: 30px;
   }
   section.home .homeContent button {
     font-size: 20px;
@@ -2096,7 +2097,13 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 602px) {
+  .container {
+    padding-left: 0px;
+  }
   @media (max-width: 580px) and (min-width: 426px) {
+    section.home .homeContent button {
+      padding: 5px 35px;
+    }
     @media (max-width: 583px) {
       section.branding .top img,
       section.marketing .top img,
@@ -2485,7 +2492,7 @@ section.about .portafolio h3 {
     line-height: 59.6px;
   }
   section.home .homeContent p {
-    font-size: 19px;
+    font-size: 18px;
   }
   section.home .homeContent button {
     font-size: 18px;
