@@ -110,13 +110,16 @@ $('.footer-info').owlCarousel({
             items: 2
         },
         600: {
-            items: 4
+            items: 3
         },
         800: {
-            items: 4
+            items: 3
+        },
+        1024: {
+            items: 3
         },
         1200: {
-            items: 5
+            items: 4
         }
     }
 })

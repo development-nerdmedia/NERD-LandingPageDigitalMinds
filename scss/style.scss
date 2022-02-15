@@ -219,6 +219,10 @@ section.menupage {
   transition: transform 0.5s ease;
   transform: translateX(-100%);
   padding: 87px 0;
+  .container {
+    height: 100%;
+    transform: translateY(-64px);
+  }
   .top {
     display: flex;
     justify-content: space-between;
@@ -271,6 +275,14 @@ section.menupage {
   }
 }
 
+.content-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  transform: translateY(-118px);
+}
+
 section.branding,
 section.marketing,
 section.disenoWeb {
@@ -286,6 +298,9 @@ section.disenoWeb {
   transform: translateX(100%);
   padding: 73px 0px;
   color: #fff;
+  .container {
+    height: 100%;
+  }
   .top {
     display: flex;
     justify-content: space-between;
@@ -516,7 +531,7 @@ section.about {
       padding-top: 50px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       .galeriaItem {
         margin-bottom: 50px;
         border-radius: 10px;
@@ -804,6 +819,9 @@ section.pagecontact {
   transition: transform 0.5s ease;
   transform: translateX(100%);
   width: calc(100% - 86px);
+  .container {
+    height: 100%;
+  }
   .btn-close {
     display: flex;
     justify-content: flex-end;
@@ -819,7 +837,7 @@ section.pagecontact {
     align-items: center;
     // height: calc(100% - 87px);
     height: 100%;
-    transform: translateY(-44px);
+    transform: translateY(-82px);
   }
 }
 
@@ -1110,6 +1128,16 @@ section.about .portafolio h3 {
   display: none;
 }
 
+@media (min-width: 426px) {
+  section.portafolioInterna .content .part1 {
+    width: 55%;
+    margin-right: 25px;
+    .vjs-theme-city {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 1860px) {
   footer .title h2 {
     font-size: 140px;
@@ -1197,6 +1225,22 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 1440px) {
+  section.portafolioInterna .content .part2 span {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  section.portafolioInterna .content .part2 p {
+    font-size: 28px;
+  }
+  section.portafolioInterna .content .part2 a {
+    font-size: 25px;
+    padding: 10px 52px;
+  }
   nav {
     width: 63.5px;
   }
@@ -1228,7 +1272,7 @@ section.about .portafolio h3 {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 426px) {
   .container {
     width: 80%;
   }
@@ -1240,6 +1284,110 @@ section.about .portafolio h3 {
   }
   section.home img.logo {
     top: 40px;
+  }
+  section.about .contenido .part1 {
+    padding-right: 55px;
+  }
+  section.about .contenido .part2 img:nth-child(1) {
+    width: 160px;
+  }
+  section.about .contenido .part1 h2 {
+    font-size: 45px;
+  }
+  section.about .portafolio h2 {
+    font-size: 60px;
+  }
+  section.about .portafolio .btn-mas a {
+    img {
+      width: 40px;
+    }
+  }
+  section.about .portafolio .btn-mas span {
+    font-size: 23px;
+  }
+  section.services {
+    padding-top: 25px;
+  }
+  section.about {
+    padding: 68px 0;
+  }
+  section.about .portafolio {
+    padding-top: 19px;
+  }
+  section.about .portafolio .galeria .galeriaItem .textInfo h4 {
+    display: none;
+  }
+  section.about .portafolio .galeria .galeriaItem .textInfo {
+    padding: 17px;
+  }
+  section.services .contenido p {
+    padding-top: 15px;
+  }
+  section.services .cards .card h3 {
+    font-size: 30px;
+    padding-top: 12px;
+  }
+  section.services .cards .card {
+    padding: 20px;
+  }
+  section.services .cards .card:nth-child(1),
+  section.services .cards .card:nth-child(2) {
+    margin-right: 20px;
+  }
+  section.services .cards .card p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  section.services .cards .card {
+    height: 351px;
+  }
+  section.services .cards .card h3::before {
+    width: 148px;
+  }
+  section.services .cards .card:nth-child(2) h3::before {
+    content: "";
+    width: 165px;
+  }
+  section.services .cards .card:nth-child(3) h3::before {
+    content: "";
+    width: 181px;
+  }
+  section.services .cards .card a img:nth-child(1) {
+    width: 40px;
+  }
+  section.services .cards .card a {
+    bottom: 13px;
+    right: 13px;
+  }
+  section.services {
+    padding-top: 25px;
+  }
+  section.contact .campos h2 {
+    font-size: 50px;
+  }
+  section.contact .campos p {
+    padding-top: 0;
+  }
+  section.contact {
+    padding-top: 78px;
+    padding-bottom: 173px;
+  }
+  section.contact form {
+    width: 630px;
+  }
+  section.contact #fs-frm [type="submit"] {
+    width: 407px;
+  }
+  footer .title {
+    padding-left: 62px;
+  }
+  footer .title h2 {
+    font-size: 80px;
+    line-height: 45px;
+    padding-right: 22px;
+  }
+  footer .title img {
+    width: 297px;
   }
 }
 
