@@ -332,6 +332,7 @@ section.disenoWeb {
       font-size: 28px;
       line-height: 45px;
       width: 572px;
+      padding-right: 20px;
     }
     .text {
       width: 785px;
@@ -347,6 +348,7 @@ section.disenoWeb {
         font-weight: 700;
         font-size: 28.108px;
         line-height: 33px;
+        margin-right: 10px;
       }
     }
   }
@@ -1128,6 +1130,25 @@ section.about .portafolio h3 {
   display: none;
 }
 
+@media (max-height: 820px) {
+  nav .btn-vertical {
+    padding: 65px 0px;
+  }
+  @media (max-height: 777px) {
+    nav {
+      padding: 52px 0;
+    }
+    nav .btn-vertical {
+      padding: 55px 0px;
+    }
+  }
+  @media (max-height: 720px) {
+    nav .btn-vertical {
+      padding: 40px 0px;
+    }
+  }
+}
+
 @media (min-width: 426px) {
   section.portafolioInterna .content .part1 {
     width: 55%;
@@ -1183,6 +1204,10 @@ section.about .portafolio h3 {
       font-size: 24px;
       line-height: 35px;
     }
+    section.services .contenido p {
+      font-size: 25px;
+      line-height: 35px;
+    }
   }
   @media (max-width: 1600px) {
     section.services .cards .card {
@@ -1225,6 +1250,10 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 1440px) {
+  section.services .cards .card:nth-child(1),
+  section.services .cards .card:nth-child(2) {
+    margin-right: 15px;
+  }
   section.pagecontact {
     padding: 61px 0 !important;
   }
@@ -1278,7 +1307,155 @@ section.about .portafolio h3 {
   }
 }
 
+@media (max-width: 1384px) {
+  footer .title h2 {
+    font-size: 110px;
+    line-height: 63px;
+    padding-right: 31px;
+  }
+  footer .title img {
+    width: 397px;
+  }
+
+  @media (max-width: 1260px) {
+    footer .title h2 {
+      font-size: 100px;
+    }
+    footer .title img {
+      width: 382px;
+    }
+    footer .title {
+      padding-left: 51px;
+    }
+  }
+  @media (max-width: 1150px) {
+    footer .title h2 {
+      font-size: 80px;
+      line-height: 46px;
+      line-height: 46px;
+      padding-right: 26px;
+    }
+    footer .title img {
+      width: 291px;
+    }
+  }
+}
+
+@media (max-width: 1240px) and (min-width: 1024px) {
+  section.branding .contenido,
+  section.marketing .contenido,
+  section.disenoWeb .contenido {
+    flex-direction: column;
+  }
+  section.branding .contenido p,
+  section.marketing .contenido p,
+  section.disenoWeb .contenido p {
+    width: 100%;
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    padding-top: 20px;
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    width: 100%;
+  }
+  section.branding h2,
+  section.marketing h2,
+  section.disenoWeb h2 {
+    padding-top: 0;
+    font-size: 40px;
+    line-height: 40px;
+    padding-bottom: 13px;
+  }
+  .content-services {
+    transform: translateY(-47px);
+  }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    justify-content: flex-start;
+  }
+  section.branding .top,
+  section.marketing .top,
+  section.disenoWeb .top {
+    img {
+      width: 80px;
+    }
+    a {
+      img {
+        width: 82px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 20px;
+  }
+  section.contact form {
+    width: 840px;
+  }
+  section.contact .campos h2 {
+    font-size: 60px;
+  }
+
+  section.contact .campos p {
+    padding-top: 0;
+  }
+  section.services .cards .card:nth-child(1),
+  section.services .cards .card:nth-child(2) {
+    margin-right: 20px;
+  }
+  section.services .cards .card {
+    height: 351px;
+  }
+  section.services .cards .card {
+    padding: 20px;
+  }
+  section.services .cards .card h3 {
+    font-size: 30px;
+    padding-top: 12px;
+  }
+  section.services .cards .card p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  section.services .cards .card a {
+    bottom: 13px;
+    right: 13px;
+  }
+  section.services .cards .card h3::before {
+    width: 149px;
+  }
+  section.services .cards .card:nth-child(2) h3::before {
+    content: "";
+    width: 165px;
+  }
+  section.services .cards .card:nth-child(3) h3::before {
+    content: "";
+    width: 181px;
+  }
+  @media (max-width: 550px) {
+    section.services .cards .card {
+      width: 100% !important;
+    }
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 426px) {
+  section.about .portafolio .galeria .galeriaItem {
+    margin-bottom: 30px;
+  }
+  section.contact .campos p {
+    font-size: 25px;
+  }
+  section.partnerds p {
+    width: 100%;
+  }
   section.portafolioInterna .content {
     flex-direction: column;
   }
@@ -1575,7 +1752,128 @@ section.about .portafolio h3 {
   }
 }
 
+@media (max-width: 933px) {
+  footer .title img {
+    width: 264px;
+  }
+  footer .title h2 {
+    font-size: 70px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section.services .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.services .cards .card:nth-child(1),
+  section.services .cards .card:nth-child(2) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  section.services .cards .card {
+    height: 256px;
+  }
+  section.services .cards {
+    padding-top: 55px;
+  }
+  section.services .contenido h2 {
+    line-height: 75px;
+  }
+  section.about .contenido {
+    flex-direction: column;
+  }
+  section.about .contenido .part1 {
+    padding-right: 0;
+  }
+  section.about .contenido .part1 h2 {
+    padding-right: 0;
+    line-height: 55px;
+  }
+  section.about .contenido .part2 {
+    margin-top: 30px;
+  }
+  section.about .contenido .part2 img:nth-child(1) {
+    display: none;
+  }
+  section.about .contenido .part2 img:nth-child(2) {
+    width: 160px;
+    display: block;
+  }
+  section.services .contenido p {
+    padding-top: 10px;
+  }
+  @media (max-width: 768px) {
+    section.about .contenido .part1 h2 {
+      line-height: 40px;
+    }
+    section.services .contenido h2 {
+      line-height: 50px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  section.contact .campos h2 {
+    font-size: 45px;
+    // line-height: 45px;
+  }
+  section.contact form {
+    width: 491px;
+  }
+  section.contact #fs-frm [type="submit"] {
+    width: 325px;
+  }
+}
+
+@media (max-width: 840px) {
+  footer .title h2 {
+    font-size: 60px;
+    line-height: 35px;
+  }
+  footer .title img {
+    width: 222px;
+  }
+}
+
 @media (max-width: 768px) and (min-width: 426px) {
+  // section.about .portafolio .galeria .galeriaItem:hover img {
+  //   transform: inherit;
+  // }
+  section.about .portafolio .galeria .galeriaItem img {
+    transition: 0.2s linear;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(1) img {
+    transform: translate(-50%, -55%) !important;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(odd) {
+    margin-right: 0px;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(1),
+  section.about .portafolio .galeria .galeriaItem:nth-child(4) {
+    width: 100%;
+    height: 350px;
+  }
+  section.about .portafolio .galeria .galeriaItem:nth-child(2),
+  section.about .portafolio .galeria .galeriaItem:nth-child(3) {
+    width: 100%;
+    height: 350px;
+  }
+  section.menupage .menuContent ul li a {
+    font-size: 50px;
+    line-height: 90px;
+  }
+  section.menupage .menuContent ul li#btnMenuContacto {
+    background-color: var(--color-verde);
+    height: 85px;
+    width: 274px;
+  }
   section.home .homeContent {
     padding-left: 8.89vw;
   }
@@ -1743,6 +2041,198 @@ section.about .portafolio h3 {
   // }
   footer .copy p {
     font-size: 15px;
+  }
+  section.menupage .container {
+    padding-left: 20px;
+  }
+  section.menupage {
+    padding: 40px 0;
+  }
+  section.pagecontact {
+    padding: 40px 0 !important;
+  }
+  section.portafolioInterna {
+    padding: 40px 0;
+  }
+  section.branding,
+  section.marketing,
+  section.disenoWeb {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 731px) {
+    footer .title h2 {
+      font-size: 50px;
+      line-height: 28px;
+      padding-right: 16px;
+    }
+    footer .title img {
+      width: 190px;
+    }
+  }
+}
+
+@media (max-width: 617px) {
+  section.portafolioInterna .content .part1,
+  section.portafolioInterna .content .part2 {
+    width: 100%;
+  }
+  section.portafolioInterna .content .part2 span {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 p {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  section.portafolioInterna .content .part2 a {
+    font-size: 18px;
+    padding: 10px 26px;
+  }
+}
+
+@media (max-width: 602px) {
+  @media (max-width: 580px) and (min-width: 426px) {
+    @media (max-width: 583px) {
+      section.branding .top img,
+      section.marketing .top img,
+      section.disenoWeb .top img {
+        width: 51px;
+      }
+
+      section.branding .top a img,
+      section.marketing .top a img,
+      section.disenoWeb .top a img {
+        width: 62px;
+      }
+      section.branding h2,
+      section.marketing h2,
+      section.disenoWeb h2 {
+        font-size: 32px;
+        line-height: inherit;
+        padding-top: 46px;
+        padding-bottom: 25px;
+      }
+      section.branding .contenido p,
+      section.marketing .contenido p,
+      section.disenoWeb .contenido p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      section.branding .contenido .text span,
+      section.marketing .contenido .text span,
+      section.disenoWeb .contenido .text span {
+        font-size: 18px;
+        line-height: 21px;
+        margin-right: 10px;
+      }
+      section.branding .btn a,
+      section.marketing .btn a,
+      section.disenoWeb .btn a {
+        font-size: 18px;
+        padding: 10px 34px;
+      }
+    }
+    footer .title {
+      padding-left: 0;
+      position: relative;
+      padding-left: 4vw;
+    }
+    footer .title h2 {
+      font-size: 71px;
+      padding-right: 0;
+      line-height: 70.5px;
+      padding: 0 10px;
+    }
+    footer .title img {
+      position: absolute;
+      width: 256px;
+      top: 72px;
+      left: inherit;
+    }
+    footer .info {
+      padding: 103px 0px 73px 0px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 488px) and (min-width: 426px) {
+      // footer .title h2 {
+      //   width: 400px;
+      // }
+      // footer .title img {
+      //   position: absolute;
+      //   width: 256px;
+      //   top: 72px;
+      //   left: 159px;
+      // }
+
+      footer .title h2 {
+        font-size: 60px;
+      }
+      footer .title img {
+        width: 226px;
+      }
+    }
+  }
+  footer .title {
+    padding-left: 0;
+  }
+  section.partnerds .contenido h2 {
+    font-size: 50px;
+    line-height: 30px;
+  }
+  section.partnerds .contenido img {
+    width: 176px;
+  }
+  nav,
+  section.home img.logo {
+    display: none;
+  }
+  .menu-movil {
+    display: block;
+  }
+  .menu-movil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 30px 0;
+    background-color: var(--color-azul);
+  }
+  .menu-movil .container-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.home .homeContent {
+    padding-left: 0;
+  }
+  section.about .container {
+    padding-left: 0;
+  }
+  section.services .container {
+    padding-left: 0px;
+  }
+  section.partnerds .container {
+    padding-left: 0px;
+  }
+  section.contact .container {
+    padding-left: 0px;
+  }
+  footer .copy {
+    flex-direction: column;
+    padding-bottom: 25px;
+  }
+  @media (max-width: 540px) {
+    section.home .homeContent h1 {
+      font-size: 47.57px;
+      line-height: 59.6px;
+    }
   }
 }
 
@@ -2086,7 +2576,7 @@ section.about .portafolio h3 {
   }
   section.services .contenido h2 {
     font-size: 32px;
-    line-height: 32px;
+    line-height: 42px;
   }
   section.services .contenido p {
     padding-top: 25px;
