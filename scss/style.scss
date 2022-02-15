@@ -1763,6 +1763,41 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 1000px) {
+  section.thankspage .text p {
+    font-size: 50px;
+  }
+  section.thankspage .text h2 {
+    font-size: 70px;
+  }
+
+  @media (max-width: 850px) and (min-width: 425px) {
+    section.thankspage .text p {
+      font-size: 40px;
+    }
+    section.thankspage .text h2 {
+      font-size: 60px;
+    }
+    @media (max-width: 650px) {
+      section.thankspage .text p {
+        font-size: 30px;
+      }
+      section.thankspage .text h2 {
+        font-size: 50px;
+      }
+    }
+    @media (max-width: 525px) {
+      section.thankspage .text p {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+      }
+      section.thankspage .text h2 {
+        font-size: 50px;
+        line-height: 36px;
+        // padding: 0px 10px;
+      }
+    }
+  }
   section.services .cards {
     flex-direction: column;
     align-items: center;
