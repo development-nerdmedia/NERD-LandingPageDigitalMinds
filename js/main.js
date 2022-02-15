@@ -83,10 +83,10 @@ $('.clients-carousel').owlCarousel({
             items: 3
         },
         600: {
-            items: 4
+            items: 3
         },
         800: {
-            items: 4
+            items: 3.5
         },
         1200: {
             items: 6
@@ -110,7 +110,7 @@ $('.footer-info').owlCarousel({
             items: 2
         },
         600: {
-            items: 3
+            items: 2.6
         },
         800: {
             items: 3

@@ -181,8 +181,7 @@ section.menupage {
   transform: translateX(-100%);
   padding: 87px 0; }
   section.menupage .container {
-    height: 100%;
-    transform: translateY(-64px); }
+    height: 100%; }
   section.menupage .top {
     display: flex;
     justify-content: space-between; }
@@ -190,6 +189,7 @@ section.menupage {
       cursor: pointer;
       z-index: 5; }
   section.menupage .menuContent {
+    transform: translateY(-64px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -470,6 +470,7 @@ section.about {
           width: 100%; }
         section.about .portafolio .galeria .galeriaItem .textInfo {
           background: linear-gradient(180deg, rgba(56, 34, 228, 0) 9.87%, #3822e4 80.47%);
+          color: #fff;
           border-radius: 0px 0px 10px 10px;
           width: 100%;
           height: 50%;
@@ -504,8 +505,7 @@ section.about {
         section.about .portafolio .galeria .galeriaItem:hover img {
           transform: scale(1.2); }
         section.about .portafolio .galeria .galeriaItem:hover .textInfo {
-          transform: translateY(0);
-          color: #fff; }
+          transform: translateY(0); }
     section.about .portafolio .btn-mas a {
       text-decoration: none;
       display: flex;
@@ -962,6 +962,10 @@ section.about .portafolio h3 {
     padding: 93px 0; } }
 
 @media (max-width: 1440px) {
+  section.pagecontact {
+    padding: 61px 0 !important; }
+  section.menupage {
+    padding: 61px 0; }
   section.portafolioInterna .content .part2 span {
     font-size: 28px;
     line-height: 40px; }
@@ -997,6 +1001,138 @@ section.about .portafolio h3 {
     line-height: 33px; } }
 
 @media (max-width: 1024px) and (min-width: 426px) {
+  section.portafolioInterna .content {
+    flex-direction: column; }
+  section.portafolioInterna .content .part1 {
+    width: 100%; }
+  section.branding .contenido,
+  section.marketing .contenido,
+  section.disenoWeb .contenido {
+    flex-direction: column; }
+  .content-services {
+    transform: translateY(-47px); }
+  section.branding .contenido p,
+  section.marketing .contenido p,
+  section.disenoWeb .contenido p {
+    width: 100%;
+    font-size: 25px;
+    line-height: 35px; }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    width: 100%;
+    padding-top: 20px; }
+  section.branding .contenido .text span,
+  section.marketing .contenido .text span,
+  section.disenoWeb .contenido .text span {
+    font-size: 25px;
+    margin-right: 10px; }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    justify-content: flex-start; }
+  section.branding .btn a,
+  section.marketing .btn a,
+  section.disenoWeb .btn a {
+    font-size: 25px;
+    padding: 10px 57px; }
+  section.branding h2,
+  section.marketing h2,
+  section.disenoWeb h2 {
+    padding-top: 0;
+    font-size: 40px;
+    line-height: 40px;
+    padding-bottom: 13px; }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    padding-top: 40px; } }
+
+@media (max-width: 1024px) and (min-width: 426px) and (max-height: 1000px) {
+  section.portafolioInterna .content .part1,
+  section.portafolioInterna .content .part2 {
+    width: 490px; }
+  section.portafolioInterna .content {
+    align-items: center; }
+  section.portafolioInterna .content .part1 div#my-player {
+    width: 100%;
+    height: 276px !important; }
+  section.portafolioInterna .content .part1 {
+    margin-right: 0px; }
+  section.portafolioInterna .content .part2 {
+    margin-top: 25px; }
+  section.portafolioInterna .content .part2 span {
+    font-size: 25px;
+    line-height: 30px; }
+  section.portafolioInterna .content .part2 p {
+    font-size: 25px;
+    line-height: 32px; }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 35px; }
+  section.portafolioInterna .content .part2 p {
+    margin-bottom: 37px; }
+  section.portafolioInterna .content .part2 a {
+    font-size: 22px;
+    padding: 10px 38px; }
+  section.menupage .top img {
+    width: 90px; }
+  section.portafolioInterna .top a img {
+    width: 70px; }
+  section.menupage .top a.menubtn img {
+    width: 70px; }
+  section.portafolioInterna .by span {
+    font-size: 40px;
+    padding-right: 11px; }
+  section.portafolioInterna .by img {
+    width: 144px; }
+  section.branding,
+  section.marketing,
+  section.disenoWeb {
+    padding: 61px 0; }
+  section.branding .top img,
+  section.marketing .top img,
+  section.disenoWeb .top img {
+    width: 75px; }
+  section.branding .top a img,
+  section.marketing .top a img,
+  section.disenoWeb .top a img {
+    width: 70px; }
+  section.branding .contenido .text,
+  section.marketing .contenido .text,
+  section.disenoWeb .contenido .text {
+    padding-top: 20px; }
+  section.branding .contenido p,
+  section.marketing .contenido p,
+  section.disenoWeb .contenido p {
+    width: 100%;
+    font-size: 23px;
+    line-height: 30px; }
+  section.branding .contenido .text span,
+  section.marketing .contenido .text span,
+  section.disenoWeb .contenido .text span {
+    font-size: 20px;
+    margin-right: 10px; }
+  section.home .homeContent p {
+    font-size: 30px;
+    padding-bottom: 30px; }
+  section.pagecontact .btn-close a img {
+    width: 70px; }
+  section.contact.pagecontact .campos h2 {
+    font-size: 45px;
+    line-height: 50px; }
+  section.contact.pagecontact .campos p {
+    font-size: 25px; }
+  section.contact .form {
+    padding-top: 35px; }
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm textarea {
+    line-height: inherit; }
+  section.pagecontact .contenido-contacto {
+    transform: translateY(-75px); } }
+
+@media (max-width: 1024px) and (min-width: 426px) {
+  section.about .portafolio .galeria .galeriaItem .textInfo {
+    transform: translateY(0%); }
   .container {
     width: 80%; }
   section.home::after {
@@ -1043,14 +1179,15 @@ section.about .portafolio h3 {
   section.services .cards .card {
     height: 351px; }
   section.services .cards .card h3::before {
-    width: 148px; }
+    width: 148px;
+    height: 18px; }
   section.services .cards .card:nth-child(2) h3::before {
     content: "";
     width: 165px; }
   section.services .cards .card:nth-child(3) h3::before {
     content: "";
     width: 181px; }
-  section.services .cards .card a img:nth-child(1) {
+  section.services .cards .card a img {
     width: 40px; }
   section.services .cards .card a {
     bottom: 13px;
@@ -1076,6 +1213,126 @@ section.about .portafolio h3 {
     padding-right: 22px; }
   footer .title img {
     width: 297px; } }
+
+@media (max-width: 768px) and (min-width: 426px) {
+  section.home .homeContent {
+    padding-left: 8.89vw; }
+  section.home img.logo {
+    display: none; }
+  section.home .homeContent h1 {
+    font-size: 60px;
+    line-height: 80px; }
+  section.home .homeContent p {
+    font-size: 23px;
+    padding-bottom: 25px;
+    padding-top: 23px; }
+  section.home .homeContent button {
+    font-size: 20px; }
+  section.home .homeContent button {
+    padding: 5px 49px; }
+  section.about .container {
+    padding-left: 20px; }
+  section.about .contenido {
+    flex-direction: column; }
+  section.about .contenido .part1 {
+    padding-right: 0; }
+  section.about .contenido .part1 h2 {
+    padding-right: 0;
+    font-size: 35px; }
+  section.about .contenido .part1 p {
+    padding-top: 20px;
+    font-size: 20px; }
+  section.about .contenido .part2 {
+    margin-top: 30px; }
+  section.about .contenido .part2 img:nth-child(1) {
+    display: none; }
+  section.about .contenido .part2 img:nth-child(2) {
+    display: block;
+    width: 160px; }
+  section.about .portafolio h2 {
+    font-size: 40px; }
+  section.about .portafolio .galeria .galeriaItem .textInfo p {
+    font-size: 15px;
+    line-height: 20px; }
+  section.about .portafolio .galeria .galeriaItem .textInfo span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; }
+  section.about .portafolio .btn-mas span {
+    font-size: 20px; }
+  section.about .portafolio .btn-mas a img {
+    width: 30px; }
+  section.services {
+    padding-bottom: 87px; }
+  section.services .container {
+    padding-left: 20px; }
+  section.services .contenido h2 {
+    font-size: 40px; }
+  section.services .contenido p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 35px; }
+  section.services .cards {
+    flex-direction: column;
+    align-items: center; }
+  section.services .cards .card {
+    width: 440px;
+    height: 230px;
+    padding: 15px; }
+  section.services .cards .card:nth-child(1),
+  section.services .cards .card:nth-child(2) {
+    margin-right: 0;
+    margin-bottom: 15px; }
+  section.services .cards .card h3 {
+    padding-top: 0; }
+  section.services .cards .card p {
+    padding-top: 6px; }
+  section.partnerds .container {
+    padding-left: 20px; }
+  section.partnerds .contenido h2 {
+    font-size: 60px;
+    line-height: 37px; }
+  section.partnerds .contenido img {
+    width: 200px; }
+  section.partnerds p {
+    font-size: 20px;
+    line-height: 35px;
+    width: 100%; }
+  section.partnerds {
+    padding-top: 64px;
+    padding-bottom: 38px; }
+  section.slider-partnerds {
+    padding-bottom: 60px; }
+  section.contact .container {
+    padding-left: 20px; }
+  section.contact .campos h2 {
+    font-size: 40px;
+    line-height: 40px; }
+  section.contact .campos p {
+    font-size: 20px;
+    padding-top: 10px; }
+  section.contact form {
+    width: 465px; }
+  section.contact #fs-frm textarea {
+    height: calc(82px + 40px);
+    margin-bottom: 66px; }
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm textarea {
+    font-size: 20px; }
+  section.contact #fs-frm [type="submit"] {
+    width: 333px;
+    font-size: 23px;
+    height: 50px; }
+  footer .title {
+    padding-left: 49px; }
+  footer .title h2 {
+    font-size: 60px;
+    line-height: 35px;
+    padding-right: 22px; }
+  footer .title img {
+    width: 224px; }
+  footer .copy p {
+    font-size: 15px; } }
 
 @media (max-width: 425px) {
   section.about .portafolio .galeria .galeriaItem:nth-child(1),
