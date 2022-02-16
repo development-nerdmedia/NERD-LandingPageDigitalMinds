@@ -21,6 +21,21 @@
   --color-rosa: #d949f8;
 }
 
+section.home,
+section.partnerds,
+section.slider-partnerds,
+section.branding,
+section.marketing,
+section.disenoWeb,
+section.contact #fs-frm [type="text"],
+section.contact #fs-frm textarea {
+  cursor: url(../img/cursor1.png), pointer;
+}
+
+body {
+  cursor: url(../img/cursor2.png), pointer;
+}
+
 button {
   -webkit-appearance: none;
   appearance: none;

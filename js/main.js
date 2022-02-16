@@ -16,7 +16,8 @@ var typed = new Typed(".typing2", {
 document.addEventListener("click", function (e) {
     if (e.target.closest(".menubtn")) {
         document.querySelector(".menupage").classList.toggle("open");
-        jQuery('body').addClass('scrollhidden');
+        // jQuery('body').addClass('scrollhidden');
+        document.querySelector("body").classList.toggle("scrollhidden");
     }
     if (e.target.closest(".brandingbtn")) {
         document.querySelector(".branding").classList.toggle("open");
@@ -69,9 +70,6 @@ document.addEventListener("click", function (e) {
 gsap
     .timeline({
         repeat: -1,
-        // default: {
-        //     duration: 6,
-        // }
     })
     .to('.flecha', {
         duration: 1,
@@ -154,26 +152,5 @@ $(document).ready(function () {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        // responsive: [
-        //     {
-        //         breakpoint: 426,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 1,
-        //             infinite: true,
-        //             dots: true
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 651,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             slidesToScroll: 1
-        //         }
-        //     }
-        //     // You can unslick at a given breakpoint now by adding:
-        //     // settings: "unslick"
-        //     // instead of a settings object
-        // ]
     });
 });
