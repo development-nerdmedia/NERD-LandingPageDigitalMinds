@@ -2452,6 +2452,9 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 425px) {
+  section.about .contenido {
+    padding-bottom: 0;
+  }
   section.home .homeContent h1 span {
     padding: 0 6px;
   }
@@ -2742,9 +2745,11 @@ section.about .portafolio h3 {
   }
   section.about {
     padding: 65px 0;
+    padding-bottom: 0;
   }
   section.about .portafolio {
     padding: 0;
+    padding-top: 100px;
   }
   section.about .contenido .part1 p {
     font-size: 18px;
@@ -2809,6 +2814,7 @@ section.about .portafolio h3 {
   section.services {
     padding-top: 5px;
     padding-bottom: 66px;
+    padding-top: 100px;
   }
   section.services .contenido h2 {
     font-size: 32px;

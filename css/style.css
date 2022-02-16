@@ -1845,6 +1845,8 @@ section.about .portafolio h3 {
     line-height: 59.6px; } }
 
 @media (max-width: 425px) {
+  section.about .contenido {
+    padding-bottom: 0; }
   section.home .homeContent h1 span {
     padding: 0 6px; }
   section.about .portafolio .gallery-container {
@@ -2062,9 +2064,11 @@ section.about .portafolio h3 {
     line-height: 45px;
     padding-right: 0; }
   section.about {
-    padding: 65px 0; }
+    padding: 65px 0;
+    padding-bottom: 0; }
   section.about .portafolio {
-    padding: 0; }
+    padding: 0;
+    padding-top: 100px; }
   section.about .contenido .part1 p {
     font-size: 18px;
     line-height: unset;
@@ -2112,7 +2116,8 @@ section.about .portafolio h3 {
     line-height: inherit; }
   section.services {
     padding-top: 5px;
-    padding-bottom: 66px; }
+    padding-bottom: 66px;
+    padding-top: 100px; }
   section.services .contenido h2 {
     font-size: 32px;
     line-height: 42px; }
