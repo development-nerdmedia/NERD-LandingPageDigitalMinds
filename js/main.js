@@ -66,6 +66,26 @@ document.addEventListener("click", function (e) {
     }
 })
 
+gsap
+    .timeline({
+        repeat: -1,
+        // default: {
+        //     duration: 6,
+        // }
+    })
+    .to('.flecha', {
+        duration: 1,
+        ease: "none",
+        y: 30,
+        ease: "power1.inOut"
+    })
+    .to('.flecha', {
+        duration: 1,
+        ease: "none",
+        y: 0,
+        ease: "power1.inOut"
+    })
+
 $('.clients-carousel').owlCarousel({
     autoplay: true,
     loop: true,
