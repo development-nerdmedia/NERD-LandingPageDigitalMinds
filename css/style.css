@@ -511,6 +511,66 @@ section.about {
           transform: scale(1.2); }
         section.about .portafolio .galeria .galeriaItem:hover .textInfo {
           transform: translateY(0); }
+    section.about .portafolio .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 50px 0;
+      grid-gap: 30px; }
+      section.about .portafolio .gallery-container .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px; }
+      section.about .portafolio .gallery-container .gallery__item {
+        height: 550px;
+        position: relative;
+        overflow: hidden; }
+        section.about .portafolio .gallery-container .gallery__item img {
+          transition: 0.2s linear; }
+        section.about .portafolio .gallery-container .gallery__item .textInfo {
+          background: linear-gradient(180deg, rgba(56, 34, 228, 0) 9.87%, #3822e4 80.47%);
+          color: #fff;
+          border-radius: 0px 0px 10px 10px;
+          width: 100%;
+          height: 50%;
+          position: absolute;
+          bottom: 0;
+          transform: translateY(100%);
+          transition: 0.2s linear;
+          display: flex;
+          justify-content: space-between;
+          padding: 30px;
+          align-items: flex-end;
+          font-family: var(--texto-poppins); }
+          section.about .portafolio .gallery-container .gallery__item .textInfo span {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 30px; }
+          section.about .portafolio .gallery-container .gallery__item .textInfo h4 {
+            font-size: 30.42px;
+            font-weight: 600;
+            line-height: 30px; }
+          section.about .portafolio .gallery-container .gallery__item .textInfo p {
+            font-family: var(--texto-manrope);
+            font-size: 22.81px;
+            font-weight: 700;
+            line-height: 30px;
+            color: var(--color-verde); }
+          section.about .portafolio .gallery-container .gallery__item .textInfo .by span {
+            padding-right: 20px;
+            font-weight: 600;
+            font-size: 30.4174px;
+            line-height: 30px; }
+        section.about .portafolio .gallery-container .gallery__item:hover .textInfo {
+          transform: translateY(0%); }
+        section.about .portafolio .gallery-container .gallery__item:hover img {
+          transform: scale(1.1); }
+      section.about .portafolio .gallery-container .gallery__item:nth-child(1),
+      section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+        grid-column-start: span 3; }
+      section.about .portafolio .gallery-container .gallery__item:nth-child(2),
+      section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+        grid-column-start: span 2; }
     section.about .portafolio .btn-mas a {
       text-decoration: none;
       display: flex;
@@ -1051,6 +1111,12 @@ section.about .portafolio h3 {
   footer .title img {
     width: 291px; } }
 
+@media (max-width: 1450px) {
+  .container {
+    padding-left: 20px; }
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 427px; } }
+
 @media (max-width: 1240px) and (min-width: 1024px) {
   section.branding .contenido,
   section.marketing .contenido,
@@ -1091,6 +1157,10 @@ section.about .portafolio h3 {
     width: 82px; } }
 
 @media (max-width: 1200px) {
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 349px; }
+  section.about .portafolio .gallery-container {
+    grid-gap: 20px; }
   .container {
     padding-left: 20px; }
   section.contact form {
@@ -1129,6 +1199,8 @@ section.about .portafolio h3 {
     width: 100% !important; } }
 
 @media (max-width: 1024px) and (min-width: 426px) {
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 294px; }
   section.about .portafolio .galeria .galeriaItem {
     margin-bottom: 30px; }
   section.contact .campos p {
@@ -1265,10 +1337,14 @@ section.about .portafolio h3 {
     transform: translateY(-75px); } }
 
 @media (max-width: 1024px) and (min-width: 426px) {
-  section.about .portafolio .galeria .galeriaItem .textInfo {
+  section.about .portafolio .galeria .galeriaItem .textInfo,
+  section.about .portafolio .gallery-container .gallery__item .textInfo {
     transform: translateY(0%); }
+  section.about .portafolio .gallery-container .gallery__item .textInfo p {
+    font-size: 19px;
+    line-height: 25px; }
   .container {
-    width: 80%; }
+    width: 83%; }
   section.home::after {
     display: none; }
   section.home .homeContent {
@@ -1293,9 +1369,11 @@ section.about .portafolio h3 {
     padding: 68px 0; }
   section.about .portafolio {
     padding-top: 19px; }
-  section.about .portafolio .galeria .galeriaItem .textInfo h4 {
+  section.about .portafolio .galeria .galeriaItem .textInfo h4,
+  section.about .portafolio .gallery-container .gallery__item .textInfo h4 {
     display: none; }
-  section.about .portafolio .galeria .galeriaItem .textInfo {
+  section.about .portafolio .galeria .galeriaItem .textInfo,
+  section.about .portafolio .gallery-container .gallery__item .textInfo {
     padding: 17px; }
   section.services .contenido p {
     padding-top: 15px; }
@@ -1361,19 +1439,21 @@ section.about .portafolio h3 {
   section.thankspage .text h2 {
     font-size: 70px; } }
 
-@media (max-width: 1000px) and (max-width: 850px) and (min-width: 425px) {
+@media (max-width: 1000px) and (max-width: 850px) and (min-width: 426px) {
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 231px; }
   section.thankspage .text p {
     font-size: 40px; }
   section.thankspage .text h2 {
     font-size: 60px; } }
 
-@media (max-width: 1000px) and (max-width: 850px) and (min-width: 425px) and (max-width: 650px) {
+@media (max-width: 1000px) and (max-width: 850px) and (min-width: 426px) and (max-width: 650px) {
   section.thankspage .text p {
     font-size: 30px; }
   section.thankspage .text h2 {
     font-size: 50px; } }
 
-@media (max-width: 1000px) and (max-width: 850px) and (min-width: 425px) and (max-width: 525px) {
+@media (max-width: 1000px) and (max-width: 850px) and (min-width: 426px) and (max-width: 525px) {
   section.thankspage .text p {
     font-size: 28px;
     line-height: 30px;
@@ -1435,6 +1515,21 @@ section.about .portafolio h3 {
     width: 222px; } }
 
 @media (max-width: 768px) and (min-width: 426px) {
+  section.about .portafolio .galeria .galeriaItem .textInfo,
+  section.about .portafolio .gallery-container .gallery__item .textInfo {
+    padding: 27px; }
+  section.about .portafolio .gallery-container {
+    grid-template-columns: repeat(1, 1fr); }
+  section.about .portafolio .gallery-container .gallery__item:nth-child(1),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+    grid-column-start: span 1; }
+  section.about .portafolio .gallery-container .gallery__item:nth-child(2),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+    grid-column-start: span 1; }
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 413px; }
+  section.about .portafolio .gallery-container {
+    grid-gap: 35px; }
   section.about .portafolio .galeria .galeriaItem img {
     transition: 0.2s linear;
     width: 100%;
@@ -1498,13 +1593,15 @@ section.about .portafolio h3 {
     width: 160px; }
   section.about .portafolio h2 {
     font-size: 40px; }
-  section.about .portafolio .galeria .galeriaItem .textInfo p {
-    font-size: 15px;
-    line-height: 20px; }
-  section.about .portafolio .galeria .galeriaItem .textInfo span {
-    font-size: 20px;
+  section.about .portafolio .galeria .galeriaItem .textInfo p,
+  section.about .portafolio .gallery-container .gallery__item .textInfo p {
+    font-size: 22px;
+    line-height: 28px; }
+  section.about .portafolio .galeria .galeriaItem .textInfo span,
+  section.about .portafolio .gallery-container .gallery__item .textInfo span {
+    font-size: 25px;
     font-weight: 600;
-    line-height: 30px; }
+    line-height: 35px; }
   section.about .portafolio .btn-mas span {
     font-size: 20px; }
   section.about .portafolio .btn-mas a img {
@@ -1620,7 +1717,12 @@ section.about .portafolio h3 {
 
 @media (max-width: 602px) {
   .container {
-    padding-left: 0px; } }
+    padding-left: 0px;
+    width: 85%; } }
+
+@media (max-width: 602px) and (max-width: 602px) and (min-width: 426px) {
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 60.4vw; } }
 
 @media (max-width: 602px) and (max-width: 580px) and (min-width: 426px) {
   section.home .homeContent button {
@@ -1730,6 +1832,16 @@ section.about .portafolio h3 {
     line-height: 59.6px; } }
 
 @media (max-width: 425px) {
+  section.about .portafolio .gallery-container {
+    grid-template-columns: repeat(1, 1fr); }
+  section.about .portafolio .gallery-container .gallery__item:nth-child(1),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+    grid-column-start: span 1; }
+  section.about .portafolio .gallery-container .gallery__item:nth-child(2),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+    grid-column-start: span 1; }
+  section.about .portafolio .gallery-container .gallery__item {
+    height: 60vw; }
   section.about .portafolio .galeria .galeriaItem:nth-child(1),
   section.about .portafolio .galeria .galeriaItem:nth-child(4) {
     width: auto; }
@@ -1963,7 +2075,8 @@ section.about .portafolio h3 {
     line-height: 45px;
     text-align: inherit;
     color: var(--color-azul); }
-  section.about .portafolio .galeria .galeriaItem .textInfo {
+  section.about .portafolio .galeria .galeriaItem .textInfo,
+  section.about .portafolio .gallery-container .gallery__item .textInfo {
     transform: translateY(0);
     color: #fff;
     padding: 20px; }
@@ -1971,12 +2084,15 @@ section.about .portafolio h3 {
     height: 255px; }
     section.about .portafolio .galeria .galeriaItem img {
       width: 110%; }
-  section.about .portafolio .galeria .galeriaItem .textInfo h4 {
+  section.about .portafolio .galeria .galeriaItem .textInfo h4,
+  section.about .portafolio .gallery-container .gallery__item .textInfo h4 {
     display: none; }
-  section.about .portafolio .galeria .galeriaItem .textInfo span {
+  section.about .portafolio .galeria .galeriaItem .textInfo span,
+  section.about .portafolio .gallery-container .gallery__item .textInfo span {
     font-size: 20px;
     line-height: inherit; }
-  section.about .portafolio .galeria .galeriaItem .textInfo p {
+  section.about .portafolio .galeria .galeriaItem .textInfo p,
+  section.about .portafolio .gallery-container .gallery__item .textInfo p {
     font-size: 16px;
     line-height: inherit; }
   section.services {
