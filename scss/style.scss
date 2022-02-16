@@ -2452,6 +2452,9 @@ section.about .portafolio h3 {
 }
 
 @media (max-width: 425px) {
+  section.home .homeContent h1 span {
+    padding: 0 6px;
+  }
   section.about .portafolio .gallery-container {
     grid-template-columns: repeat(1, 1fr);
   }

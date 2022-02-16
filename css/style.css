@@ -1845,6 +1845,8 @@ section.about .portafolio h3 {
     line-height: 59.6px; } }
 
 @media (max-width: 425px) {
+  section.home .homeContent h1 span {
+    padding: 0 6px; }
   section.about .portafolio .gallery-container {
     grid-template-columns: repeat(1, 1fr); }
   section.about .portafolio .gallery-container .gallery__item:nth-child(1),
