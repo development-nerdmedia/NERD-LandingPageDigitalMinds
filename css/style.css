@@ -23,6 +23,9 @@ button {
   -webkit-appearance: none;
   appearance: none; }
 
+.scrollhidden {
+  overflow: hidden; }
+
 .video-js .vjs-big-play-button {
   display: none !important; }
 

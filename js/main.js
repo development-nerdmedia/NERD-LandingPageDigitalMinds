@@ -16,53 +16,53 @@ var typed = new Typed(".typing2", {
 document.addEventListener("click", function (e) {
     if (e.target.closest(".menubtn")) {
         document.querySelector(".menupage").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
     if (e.target.closest(".brandingbtn")) {
         document.querySelector(".branding").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
     if (e.target.closest(".marketingbtn")) {
         document.querySelector(".marketing").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
     if (e.target.closest(".disenowebbtn")) {
         document.querySelector(".disenoWeb").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
     if (e.target.closest(".contacto-page")) {
         document.querySelector(".pagecontact").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
     if (e.target.closest(".openinterna")) {
         document.querySelector(".portafolioInterna").classList.toggle("open");
-        // jQuery('body').addClass('scrollhidden');
+        jQuery('body').addClass('scrollhidden');
     }
 
     /* cerrar */
     if (e.target.closest(".cerrarr")) {
         document.querySelector(".menupage").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
     if (e.target.closest(".closebranding")) {
         document.querySelector(".branding").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
     if (e.target.closest(".closemarketing")) {
         document.querySelector(".marketing").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
     if (e.target.closest(".closedisenoweb")) {
         document.querySelector(".disenoWeb").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
     if (e.target.closest(".close-contact")) {
         document.querySelector(".pagecontact").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
     if (e.target.closest(".closeinterna")) {
         document.querySelector(".portafolioInterna").classList.toggle("open");
-        // jQuery('body').removeClass('scrollhidden');
+        jQuery('body').removeClass('scrollhidden');
     }
 })
 
