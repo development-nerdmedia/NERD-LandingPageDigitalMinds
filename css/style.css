@@ -19,6 +19,9 @@
   --color-verde: #24fe7c;
   --color-rosa: #d949f8; }
 
+.grecaptcha-badge {
+  visibility: hidden; }
+
 section.home,
 section.partnerds,
 section.slider-partnerds,
@@ -48,8 +51,14 @@ button {
 .vjs-poster {
   background-color: transparent !important; }
 
+.escondido {
+  display: none; }
+
 .vjs-theme-city .vjs-control-bar {
   border-radius: 10px !important; }
+
+.falto {
+  border-bottom: 4px solid var(--color-rosa) !important; }
 
 nav {
   border-right: 1px solid var(--color-azul);
@@ -77,10 +86,13 @@ nav {
       background-color: var(--color-verde);
       position: absolute;
       z-index: -2;
-      left: 4px; }
+      left: 4px;
+      transition: 0.2s ease; }
     nav .btn-vertical span {
       font-weight: 900;
       font-family: var(--texto-epilogue); }
+    nav .btn-vertical:hover::before {
+      background-color: var(--color-rosa); }
   nav ul {
     list-style: none; }
     nav ul li {
@@ -154,7 +166,8 @@ section.home {
       border-radius: 18.27px;
       padding: 13px 73px;
       color: white;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: 0.2s ease; }
       section.home .homeContent button:hover {
         background-color: var(--color-verde);
         color: var(--color-azul); }
@@ -214,7 +227,9 @@ section.menupage {
     section.menupage .menuContent ul {
       list-style: none; }
       section.menupage .menuContent ul li {
-        padding: 0 10px; }
+        padding: 0 10px;
+        transition: 0.2s linear;
+        width: fit-content; }
         section.menupage .menuContent ul li a {
           text-decoration: none;
           color: #fff;
@@ -222,22 +237,30 @@ section.menupage {
           font-weight: 900;
           font-size: 60px;
           line-height: 110px; }
-      section.menupage .menuContent ul li#btnMenuContacto {
-        background-color: var(--color-verde);
-        height: 98px;
-        width: 317px; }
-        section.menupage .menuContent ul li#btnMenuContacto a {
-          color: var(--color-azul);
-          cursor: pointer; }
+        section.menupage .menuContent ul li:hover {
+          background-color: var(--color-verde);
+          width: fit-content; }
+          section.menupage .menuContent ul li:hover a {
+            color: var(--color-azul);
+            cursor: pointer; }
   section.menupage .infoMenu {
-    padding-top: 70px; }
+    padding-top: 70px;
+    padding-top: 3.6vw; }
     section.menupage .infoMenu p {
       font-family: var(--texto-manrope);
       font-style: normal;
       font-weight: bold;
       font-size: 26px;
       line-height: 34px;
-      color: #fff; }
+      color: #fff;
+      display: flex;
+      align-items: center; }
+      section.menupage .infoMenu p a {
+        text-decoration: none;
+        color: #fff; }
+      section.menupage .infoMenu p img {
+        width: 25px;
+        margin-right: 5px; }
 
 .content-services {
   display: flex;
@@ -322,7 +345,12 @@ section.disenoWeb {
         font-weight: 700;
         font-size: 28.108px;
         line-height: 33px;
-        margin-right: 10px; }
+        margin-right: 10px;
+        transition: 0.2s ease; }
+        section.branding .contenido .text span:hover,
+        section.marketing .contenido .text span:hover,
+        section.disenoWeb .contenido .text span:hover {
+          background-color: var(--color-verde); }
   section.branding .btn,
   section.marketing .btn,
   section.disenoWeb .btn {
@@ -339,7 +367,8 @@ section.disenoWeb {
       padding: 10px 78px;
       border-radius: 18px;
       color: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: 0.2s ease; }
       section.branding .btn a:hover,
       section.marketing .btn a:hover,
       section.disenoWeb .btn a:hover {
@@ -537,7 +566,8 @@ section.about {
       section.about .portafolio .gallery-container .gallery__item {
         height: 550px;
         position: relative;
-        overflow: hidden; }
+        overflow: hidden;
+        cursor: pointer; }
         section.about .portafolio .gallery-container .gallery__item img {
           transition: 0.2s linear; }
         section.about .portafolio .gallery-container .gallery__item .textInfo {
@@ -579,23 +609,32 @@ section.about {
         section.about .portafolio .gallery-container .gallery__item:hover img {
           transform: scale(1.1); }
       section.about .portafolio .gallery-container .gallery__item:nth-child(1),
-      section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+      section.about .portafolio .gallery-container .gallery__item:nth-child(4),
+      section.about .portafolio .gallery-container .gallery__item:nth-child(5) {
         grid-column-start: span 3; }
       section.about .portafolio .gallery-container .gallery__item:nth-child(2),
-      section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+      section.about .portafolio .gallery-container .gallery__item:nth-child(3),
+      section.about .portafolio .gallery-container .gallery__item:nth-child(6) {
         grid-column-start: span 2; }
-    section.about .portafolio .btn-mas a {
-      text-decoration: none;
+      section.about .portafolio .gallery-container .gallery__item:nth-child(5),
+      section.about .portafolio .gallery-container .gallery__item:nth-child(6) {
+        display: none; }
+    section.about .portafolio .btn-mas {
       display: flex;
-      align-items: center;
       justify-content: center; }
-    section.about .portafolio .btn-mas span {
-      padding-left: 17px;
-      font-family: var(--texto-manrope);
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 45px;
-      color: var(--color-azul); }
+      section.about .portafolio .btn-mas a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; }
+      section.about .portafolio .btn-mas span {
+        padding-left: 17px;
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 45px;
+        color: var(--color-azul); }
 
 section.services {
   padding-top: 60px;
@@ -626,7 +665,9 @@ section.services {
       min-height: 490px;
       padding: 30px;
       position: relative;
-      border-radius: 15px; }
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.2s ease; }
       section.services .cards .card:hover {
         border: 4px solid var(--color-azul); }
         section.services .cards .card:hover a img:nth-child(1) {
@@ -731,7 +772,7 @@ section.slider-partnerds {
 section.pagecontact {
   background-color: #fff;
   height: 100vh;
-  padding: 73px 0px !important;
+  padding: 43px 0px !important;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -756,6 +797,16 @@ section.pagecontact {
     align-items: center;
     height: 100%;
     transform: translateY(-82px); }
+  section.pagecontact .form-input:focus ~ label,
+  section.pagecontact .form-input:valid ~ label {
+    font-size: 18px;
+    left: 0px;
+    top: -3px; }
+  section.pagecontact .form-input.textarea:focus ~ label,
+  section.pagecontact .form-input.textarea:valid ~ label {
+    font-size: 16px;
+    left: 0px;
+    top: -11px; }
 
 section.contact {
   padding-top: 127px;
@@ -784,9 +835,12 @@ section.contact {
   section.contact input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+  section.contact .form-group {
+    width: 100%; }
   section.contact input[type="number"] {
     -moz-appearance: textfield; }
-  section.contact #fs-frm fieldset {
+  section.contact #fs-frm fieldset,
+  section.contact #fs-frm2 textarea {
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -794,8 +848,12 @@ section.contact {
   section.contact #fs-frm input,
   section.contact #fs-frm fieldset,
   section.contact #fs-frm textarea,
-  section.contact #fs-frm label,
-  section.contact #fs-frm #card-element:disabled {
+  section.contact #fs-frm #card-element:disabled,
+  section.contact #fs-frm2 select,
+  section.contact #fs-frm2 input,
+  section.contact #fs-frm2 fieldset,
+  section.contact #fs-frm2 textarea,
+  section.contact #fs-frm2 #card-element:disabled {
     font-family: inherit;
     font-size: 100%;
     color: var(--color-azul);
@@ -806,17 +864,79 @@ section.contact {
     padding: 0;
     margin: 0;
     -webkit-appearance: none;
-    -moz-appearance: none; }
-  section.contact #fs-frm label,
+    -moz-appearance: none;
+    box-sizing: border-box;
+    padding-top: 8px; }
+  section.contact #fs-frm input[type="submit"],
+  section.contact #fs-frm2 input[type="submit"] {
+    padding-top: 0; }
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 textarea {
+    padding-top: 18px; }
+  section.contact .form-group {
+    width: 100%;
+    position: relative; }
+    section.contact .form-group .form-label {
+      position: absolute;
+      left: 15px;
+      top: 9px;
+      color: var(--color-azul);
+      font-family: var(--texto-manrope);
+      font-size: 28px;
+      font-weight: 700;
+      cursor: text;
+      transition: 0.1s linear;
+      z-index: -1;
+      opacity: 0.7; }
+    section.contact .form-group .form-input:focus ~ label,
+    section.contact .form-group .form-input:valid ~ label {
+      font-size: 18px;
+      left: 0px;
+      top: -3px; }
+    section.contact .form-group .form-input.textarea:focus ~ label,
+    section.contact .form-group .form-input.textarea:valid ~ label {
+      font-size: 16px;
+      left: 0px;
+      top: -11px; }
+  section.contact #fs-frm [type="text"].falto,
+  section.contact #fs-frm [type="number"].falto,
+  section.contact #fs-frm [type="email"].falto,
+  section.contact #fs-frm textarea.falto,
+  section.contact #fs-frm2 [type="text"].falto,
+  section.contact #fs-frm2 [type="number"].falto,
+  section.contact #fs-frm2 [type="email"].falto,
+  section.contact #fs-frm2 textarea.falto {
+    border-bottom: 2px solid #e11f4b !important; }
+    section.contact #fs-frm [type="text"].falto ~ label,
+    section.contact #fs-frm [type="number"].falto ~ label,
+    section.contact #fs-frm [type="email"].falto ~ label,
+    section.contact #fs-frm textarea.falto ~ label,
+    section.contact #fs-frm2 [type="text"].falto ~ label,
+    section.contact #fs-frm2 [type="number"].falto ~ label,
+    section.contact #fs-frm2 [type="email"].falto ~ label,
+    section.contact #fs-frm2 textarea.falto ~ label {
+      color: #e11f4b; }
+  section.contact .form-group.textarea .form-label {
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    color: #3e636b;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    cursor: text;
+    transition: 0.1s linear; }
   section.contact #fs-frm legend,
-  section.contact #fs-frm ::placeholder {
+  section.contact #fs-frm ::placeholder,
+  section.contact #fs-frm2 legend,
+  section.contact #fs-frm2 ::placeholder {
     font-size: 20px;
     margin-bottom: 0.5rem;
     padding-top: 0.2rem;
     display: flex;
     align-items: baseline;
     color: var(--color-azul); }
-  section.contact #fs-frm ::placeholder {
+  section.contact #fs-frm ::placeholder,
+  section.contact #fs-frm2 ::placeholder {
     opacity: 0.5; }
   section.contact .form {
     display: flex;
@@ -826,7 +946,9 @@ section.contact {
   section.contact form {
     width: 1000px; }
   section.contact #fs-frm [type="text"],
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
     background-color: rgba(255, 255, 255, 0.26);
     color: var(--color-azul);
     margin-bottom: 1.5rem;
@@ -835,10 +957,13 @@ section.contact {
     font-weight: 700;
     font-size: 28px;
     line-height: 56px; }
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 textarea {
     height: calc(82px + 62px);
-    margin-bottom: 88px; }
-  section.contact #fs-frm [type="submit"] {
+    margin-bottom: 88px;
+    line-height: initial; }
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     width: 500px;
     height: 60px;
     font-family: var(--texto-manrope);
@@ -848,8 +973,10 @@ section.contact {
     background-color: var(--color-rosa);
     color: #fff !important;
     cursor: pointer;
-    border-radius: 18.27px; }
-    section.contact #fs-frm [type="submit"]:hover {
+    border-radius: 18.27px;
+    transition: 0.2s ease; }
+    section.contact #fs-frm [type="submit"]:hover,
+    section.contact #fs-frm2 [type="submit"]:hover {
       background-color: var(--color-verde);
       color: var(--color-azul); }
 
@@ -912,6 +1039,8 @@ footer {
     footer .info p.linkedin::before {
       width: 123px;
       left: -3px; }
+    footer .info p.telefono::before {
+      width: 235px; }
   footer .copy {
     display: flex;
     justify-content: center;
@@ -1211,6 +1340,25 @@ section.about .portafolio h3 {
   section.services .cards .card {
     width: 100% !important; } }
 
+@media (max-width: 1024px) and (max-height: 1000px) {
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
+    font-size: 25px; }
+  section.contact .form-group .form-label {
+    font-size: 25px;
+    top: 1px; }
+  section.contact #fs-frm select,
+  section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm fieldset,
+  section.contact #fs-frm #card-element:disabled,
+  section.contact #fs-frm2 select,
+  section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 fieldset,
+  section.contact #fs-frm2 #card-element:disabled {
+    padding-top: 18px; } }
+
 @media (max-width: 1024px) and (min-width: 426px) {
   section.about .portafolio .gallery-container .gallery__item {
     height: 294px; }
@@ -1344,7 +1492,9 @@ section.about .portafolio h3 {
   section.contact .form {
     padding-top: 35px; }
   section.contact #fs-frm [type="text"],
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
     line-height: inherit; }
   section.pagecontact .contenido-contacto {
     transform: translateY(-75px); } }
@@ -1428,7 +1578,8 @@ section.about .portafolio h3 {
     padding-bottom: 173px; }
   section.contact form {
     width: 630px; }
-  section.contact #fs-frm [type="submit"] {
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     width: 407px; }
   footer .title {
     padding-left: 62px; }
@@ -1517,7 +1668,8 @@ section.about .portafolio h3 {
     font-size: 45px; }
   section.contact form {
     width: 491px; }
-  section.contact #fs-frm [type="submit"] {
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     width: 325px; } }
 
 @media (max-width: 840px) {
@@ -1528,16 +1680,22 @@ section.about .portafolio h3 {
     width: 222px; } }
 
 @media (max-width: 768px) and (min-width: 426px) {
+  section.menupage .infoMenu p {
+    font-size: 20px; }
+  section.menupage .infoMenu p img {
+    width: 20px; }
   section.about .portafolio .galeria .galeriaItem .textInfo,
   section.about .portafolio .gallery-container .gallery__item .textInfo {
     padding: 27px; }
   section.about .portafolio .gallery-container {
     grid-template-columns: repeat(1, 1fr); }
   section.about .portafolio .gallery-container .gallery__item:nth-child(1),
-  section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+  section.about .portafolio .gallery-container .gallery__item:nth-child(4),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(5) {
     grid-column-start: span 1; }
   section.about .portafolio .gallery-container .gallery__item:nth-child(2),
-  section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+  section.about .portafolio .gallery-container .gallery__item:nth-child(3),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(6) {
     grid-column-start: span 1; }
   section.about .portafolio .gallery-container .gallery__item {
     height: 413px; }
@@ -1565,10 +1723,6 @@ section.about .portafolio h3 {
   section.menupage .menuContent ul li a {
     font-size: 50px;
     line-height: 90px; }
-  section.menupage .menuContent ul li#btnMenuContacto {
-    background-color: var(--color-verde);
-    height: 85px;
-    width: 274px; }
   section.home .homeContent {
     padding-left: 8.89vw; }
   section.home img.logo {
@@ -1670,13 +1824,17 @@ section.about .portafolio h3 {
     padding-top: 10px; }
   section.contact form {
     width: 465px; }
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 textarea {
     height: calc(82px + 40px);
     margin-bottom: 66px; }
   section.contact #fs-frm [type="text"],
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
     font-size: 20px; }
-  section.contact #fs-frm [type="submit"] {
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     width: 333px;
     font-size: 23px;
     height: 50px; }
@@ -1710,6 +1868,32 @@ section.about .portafolio h3 {
     padding-right: 16px; }
   footer .title img {
     width: 190px; } }
+
+@media (max-width: 768px) {
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
+    font-size: 20px; }
+  section.contact .form-group .form-label {
+    font-size: 20px;
+    top: 17px;
+    left: 0; }
+  section.contact #fs-frm select,
+  section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm fieldset,
+  section.contact #fs-frm #card-element:disabled,
+  section.contact #fs-frm2 select,
+  section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 fieldset,
+  section.contact #fs-frm2 #card-element:disabled {
+    padding-top: 18px;
+    height: 60px; }
+  section.contact .form-group .form-input:focus ~ label,
+  section.contact .form-group .form-input:valid ~ label {
+    font-size: 15px;
+    left: 0px;
+    top: 1px; } }
 
 @media (max-width: 617px) {
   section.portafolioInterna .content .part1,
@@ -1845,6 +2029,18 @@ section.about .portafolio h3 {
     line-height: 59.6px; } }
 
 @media (max-width: 425px) {
+  section.contact .form-group textarea:focus ~ label,
+  section.contact .form-group textarea:valid ~ label {
+    top: 0px !important; }
+  section.contact .form-group .form-label {
+    font-size: 18px; }
+  section.contact .form-group .form-input:focus ~ label,
+  section.contact .form-group .form-input:valid ~ label {
+    top: 7px; }
+  section.menupage .infoMenu p {
+    font-size: 18px; }
+  section.menupage .infoMenu p img {
+    width: 18px; }
   section.about .contenido {
     padding-bottom: 0; }
   section.home .homeContent h1 span {
@@ -1852,10 +2048,12 @@ section.about .portafolio h3 {
   section.about .portafolio .gallery-container {
     grid-template-columns: repeat(1, 1fr); }
   section.about .portafolio .gallery-container .gallery__item:nth-child(1),
-  section.about .portafolio .gallery-container .gallery__item:nth-child(4) {
+  section.about .portafolio .gallery-container .gallery__item:nth-child(4),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(5) {
     grid-column-start: span 1; }
   section.about .portafolio .gallery-container .gallery__item:nth-child(2),
-  section.about .portafolio .gallery-container .gallery__item:nth-child(3) {
+  section.about .portafolio .gallery-container .gallery__item:nth-child(3),
+  section.about .portafolio .gallery-container .gallery__item:nth-child(6) {
     grid-column-start: span 1; }
   section.about .portafolio .gallery-container .gallery__item {
     height: 60vw; }
@@ -2036,7 +2234,8 @@ section.about .portafolio h3 {
     margin: 0 auto; }
   section.contact form {
     width: 100%; }
-  section.contact #fs-frm fieldset {
+  section.contact #fs-frm fieldset,
+  section.contact #fs-frm2 fieldset {
     display: flex;
     flex-direction: column; }
   nav,
@@ -2192,26 +2391,37 @@ section.about .portafolio h3 {
     text-align: start;
     font-size: 18px;
     line-height: 25px; }
-  section.contact #fs-frm fieldset {
+  section.contact #fs-frm fieldset,
+  section.contact #fs-frm2 fieldset {
     align-items: flex-start; }
-  section.contact #fs-frm [type="submit"] {
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     width: 80%;
     text-align: center; }
   section.contact form {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  section.contact #fs-frm [type="submit"] {
+  section.contact #fs-frm [type="submit"],
+  section.contact #fs-frm2 [type="submit"] {
     font-size: 18px;
     height: 48px; }
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 textarea {
     margin-bottom: 56px; }
   section.contact .form {
     padding-top: 35px; }
-  section.contact #fs-frm [type="text"] {
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm2 [type="text"] {
     margin-bottom: 1rem; }
-  section.contact #fs-frm textarea {
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 textarea {
     height: 100px; }
+  section.contact #fs-frm [type="text"],
+  section.contact #fs-frm textarea,
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 textarea {
+    font-size: 18px; }
   section.contact {
     padding-bottom: 89px; }
   footer .title {
@@ -2288,10 +2498,6 @@ section.about .portafolio h3 {
     color: var(--color-verde) !important; }
   section.slider-partnerds {
     padding-bottom: 75px; }
-  section.menupage .menuContent ul li#btnMenuContacto {
-    background-color: var(--color-verde);
-    height: auto;
-    width: inherit; }
   section.menupage .menuContent ul li {
     margin: 35px 0; }
   section.menupage .menuContent ul li {

@@ -18,7 +18,7 @@ $message = $_POST['message'];
 $to = $myemails;
 $email_subject = "Contacto Nerd Digital";
 $email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n 
-Telefono: $tel \n Mensaje: \n $message";
+Telefono o email: $tel \n Mensaje: \n $message";
 $headers = "From: digitalminds.site";
 
 mail($to, $email_subject, $email_body, $headers);
@@ -27,7 +27,7 @@ mail($to, $email_subject, $email_body, $headers);
       <div class="container-thanks">
         <div class="content">
           <div class="top">
-            <a class="closeinterna" href="../index.html">
+            <a class="closeinterna" href="http://digitalminds.site/">
               <img src="../img/closemenu.svg" alt="close"
             /></a>
           </div>

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="icon" type="image/png" href="img/favicon-1.png" />
+    <meta
+      name="keywords"
+      content="branding, marketing, diseño web, desarrollo web, diseño, publicidad, publicidad para redes, social media, estrategia, creatividad, comerciales, marketing, creativo"
+    />
+    <meta
+      name="description"
+      content="Somos una agencia que lleva la estrategia y creatividad a todo lo que hace. Entendemos las necesidades de nuestros clientes para ofrecerles soluciones que respondan a sus objetivos comerciales y de marketing. Nuestra experiencia nos permite diseñar estrategias que funcionen y disfrutar del proceso creativo."
+    />
+    <meta name="author" content="NERD - Digital Minds" />
+    <meta name="language" content="es" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -25,7 +35,7 @@
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <title>NERD - Landing Page Digital Minds</title>
+    <title>NERD - Digital Minds</title>
   </head>
   <body>
     <header>
@@ -39,15 +49,15 @@
         <div class="redes">
           <ul>
             <li>
-              <a href="#"> <img src="img/instagram.svg" alt="instagram" /> </a>
+              <a href="https://www.instagram.com/nerd_agencia/" target="_blank"> <img src="img/instagram.svg" alt="instagram" /> </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank">
                 <img src="img/linkedin.svg" alt="linkedin" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/NerdMedia" target="_blank">
                 <img src="img/Vector.svg" alt="facebook" />
               </a>
             </li>
@@ -79,9 +89,20 @@
               </li>
             </ul>
             <div class="infoMenu">
-              <p>francesca@nerdmedia.pe</p>
-              <p>+51 942 464 074</p>
-              <p>Lima - Perú</p>
+              <p>
+                <a href="mailto:francesca@nerdmedia.pe"
+                  ><img
+                    src="img/correo.png"
+                    alt="carta"
+                  />francesca@nerdmedia.pe</a
+                >
+              </p>
+              <p><a href="tel:+51 942 464 074">                
+                <img src="img/telephone.png" alt="carta" />+51 942 464 074</p>
+              </a>
+              <p>
+                <img src="img/Crop_location-white.svg" alt="carta" />Lima - Perú
+              </p>
             </div>
           </div>
         </div>
@@ -101,34 +122,57 @@
             <div class="form">
               <form
                 class="formulario containerform"
-                id="fs-frm"
+                id="fs-frm2"
                 name="complaint-form"
                 accept-charset="utf-8"
                 action="php/thanks.php"
                 method="post"
               >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    id="full-name"
+                    placeholder=""
+                    required=""
+                    class="form-input"
+                  />
+                  <label for="form-nombre" class="form-label">Tu nombre</label>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="telephone"
+                    id="telephone"
+                    placeholder=""
+                    required=""
+                    class="form-input"
+                  />
+                  <label for="form-nombre" class="form-label"
+                    >Teléfono o email</label
+                  >
+                </div>
+                <input id="oculto" type="text" class="escondido" name="stopspam">
+                <div class="form-group">
+                  <textarea
+                    rows="6"
+                    name="message"
+                    id="message"
+                    placeholder=""
+                    required=""
+                    class="form-input"
+                  ></textarea>
+                  <label for="form-nombre" class="form-label"
+                    >Hablanos de tu proyecto</label
+                  >
+                </div>
                 <input
-                  type="text"
-                  name="name"
-                  id="full-name"
-                  placeholder="Tu nombre"
-                  required=""
+                  class="g-recaptcha btn button btnform1"
+                  type="submit"
+                  value="Enviar"
+                  data-sitekey="6Lch2-YeAAAAACZILHfhlY-HLL5lfBcfFJ4AgB83"
+                  data-action="submit"
                 />
-                <input
-                  type="text"
-                  name="telephone"
-                  id="full-name"
-                  placeholder="Teléfono o email"
-                  required=""
-                />
-                <textarea
-                  rows="6"
-                  name="message"
-                  id="complaint"
-                  placeholder="Hablanos de tu proyecto"
-                  required=""
-                ></textarea>
-                <input class="btn button" type="submit" value="Enviar" />
               </form>
             </div>
           </div>
@@ -322,11 +366,35 @@
                   </div>
                 </div>
               </div>
+              <div class="gallery__item openinterna mostrariten">
+                <img
+                  class="gallery__img"
+                  src="img/neo.png"
+                  alt="statkraft"
+                />
+                <div class="textInfo">
+                  <div>
+                    <span>NEO Projects</span>
+                    <h4>Conecta con el Futuro</h4>
+                    <p>Creatividad, Branding, UX, UI, Digital</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery__item openinterna mostrariten1">
+                <img class="gallery__img" src="img/neo.png" alt="ucal" />
+                <div class="textInfo">
+                  <div>
+                    <span>NEO Projects</span>
+                    <h4>Conecta con el Futuro</h4>
+                    <p>Creatividad, Branding, UX, UI, Digital</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="btn-mas">
-              <a href="#">
-                <img class="gallery__img" src="img/btn-mas.svg" alt="" />
-                <span>Ver más proyectos</span></a
+              <a id="vermasitems">
+                <img class="gallery__img" src="img/btn-mas.svg" alt="mas" />
+                <span id="btnmas">Ver más proyectos</span></a
               >
             </div>
           </div>
@@ -381,13 +449,13 @@
               problema en nuestros diferentes lineas de acción.
             </p>
           </div>
-          <div class="cards">
+          <div class="cards brandingbtn">
             <div class="card">
               <h3>Branding</h3>
               <p>¿Necesitas construir una marca que impacte y venda?</p>
-              <a class="brandingbtn">
+              <a>
                 <img src="img/btn-services.svg" alt="mas" />
-                <img src="img/btn-services-azul.svg" alt=""
+                <img src="img/btn-services-azul.svg" alt="mas"
               /></a>
             </div>
             <div class="card">
@@ -398,7 +466,7 @@
               <a class="marketingbtn">
                 <img src="img/btn-services.svg" alt="mas" /><img
                   src="img/btn-services-azul.svg"
-                  alt=""
+                  alt="mas"
               /></a>
             </div>
             <div class="card">
@@ -410,7 +478,7 @@
               <a class="disenowebbtn">
                 <img src="img/btn-services.svg" alt="mas" /><img
                   src="img/btn-services-azul.svg"
-                  alt=""
+                  alt="mas"
               /></a>
             </div>
           </div>
@@ -420,7 +488,7 @@
         <div class="container">
           <div class="contenido">
             <h2>Part</h2>
-            <img src="img/nerds.svg" alt="" /><span>s</span>
+            <img src="img/nerds.svg" alt="nerds" /><span>s</span>
           </div>
           <p>
             Somos comprometidos y curiosos. No tenemos miedo de cuestionar las
@@ -532,28 +600,51 @@
               action="php/thanks.php"
               method="post"
             >
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="full-name2"
+                  placeholder=""
+                  required=""
+                  class="form-input"
+                />
+                <label for="form-nombre" class="form-label">Tu nombre</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="telephone2"
+                  id="telephone2"
+                  placeholder=""
+                  required=""
+                  class="form-input"
+                />
+                <label for="form-nombre" class="form-label"
+                  >Teléfono o email</label
+                >
+              </div>
+              <input id="oculto2" type="text" class="escondido" name="stopspam">
+              <div class="form-group">
+                <textarea
+                  rows="6"
+                  name="message"
+                  id="message2"
+                  placeholder=""
+                  required=""
+                  class="form-input"
+                ></textarea>
+                <label for="form-nombre" class="form-label"
+                  >Hablanos de tu proyecto</label
+                >
+              </div>
               <input
-                type="text"
-                name="name"
-                id="full-name"
-                placeholder="Tu nombre"
-                required=""
+                class="g-recaptcha btn button btnform2"
+                type="submit"
+                value="Enviar"
+                data-sitekey="6Lch2-YeAAAAACZILHfhlY-HLL5lfBcfFJ4AgB83"
+                data-action="submit"
               />
-              <input
-                type="text"
-                name="telephone"
-                id="full-name"
-                placeholder="Teléfono o email"
-                required=""
-              />
-              <textarea
-                rows="6"
-                name="message"
-                id="complaint"
-                placeholder="Hablanos de tu proyecto"
-                required=""
-              ></textarea>
-              <input class="btn button" type="submit" value="Enviar" />
             </form>
           </div>
         </div>
@@ -561,24 +652,25 @@
       <footer>
         <div class="title">
           <h2>PROUD TO BE</h2>
-          <img src="img/nerds-azul.svg" alt="" />
+          <img src="img/nerds-azul.svg" alt="nerds" />
         </div>
         <div class="info">
           <div class="owl-carousel owl-theme footer-info">
             <div class="item box">
-              <p class="telefono">+51 942 464 074</p>
+              <a href="tel:+51 942 464 074">
+                <p class="telefono">+51 942 464 074</p></a>
             </div>
             <div class="item box">
-              <p class="correo">hola@nerdmedia.pe</p>
+              <a href="mailto:hola@nermedia.pe"><p class="correo">hola@nerdmedia.pe</p></a>              
             </div>
             <div class="item box">
-              <a href="#"><p class="instagram">Instagram</p></a>
+              <a href="https://www.instagram.com/nerd_agencia/" target="_blank"><p class="instagram">Instagram</p></a>
             </div>
             <div class="item box">
-              <a href="#"> <p class="linkedin">Linkedin</p></a>
+              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank"> <p class="linkedin">Linkedin</p></a>
             </div>
             <div class="item box">
-              <a href="#"> <p class="facebook">Facebook</p></a>
+              <a href="https://www.facebook.com/NerdMedia" target="_blank"> <p class="facebook">Facebook</p></a>
             </div>
           </div>
         </div>
@@ -589,6 +681,7 @@
         </div>
       </footer>
     </main>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

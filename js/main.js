@@ -13,6 +13,35 @@ var typed = new Typed(".typing2", {
     loop: true
 });
 
+
+var interruptorid = document.getElementById('btnmas');
+
+/* elementos de contacto en pantalla */
+const nombre = document.querySelector("#full-name");
+const telephone = document.querySelector("#telephone");
+const message = document.querySelector("#message");
+const oculto = document.querySelector("#oculto");
+
+/* elementos del contacto en pagina */
+const nombre1 = document.querySelector("#full-name2");
+const telephone1 = document.querySelector("#telephone2");
+const message1 = document.querySelector("#message2");
+const oculto1 = document.querySelector("#oculto2");
+
+var valornombre = 1;
+var valortelefono = 1;
+var valormensaje = 0;
+
+var result = valornombre * valortelefono * valormensaje;
+
+var valornombre2 = 1;
+var valortelefono2 = 1;
+var valormensaje2 = 0;
+
+var result2 = valornombre2 * valortelefono2 * valormensaje2;
+
+var vol = new Boolean(false);
+
 document.addEventListener("click", function (e) {
     if (e.target.closest(".menubtn")) {
         document.querySelector(".menupage").classList.toggle("open");
@@ -65,7 +94,102 @@ document.addEventListener("click", function (e) {
         document.querySelector(".portafolioInterna").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
     }
+
+    if (e.target.closest(".btnform1")) {
+        if (result === 0) {
+            e.preventDefault();
+            if (nombre.value.length === 0 || nombre.value.charAt(0).includes(" ")) {
+                valornombre = 0;
+                if ($("#full-name.focus-visible")) {
+                    nombre.classList.add("falto");
+                }
+            } else {
+                valornombre = 1;
+            }
+            if (telephone.value.length === 0 || telephone.value.charAt(0).includes(" ")) {
+                valortelefono = 0;
+                if ($("#telephone.focus-visible")) {
+                    telephone.classList.add("falto");
+                }
+            } else {
+                valortelefono = 1;
+            }
+            if (message.value.length === 0 || message.value.charAt(0).includes(" ")) {
+                valormensaje = 0;
+                if ($("#message.focus-visible")) {
+                    message.classList.add("falto");
+                }
+            } else {
+                valormensaje = 1;
+            }
+            result = valornombre * valortelefono * valormensaje;
+            if (result === 1) {
+                if (oculto.value.length === 0) {
+                    onSubmit2();
+                }
+            }
+        }
+    }
+
+    if (e.target.closest(".btnform2")) {
+        if (result2 === 0) {
+            e.preventDefault();
+            if (nombre1.value.length === 0 || nombre1.value.charAt(0).includes(" ")) {
+                valornombre2 = 0;
+                if ($("#full-name2.focus-visible")) {
+                    nombre1.classList.add("falto");
+                }
+            } else {
+                valornombre2 = 1;
+            }
+            if (telephone1.value.length === 0 || telephone1.value.charAt(0).includes(" ")) {
+                valortelefono2 = 0;
+                if ($("#telephone2.focus-visible")) {
+                    telephone1.classList.add("falto");
+                }
+            } else {
+                valortelefono2 = 1;
+            }
+            if (message1.value.length === 0 || message1.value.charAt(0).includes(" ")) {
+                valormensaje2 = 0;
+                if ($("#telephone2.focus-visible")) {
+                    message1.classList.add("falto");
+                }
+            } else {
+                valormensaje2 = 1;
+            }
+            result2 = valornombre2 * valortelefono2 * valormensaje2;
+            if (result2 === 1) {
+                if (oculto2.value.length === 0) {
+                    onSubmit();
+                }
+            }
+        }
+    }
+
+    if (e.target.closest("#vermasitems")) {
+        if (vol == false) {
+            document.querySelector(".mostrariten").style.display = "block";
+            document.querySelector(".mostrariten1").style.display = "block";
+            document.getElementById("btnmas").innerHTML = "Ver menos proyectos";
+            vol = true;
+        } else {
+            document.querySelector(".mostrariten").style.display = "none";
+            document.querySelector(".mostrariten1").style.display = "none";
+            document.getElementById("btnmas").innerHTML = "Ver más proyectos";
+            vol = false;
+        }
+
+    }
 })
+
+function onSubmit(token) {
+    document.getElementById("fs-frm").submit();
+}
+
+function onSubmit2(token) {
+    document.getElementById("fs-frm2").submit();
+}
 
 gsap
     .timeline({
@@ -91,7 +215,7 @@ $('.clients-carousel').owlCarousel({
     dots: false,
     slideTransition: 'linear',
     autoplayTimeout: 4500,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     autoplaySpeed: 4500,
     responsive: {
         0: {
@@ -118,7 +242,7 @@ $('.footer-info').owlCarousel({
     dots: false,
     slideTransition: 'linear',
     autoplayTimeout: 4500,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     autoplaySpeed: 4500,
     responsive: {
         0: {
