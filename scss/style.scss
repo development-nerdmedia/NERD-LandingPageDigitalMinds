@@ -32,6 +32,8 @@ section.branding,
 section.marketing,
 section.disenoWeb,
 section.contact #fs-frm [type="text"],
+section.contact #fs-frm [type="email"],
+section.contact #fs-frm [type="number"],
 section.contact #fs-frm textarea {
   cursor: url(../img/cursor1.png), pointer;
 }
@@ -282,13 +284,14 @@ section.menupage {
         padding: 0 10px;
         transition: 0.2s linear;
         width: fit-content;
+        margin: 15px 0;
         a {
           text-decoration: none;
           color: #fff;
           font-family: var(--texto-epilogue);
           font-weight: 900;
           font-size: 60px;
-          line-height: 110px;
+          // line-height: 110px;
         }
         &:hover {
           background-color: var(--color-verde);
@@ -379,13 +382,14 @@ section.disenoWeb {
     font-family: var(--texto-epilogue);
     font-weight: 900;
     font-size: 50px;
-    line-height: 70px;
+    // line-height: 70px;
     padding-bottom: 37px;
   }
   .contenido {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+    align-items: flex-start;
     p {
       font-family: var(--texto-manrope);
       font-weight: 700;
@@ -407,7 +411,7 @@ section.disenoWeb {
         font-family: var(--texto-manrope);
         font-weight: 700;
         font-size: 28.108px;
-        line-height: 33px;
+        // line-height: 33px;
         margin-right: 10px;
         transition: 0.2s ease;
         &:hover {
@@ -449,7 +453,7 @@ section.portafolioInterna {
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  padding: 61px 0px;
+  padding: 40px 0px;
   // padding-left: 76px;
   color: #fff;
   // display: flex;
@@ -477,6 +481,7 @@ section.portafolioInterna {
   .content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     .part1 {
       video {
         border-radius: 10px;
@@ -486,6 +491,9 @@ section.portafolioInterna {
       font-family: var(--texto-poppins);
       display: flex;
       align-items: center;
+      width: 45%;
+      padding-left: 40px;
+      padding-top: 15px;
       span {
         font-size: 31px;
         font-weight: 600;
@@ -496,13 +504,20 @@ section.portafolioInterna {
         font-weight: 600;
         line-height: 42.3px;
       }
-      p {
+      p.bajada {
         font-family: var(--texto-manrope);
         font-size: 32.16px;
         font-weight: 700;
         line-height: 42.3px;
         color: var(--color-verde);
-        margin-bottom: 50px;
+        // margin-bottom: 20px;
+      }
+      p.parrafo{
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 22px;
+        margin: 20px 0;
+        margin-bottom: 40px;
       }
       a {
         background-color: #d949f8;
@@ -558,9 +573,20 @@ section.about {
       p {
         padding-top: 35px;
         font-family: var(--texto-manrope);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 45px;
+      }
+      h3{
+        padding-top: 35px;
+        font-family: var(--texto-manrope);
         font-weight: 700;
         font-size: 28px;
         line-height: 45px;
+        span{
+          font-family: var(--texto-epilogue);
+          font-weight: 900;
+        }
       }
     }
     .part2 {
@@ -687,7 +713,7 @@ section.about {
       // grid-auto-rows: 550px;
       padding: 50px 0;
       grid-gap: 30px;
-      .gallery__img {
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -698,6 +724,8 @@ section.about {
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        border-radius: 10px;
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
         img {
           transition: 0.2s linear;
         }
@@ -808,7 +836,7 @@ section.services {
     p {
       padding-top: 35px;
       font-family: var(--texto-manrope);
-      font-weight: 700;
+      font-weight: 400;
       font-size: 28px;
       line-height: 45px;
       width: 90%;
@@ -823,7 +851,7 @@ section.services {
       margin-right: 35px;
     }
     .card {
-      border: 4px solid var(--color-verde);
+      border: 4px solid var(--color-azul);
       width: 500px;
       // height: 490px;
       min-height: 490px;
@@ -833,12 +861,12 @@ section.services {
       cursor: pointer;
       transition: 0.2s ease;
       &:hover {
-        border: 4px solid var(--color-azul);
+        border: 4px solid var(--color-verde);
         a {
-          img:nth-child(1) {
+          img:nth-child(2) {
             display: none;
           }
-          img:nth-child(2) {
+          img:nth-child(1) {
             display: block;
           }
         }
@@ -862,7 +890,7 @@ section.services {
       }
       p {
         font-family: var(--texto-manrope);
-        font-weight: 700;
+        font-weight: 400;
         font-size: 28px;
         line-height: 35px;
         padding-top: 20px;
@@ -876,7 +904,7 @@ section.services {
         img:nth-child(1) {
           display: block;
         }
-        img:nth-child(2) {
+        img:nth-child(1) {
           display: none;
         }
       }
@@ -903,7 +931,7 @@ section.services {
 section.partnerds {
   background-color: var(--color-azul);
   padding-top: 100px;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
   color: #fff;
   .contenido {
     display: flex;
@@ -923,7 +951,7 @@ section.partnerds {
   }
   p {
     font-family: var(--texto-manrope);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 28px;
     line-height: 45px;
     width: 90%;
@@ -1057,6 +1085,16 @@ section.contact {
   .form-group {
     width: 100%;
   }
+  .colum{
+    width: 100%;
+    display: flex;
+    .form-group{
+      width: 50%;
+    }
+    .form-group:first-child{
+      margin-right: 33px;
+    }
+  }
   input[type="number"] {
     -moz-appearance: textfield;
   }
@@ -1184,8 +1222,12 @@ section.contact {
     width: 1000px;
   }
   #fs-frm [type="text"],
+  #fs-frm [type="number"],
+  #fs-frm [type="email"],
   #fs-frm textarea,
   #fs-frm2 [type="text"],
+  #fs-frm2 [type="number"],
+  #fs-frm2 [type="email"],
   #fs-frm2 textarea {
     background-color: rgba(255, 255, 255, 0.26);
     color: var(--color-azul);
@@ -1393,6 +1435,285 @@ section.about .portafolio h3 {
   display: none;
 }
 
+section.banner{
+  background-color: var(--color-azul);
+  padding: 73px 0;
+  padding-bottom: 90px;
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .banner-title{
+      max-width: 750px;
+      color: #fff;
+      h1{
+        font-family: var(--texto-epilogue);
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 90px;
+      }
+      p{
+        margin-top: 50px;
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+section.bajada{
+  padding: 200px 0;  
+  color: var(--color-azul);
+  p{
+    font-family: var(--texto-manrope);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .part1{
+      width: 50%;
+      padding-right: 30px;
+      p{
+        font-family: var(--texto-epilogue);
+        font-style: italic;
+        font-weight: 900;
+      }
+    }
+    .part2{
+      width: 50%;
+    }
+  }
+}
+
+section.image{
+  .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px;
+    padding-bottom: 50px;
+    h3{
+      font-family: var(--texto-epilogue);
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 73px;
+      color: var(--color-azul);
+      position: relative;
+    }
+    h3:nth-child(1){
+      &:before {
+        content: "";
+        width: 250px;
+        height: 22px;
+        background-color: var(--color-verde);
+        position: absolute;
+        bottom: 15px;
+        z-index: -2;
+      }
+    }
+    h3:nth-child(2){
+      &:before {
+        content: "";
+        width: 290px;
+        height: 22px;
+        background-color: var(--color-verde);
+        position: absolute;
+        bottom: 15px;
+        z-index: -2;
+      }
+    }
+    h3:nth-child(3){
+      &:before {
+        content: "";
+        width: 317px;
+        height: 22px;
+        background-color: var(--color-verde);
+        position: absolute;
+        bottom: 15px;
+        z-index: -2;
+      }
+    }
+  }
+  img{
+    width: 100%;
+  }
+  padding-bottom: 100px;
+}
+
+.page-nosotros {  
+  section.partnerds{
+    color: var(--color-azul);
+    background-color: #fff;  
+    p {
+      font-weight: 700;
+    }
+  }
+  section.slider-partnerds{
+    background-color: #fff;  
+  }
+  footer{
+    padding-top: 100px;
+  }
+}
+
+.item-servicios{
+  padding-bottom: 100px;
+  .item{    
+    color: var(--color-azul);   
+    h3{
+      font-family: var(--texto-epilogue);
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 73px;
+      position: relative;
+    }
+    a{
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28.108px;
+      border: 2.68px solid var(--color-azul);
+      border-radius: 20px;
+      padding: 3px 14px;
+      text-decoration: none;   
+    }
+    p{
+      font-family: var(--texto-manrope);
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    .content{
+      display: flex;
+      padding-top: 50px;
+      align-items: flex-start;
+      div:nth-child(1){
+        width: 25%;
+      }
+      div:nth-child(2){
+        width: 28%;
+      }
+      div:nth-child(3){
+        width: 47%;
+        padding-left: 50px;
+      }
+      .enlaces{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        a{
+          margin: 7px 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .item:nth-child(1){
+    h3:before {
+      content: "";
+      width: 250px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2;
+    }
+  }
+  .item:nth-child(2){    
+    padding-top: 50px;
+    h3:before {
+      content: "";
+      width: 290px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2;
+    }
+  }
+  .item:nth-child(3){    
+    padding-top: 50px;
+    h3:before {
+      content: "";
+      width: 317px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2;
+    }
+  }
+}
+
+/*media querys*/
+
+@media (max-width: 1560px) {
+  section.portafolioInterna .content .part2{
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 1540px) {
+  section.branding, section.marketing, section.disenoWeb{
+    padding: 33px 0px;
+  }
+  section.branding h2, section.marketing h2, section.disenoWeb h2{
+    padding-top: 122px;
+    padding-bottom: 20px;
+  }
+  section.branding .contenido, section.marketing .contenido, section.disenoWeb .contenido{
+    margin-bottom: 47px;
+  }
+}
+
+@media (max-width: 1220px) {
+  section.portafolioInterna .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2{
+    width: 490px !important;
+  }
+  section.portafolioInterna .content .part1{
+    margin-right: 0 !important; 
+  }
+  section.portafolioInterna .content .part1 div#my-player{
+    height: 276px !important;
+  }
+  section.portafolioInterna .content .part2{
+    padding-left: 0;
+  }
+  section.portafolioInterna .content .part2 span {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  section.portafolioInterna .content .part2 p.bajada{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  section.portafolioInterna .content .part2 p.parrafo{
+    font-size: 20px;
+    margin: 12px 0;
+    margin-bottom: 25px;
+  }
+  section.portafolioInterna .by span{
+    padding-right: 7px;
+    font-size: 35px;
+  }
+  section.portafolioInterna .by img {
+    width: 120px;
+  }
+}
+
 @media (max-height: 820px) {
   nav .btn-vertical {
     padding: 65px 0px;
@@ -1409,6 +1730,18 @@ section.about .portafolio h3 {
     nav .btn-vertical {
       padding: 40px 0px;
     }
+  }
+}
+
+@media (max-width: 515px) {
+  section.portafolioInterna .content .part1 div#my-player {
+    width: 100%;
+    height: 249px !important;
+  }
+}
+@media (max-width: 453px) {
+  section.portafolioInterna .content .part1 div#my-player {
+    height: 216px !important;
   }
 }
 
@@ -1736,10 +2069,38 @@ section.about .portafolio h3 {
   }
 }
 
+@media (max-width: 1024px) and (min-height: 1000px) {
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2{
+    width: 100% !important;
+  }
+  section.portafolioInterna .content .part1 div#my-player {
+    height: 469px !important;
+  }
+  section.portafolioInterna .content .part2 p.parrafo{
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.contact .colum{
+    flex-direction: column;
+    .form-group{
+      width: 100%;
+    }
+  }
+  section.contact .colum .form-group:first-child {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1024px) and (max-height: 1000px) {
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 25px;
   }
@@ -1749,10 +2110,14 @@ section.about .portafolio h3 {
   }
   section.contact #fs-frm select,
   section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm input[type="number"],
+  section.contact #fs-frm input[type="email"],
   section.contact #fs-frm fieldset,
   section.contact #fs-frm #card-element:disabled,
   section.contact #fs-frm2 select,
   section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 input[type="number"],
+  section.contact #fs-frm2 input[type="email"],
   section.contact #fs-frm2 fieldset,
   section.contact #fs-frm2 #card-element:disabled {
     padding-top: 18px;
@@ -1840,13 +2205,13 @@ section.about .portafolio h3 {
     }
     section.portafolioInterna .content .part1 div#my-player {
       width: 100%;
-      height: 276px !important;
+      // height: 276px !important;
     }
     section.portafolioInterna .content .part1 {
       margin-right: 0px;
     }
     section.portafolioInterna .content .part2 {
-      margin-top: 25px;
+      margin-top: 0px;
     }
     section.portafolioInterna .content .part2 span {
       font-size: 25px;
@@ -1860,7 +2225,7 @@ section.about .portafolio h3 {
       font-size: 35px;
     }
     section.portafolioInterna .content .part2 p {
-      margin-bottom: 37px;
+      margin-bottom: 0px;
     }
     section.portafolioInterna .content .part2 a {
       font-size: 22px;
@@ -1939,8 +2304,12 @@ section.about .portafolio h3 {
       padding-top: 35px;
     }
     section.contact #fs-frm [type="text"],
+    section.contact #fs-frm [type="number"],
+    section.contact #fs-frm [type="email"],
     section.contact #fs-frm textarea,
     section.contact #fs-frm2 [type="text"],
+    section.contact #fs-frm2 [type="number"],
+    section.contact #fs-frm2 [type="email"],
     section.contact #fs-frm2 textarea {
       line-height: inherit;
     }
@@ -2085,6 +2454,19 @@ section.about .portafolio h3 {
   footer .title h2 {
     font-size: 70px;
     line-height: 40px;
+  }
+}
+
+@media (max-width: 790px) {
+  section.portafolioInterna{
+    padding: 24px 0px;
+  }
+  section.portafolioInterna .by span {
+    font-size: 25px;
+    padding-right: 8px;
+  }
+  section.portafolioInterna .by img {
+    width: 100px;
   }
 }
 
@@ -2415,8 +2797,12 @@ section.about .portafolio h3 {
     margin-bottom: 66px;
   }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 20px;
   }
@@ -2452,9 +2838,6 @@ section.about .portafolio h3 {
   section.pagecontact {
     padding: 40px 0 !important;
   }
-  section.portafolioInterna {
-    padding: 40px 0;
-  }
   section.branding,
   section.marketing,
   section.disenoWeb {
@@ -2475,8 +2858,12 @@ section.about .portafolio h3 {
 
 @media (max-width: 768px) {
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 20px;
   }
@@ -2487,10 +2874,14 @@ section.about .portafolio h3 {
   }
   section.contact #fs-frm select,
   section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm input[type="number"],
+  section.contact #fs-frm input[type="email"],
   section.contact #fs-frm fieldset,
   section.contact #fs-frm #card-element:disabled,
   section.contact #fs-frm2 select,
   section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 input[type="number"],
+  section.contact #fs-frm2 input[type="email"],
   section.contact #fs-frm2 fieldset,
   section.contact #fs-frm2 #card-element:disabled {
     padding-top: 18px;
@@ -2526,6 +2917,21 @@ section.about .portafolio h3 {
     font-size: 18px;
     padding: 10px 26px;
   }
+  section.portafolioInterna .content .part2 p.bajada {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  section.portafolioInterna .content .part2 p.parrafo {
+    font-size: 20px;
+    margin: 6px 0;
+    margin-bottom: 19px;
+  }
+}
+
+@media (max-width: 580px) {
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2 {
+    width: 100% !important;
+}
 }
 
 @media (max-width: 602px) {
@@ -2761,7 +3167,7 @@ section.about .portafolio h3 {
     width: 246px;
   }
   section.portafolioInterna {
-    padding: 36px 0;
+    padding: 10px 0;
   }
   section.portafolioInterna .top img {
     width: 62px;
@@ -2770,7 +3176,18 @@ section.about .portafolio h3 {
     flex-direction: column;
   }
   section.portafolioInterna .content .part1 {
-    margin-bottom: 35px;
+    margin-bottom: 0;
+  }
+  section.portafolioInterna .content .part2 p.parrafo{
+    font-size: 18px;
+    line-height: 25px;
+  }
+  section.portafolioInterna .content .part2 h4{
+    font-size: 25px;
+  }
+  section.portafolioInterna .content .part2 p.bajada {
+    font-size: 19px;
+    line-height: 25px;
   }
   section.portafolioInterna .content .part1 div#my-player {
     width: 100%;
@@ -3191,7 +3608,11 @@ section.about .portafolio h3 {
     padding-top: 35px;
   }
   section.contact #fs-frm [type="text"],
-  section.contact #fs-frm2 [type="text"] {
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"] {
     margin-bottom: 1rem;
   }
   section.contact #fs-frm textarea,
@@ -3199,8 +3620,12 @@ section.about .portafolio h3 {
     height: 100px;
   }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 18px;
   }

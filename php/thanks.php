@@ -13,12 +13,13 @@
 $myemails = 'development@nerdmedia.pe, alonso@nerdmedia.pe';
 $name = $_POST['name'];
 $tel = $_POST['telephone'];
+$email= $_POST['email'];
 $message = $_POST['message'];
 
 $to = $myemails;
 $email_subject = "Contacto Nerd Digital (nerd.pe)";
 $email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n 
-Telefono o email: $tel \n Mensaje: \n $message";
+Telefono: $tel \n Email: $email \n Mensaje: \n $message";
 $headers = "From: $name";
 
 mail($to, $email_subject, $email_body, $headers);

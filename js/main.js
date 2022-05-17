@@ -1,17 +1,28 @@
-var typed = new Typed(".typing", {
-    strings: ["experiencias", "contenidos", "------"],
-    typeSpeed: 100,
-    backDelay: 2000,
-    backSpeed: 100,
-    loop: true
-});
-var typed = new Typed(".typing2", {
-    strings: ["memorables", "impactantes", "virales"],
-    typeSpeed: 100,
-    backDelay: 2000,
-    backSpeed: 100,
-    loop: true
-});
+MyApp = {
+    typeding: {
+        init: function () {
+            var typed = new Typed(".typing", {
+                strings: ["marcas", "campañas", "experiencias"],
+                typeSpeed: 100,
+                backDelay: 2000,
+                backSpeed: 100,
+                loop: true
+            });
+            var typed = new Typed(".typing2", {
+                strings: ["memorables", "que importan", "exitosas"],
+                typeSpeed: 100,
+                backDelay: 2000,
+                backSpeed: 100,
+                loop: true
+            });
+        }
+    }
+}
+
+if ($('.home').length > 0) {
+    MyApp.typeding.init();
+}
+
 
 
 var interruptorid = document.getElementById('btnmas');
@@ -25,6 +36,7 @@ const oculto = document.querySelector("#oculto");
 /* elementos del contacto en pagina */
 const nombre1 = document.querySelector("#full-name2");
 const telephone1 = document.querySelector("#telephone2");
+const email1 = document.querySelector("#email2");
 const message1 = document.querySelector("#message2");
 const oculto1 = document.querySelector("#oculto2");
 
@@ -36,9 +48,10 @@ var result = valornombre * valortelefono * valormensaje;
 
 var valornombre2 = 1;
 var valortelefono2 = 1;
+var valoremail2 = 1;
 var valormensaje2 = 0;
 
-var result2 = valornombre2 * valortelefono2 * valormensaje2;
+var result2 = valornombre2 * valortelefono2 * valoremail2 * valormensaje2;
 
 var vol = new Boolean(false);
 
@@ -60,10 +73,10 @@ document.addEventListener("click", function (e) {
         document.querySelector(".disenoWeb").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
     }
-    if (e.target.closest(".contacto-page")) {
-        document.querySelector(".pagecontact").classList.toggle("open");
-        jQuery('body').addClass('scrollhidden');
-    }
+    // if (e.target.closest(".contacto-page")) {
+    //     document.querySelector(".pagecontact").classList.toggle("open");
+    //     jQuery('body').addClass('scrollhidden');
+    // }
     if (e.target.closest(".openinterna")) {
         document.querySelector(".portafolioInterna").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
@@ -86,10 +99,10 @@ document.addEventListener("click", function (e) {
         document.querySelector(".disenoWeb").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
     }
-    if (e.target.closest(".close-contact")) {
-        document.querySelector(".pagecontact").classList.toggle("open");
-        jQuery('body').removeClass('scrollhidden');
-    }
+    // if (e.target.closest(".close-contact")) {
+    //     document.querySelector(".pagecontact").classList.toggle("open");
+    //     jQuery('body').removeClass('scrollhidden');
+    // }
     if (e.target.closest(".closeinterna")) {
         document.querySelector(".portafolioInterna").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
@@ -150,15 +163,23 @@ document.addEventListener("click", function (e) {
             } else {
                 valortelefono2 = 1;
             }
+            if (email1.value.length === 0 || email1.value.charAt(0).includes(" ")) {
+                valoremail2 = 0;
+                if ($("#email2.focus-visible")) {
+                    email1.classList.add("falto");
+                }
+            } else {
+                valoremail2 = 1;
+            }
             if (message1.value.length === 0 || message1.value.charAt(0).includes(" ")) {
                 valormensaje2 = 0;
-                if ($("#telephone2.focus-visible")) {
+                if ($("#message2.focus-visible")) {
                     message1.classList.add("falto");
                 }
             } else {
                 valormensaje2 = 1;
             }
-            result2 = valornombre2 * valortelefono2 * valormensaje2;
+            result2 = valornombre2 * valortelefono2 * valoremail2 * valormensaje2;
             if (result2 === 1) {
                 if (oculto2.value.length === 0) {
                     onSubmit();

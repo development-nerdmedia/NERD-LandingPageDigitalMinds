@@ -29,6 +29,8 @@ section.branding,
 section.marketing,
 section.disenoWeb,
 section.contact #fs-frm [type="text"],
+section.contact #fs-frm [type="email"],
+section.contact #fs-frm [type="number"],
 section.contact #fs-frm textarea {
   cursor: url(../img/cursor1.png), pointer; }
 
@@ -229,14 +231,14 @@ section.menupage {
       section.menupage .menuContent ul li {
         padding: 0 10px;
         transition: 0.2s linear;
-        width: fit-content; }
+        width: fit-content;
+        margin: 15px 0; }
         section.menupage .menuContent ul li a {
           text-decoration: none;
           color: #fff;
           font-family: var(--texto-epilogue);
           font-weight: 900;
-          font-size: 60px;
-          line-height: 110px; }
+          font-size: 60px; }
         section.menupage .menuContent ul li:hover {
           background-color: var(--color-verde);
           width: fit-content; }
@@ -310,14 +312,14 @@ section.disenoWeb {
     font-family: var(--texto-epilogue);
     font-weight: 900;
     font-size: 50px;
-    line-height: 70px;
     padding-bottom: 37px; }
   section.branding .contenido,
   section.marketing .contenido,
   section.disenoWeb .contenido {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    align-items: flex-start; }
     section.branding .contenido p,
     section.marketing .contenido p,
     section.disenoWeb .contenido p {
@@ -344,7 +346,6 @@ section.disenoWeb {
         font-family: var(--texto-manrope);
         font-weight: 700;
         font-size: 28.108px;
-        line-height: 33px;
         margin-right: 10px;
         transition: 0.2s ease; }
         section.branding .contenido .text span:hover,
@@ -386,7 +387,7 @@ section.portafolioInterna {
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  padding: 61px 0px;
+  padding: 40px 0px;
   color: #fff; }
   section.portafolioInterna .container {
     height: 100%;
@@ -405,13 +406,17 @@ section.portafolioInterna {
       z-index: 5; }
   section.portafolioInterna .content {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: flex-start; }
     section.portafolioInterna .content .part1 video {
       border-radius: 10px; }
     section.portafolioInterna .content .part2 {
       font-family: var(--texto-poppins);
       display: flex;
-      align-items: center; }
+      align-items: center;
+      width: 45%;
+      padding-left: 40px;
+      padding-top: 15px; }
       section.portafolioInterna .content .part2 span {
         font-size: 31px;
         font-weight: 600;
@@ -420,13 +425,18 @@ section.portafolioInterna {
         font-size: 42.87px;
         font-weight: 600;
         line-height: 42.3px; }
-      section.portafolioInterna .content .part2 p {
+      section.portafolioInterna .content .part2 p.bajada {
         font-family: var(--texto-manrope);
         font-size: 32.16px;
         font-weight: 700;
         line-height: 42.3px;
-        color: var(--color-verde);
-        margin-bottom: 50px; }
+        color: var(--color-verde); }
+      section.portafolioInterna .content .part2 p.parrafo {
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 22px;
+        margin: 20px 0;
+        margin-bottom: 40px; }
       section.portafolioInterna .content .part2 a {
         background-color: #d949f8;
         font-family: var(--texto-manrope);
@@ -470,9 +480,18 @@ section.about {
       section.about .contenido .part1 p {
         padding-top: 35px;
         font-family: var(--texto-manrope);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 45px; }
+      section.about .contenido .part1 h3 {
+        padding-top: 35px;
+        font-family: var(--texto-manrope);
         font-weight: 700;
         font-size: 28px;
         line-height: 45px; }
+        section.about .contenido .part1 h3 span {
+          font-family: var(--texto-epilogue);
+          font-weight: 900; }
     section.about .contenido .part2 img {
       width: 269px;
       float: right; }
@@ -558,7 +577,7 @@ section.about {
       grid-template-columns: repeat(5, 1fr);
       padding: 50px 0;
       grid-gap: 30px; }
-      section.about .portafolio .gallery-container .gallery__img {
+      section.about .portafolio .gallery-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -567,7 +586,9 @@ section.about {
         height: 550px;
         position: relative;
         overflow: hidden;
-        cursor: pointer; }
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
         section.about .portafolio .gallery-container .gallery__item img {
           transition: 0.2s linear; }
         section.about .portafolio .gallery-container .gallery__item .textInfo {
@@ -648,7 +669,7 @@ section.services {
   section.services .contenido p {
     padding-top: 35px;
     font-family: var(--texto-manrope);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 28px;
     line-height: 45px;
     width: 90%; }
@@ -660,7 +681,7 @@ section.services {
     section.services .cards .card:nth-child(2) {
       margin-right: 35px; }
     section.services .cards .card {
-      border: 4px solid var(--color-verde);
+      border: 4px solid var(--color-azul);
       width: 500px;
       min-height: 490px;
       padding: 30px;
@@ -669,10 +690,10 @@ section.services {
       cursor: pointer;
       transition: 0.2s ease; }
       section.services .cards .card:hover {
-        border: 4px solid var(--color-azul); }
-        section.services .cards .card:hover a img:nth-child(1) {
-          display: none; }
+        border: 4px solid var(--color-verde); }
         section.services .cards .card:hover a img:nth-child(2) {
+          display: none; }
+        section.services .cards .card:hover a img:nth-child(1) {
           display: block; }
       section.services .cards .card h3 {
         font-family: var(--texto-epilogue);
@@ -691,7 +712,7 @@ section.services {
           z-index: -2; }
       section.services .cards .card p {
         font-family: var(--texto-manrope);
-        font-weight: 700;
+        font-weight: 400;
         font-size: 28px;
         line-height: 35px;
         padding-top: 20px;
@@ -703,7 +724,7 @@ section.services {
         cursor: pointer; }
         section.services .cards .card a img:nth-child(1) {
           display: block; }
-        section.services .cards .card a img:nth-child(2) {
+        section.services .cards .card a img:nth-child(1) {
           display: none; }
     section.services .cards .card:nth-child(2) h3::before {
       content: "";
@@ -715,7 +736,7 @@ section.services {
 section.partnerds {
   background-color: var(--color-azul);
   padding-top: 100px;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
   color: #fff; }
   section.partnerds .contenido {
     display: flex;
@@ -732,7 +753,7 @@ section.partnerds {
       line-height: 36px; }
   section.partnerds p {
     font-family: var(--texto-manrope);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 28px;
     line-height: 45px;
     width: 90%;
@@ -837,6 +858,13 @@ section.contact {
     margin: 0; }
   section.contact .form-group {
     width: 100%; }
+  section.contact .colum {
+    width: 100%;
+    display: flex; }
+    section.contact .colum .form-group {
+      width: 50%; }
+    section.contact .colum .form-group:first-child {
+      margin-right: 33px; }
   section.contact input[type="number"] {
     -moz-appearance: textfield; }
   section.contact #fs-frm fieldset,
@@ -946,8 +974,12 @@ section.contact {
   section.contact form {
     width: 1000px; }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     background-color: rgba(255, 255, 255, 0.26);
     color: var(--color-azul);
@@ -1109,6 +1141,220 @@ section.about .portafolio h3 {
 .container .slider-clientes2 {
   display: none; }
 
+section.banner {
+  background-color: var(--color-azul);
+  padding: 73px 0;
+  padding-bottom: 90px; }
+  section.banner .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    section.banner .content .banner-title {
+      max-width: 750px;
+      color: #fff; }
+      section.banner .content .banner-title h1 {
+        font-family: var(--texto-epilogue);
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 90px; }
+      section.banner .content .banner-title p {
+        margin-top: 50px;
+        font-family: var(--texto-manrope);
+        font-weight: 700;
+        font-size: 28px; }
+
+section.bajada {
+  padding: 200px 0;
+  color: var(--color-azul); }
+  section.bajada p {
+    font-family: var(--texto-manrope);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 45px; }
+  section.bajada .content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    section.bajada .content .part1 {
+      width: 50%;
+      padding-right: 30px; }
+      section.bajada .content .part1 p {
+        font-family: var(--texto-epilogue);
+        font-style: italic;
+        font-weight: 900; }
+    section.bajada .content .part2 {
+      width: 50%; }
+
+section.image {
+  padding-bottom: 100px; }
+  section.image .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px;
+    padding-bottom: 50px; }
+    section.image .content h3 {
+      font-family: var(--texto-epilogue);
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 73px;
+      color: var(--color-azul);
+      position: relative; }
+    section.image .content h3:nth-child(1):before {
+      content: "";
+      width: 250px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2; }
+    section.image .content h3:nth-child(2):before {
+      content: "";
+      width: 290px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2; }
+    section.image .content h3:nth-child(3):before {
+      content: "";
+      width: 317px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2; }
+  section.image img {
+    width: 100%; }
+
+.page-nosotros section.partnerds {
+  color: var(--color-azul);
+  background-color: #fff; }
+  .page-nosotros section.partnerds p {
+    font-weight: 700; }
+
+.page-nosotros section.slider-partnerds {
+  background-color: #fff; }
+
+.page-nosotros footer {
+  padding-top: 100px; }
+
+.item-servicios {
+  padding-bottom: 100px; }
+  .item-servicios .item {
+    color: var(--color-azul); }
+    .item-servicios .item h3 {
+      font-family: var(--texto-epilogue);
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 73px;
+      position: relative; }
+    .item-servicios .item a {
+      font-family: var(--texto-manrope);
+      font-weight: 700;
+      font-size: 28.108px;
+      border: 2.68px solid var(--color-azul);
+      border-radius: 20px;
+      padding: 3px 14px;
+      text-decoration: none; }
+    .item-servicios .item p {
+      font-family: var(--texto-manrope);
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38px; }
+    .item-servicios .item .content {
+      display: flex;
+      padding-top: 50px;
+      align-items: flex-start; }
+      .item-servicios .item .content div:nth-child(1) {
+        width: 25%; }
+      .item-servicios .item .content div:nth-child(2) {
+        width: 28%; }
+      .item-servicios .item .content div:nth-child(3) {
+        width: 47%;
+        padding-left: 50px; }
+      .item-servicios .item .content .enlaces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; }
+        .item-servicios .item .content .enlaces a {
+          margin: 7px 0;
+          margin-right: 10px; }
+  .item-servicios .item:nth-child(1) h3:before {
+    content: "";
+    width: 250px;
+    height: 22px;
+    background-color: var(--color-verde);
+    position: absolute;
+    bottom: 15px;
+    z-index: -2; }
+  .item-servicios .item:nth-child(2) {
+    padding-top: 50px; }
+    .item-servicios .item:nth-child(2) h3:before {
+      content: "";
+      width: 290px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2; }
+  .item-servicios .item:nth-child(3) {
+    padding-top: 50px; }
+    .item-servicios .item:nth-child(3) h3:before {
+      content: "";
+      width: 317px;
+      height: 22px;
+      background-color: var(--color-verde);
+      position: absolute;
+      bottom: 15px;
+      z-index: -2; }
+
+/*media querys*/
+@media (max-width: 1560px) {
+  section.portafolioInterna .content .part2 {
+    padding-left: 10px; } }
+
+@media (max-width: 1540px) {
+  section.branding, section.marketing, section.disenoWeb {
+    padding: 33px 0px; }
+  section.branding h2, section.marketing h2, section.disenoWeb h2 {
+    padding-top: 122px;
+    padding-bottom: 20px; }
+  section.branding .contenido, section.marketing .contenido, section.disenoWeb .contenido {
+    margin-bottom: 47px; } }
+
+@media (max-width: 1220px) {
+  section.portafolioInterna .content {
+    flex-direction: column;
+    align-items: center; }
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2 {
+    width: 490px !important; }
+  section.portafolioInterna .content .part1 {
+    margin-right: 0 !important; }
+  section.portafolioInterna .content .part1 div#my-player {
+    height: 276px !important; }
+  section.portafolioInterna .content .part2 {
+    padding-left: 0; }
+  section.portafolioInterna .content .part2 span {
+    font-size: 23px;
+    line-height: 30px; }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px; }
+  section.portafolioInterna .content .part2 p.bajada {
+    font-size: 25px;
+    line-height: 30px; }
+  section.portafolioInterna .content .part2 p.parrafo {
+    font-size: 20px;
+    margin: 12px 0;
+    margin-bottom: 25px; }
+  section.portafolioInterna .by span {
+    padding-right: 7px;
+    font-size: 35px; }
+  section.portafolioInterna .by img {
+    width: 120px; } }
+
 @media (max-height: 820px) {
   nav .btn-vertical {
     padding: 65px 0px; } }
@@ -1122,6 +1368,15 @@ section.about .portafolio h3 {
 @media (max-height: 820px) and (max-height: 720px) {
   nav .btn-vertical {
     padding: 40px 0px; } }
+
+@media (max-width: 515px) {
+  section.portafolioInterna .content .part1 div#my-player {
+    width: 100%;
+    height: 249px !important; } }
+
+@media (max-width: 453px) {
+  section.portafolioInterna .content .part1 div#my-player {
+    height: 216px !important; } }
 
 @media (min-width: 426px) {
   section.portafolioInterna .content .part1 {
@@ -1340,10 +1595,30 @@ section.about .portafolio h3 {
   section.services .cards .card {
     width: 100% !important; } }
 
+@media (max-width: 1024px) and (min-height: 1000px) {
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2 {
+    width: 100% !important; }
+  section.portafolioInterna .content .part1 div#my-player {
+    height: 469px !important; }
+  section.portafolioInterna .content .part2 p.parrafo {
+    font-size: 25px; } }
+
+@media (max-width: 1024px) {
+  section.contact .colum {
+    flex-direction: column; }
+    section.contact .colum .form-group {
+      width: 100%; }
+  section.contact .colum .form-group:first-child {
+    margin-right: 0; } }
+
 @media (max-width: 1024px) and (max-height: 1000px) {
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 25px; }
   section.contact .form-group .form-label {
@@ -1351,10 +1626,14 @@ section.about .portafolio h3 {
     top: 1px; }
   section.contact #fs-frm select,
   section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm input[type="number"],
+  section.contact #fs-frm input[type="email"],
   section.contact #fs-frm fieldset,
   section.contact #fs-frm #card-element:disabled,
   section.contact #fs-frm2 select,
   section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 input[type="number"],
+  section.contact #fs-frm2 input[type="email"],
   section.contact #fs-frm2 fieldset,
   section.contact #fs-frm2 #card-element:disabled {
     padding-top: 18px; } }
@@ -1422,12 +1701,11 @@ section.about .portafolio h3 {
   section.portafolioInterna .content {
     align-items: center; }
   section.portafolioInterna .content .part1 div#my-player {
-    width: 100%;
-    height: 276px !important; }
+    width: 100%; }
   section.portafolioInterna .content .part1 {
     margin-right: 0px; }
   section.portafolioInterna .content .part2 {
-    margin-top: 25px; }
+    margin-top: 0px; }
   section.portafolioInterna .content .part2 span {
     font-size: 25px;
     line-height: 30px; }
@@ -1437,7 +1715,7 @@ section.about .portafolio h3 {
   section.portafolioInterna .content .part2 h4 {
     font-size: 35px; }
   section.portafolioInterna .content .part2 p {
-    margin-bottom: 37px; }
+    margin-bottom: 0px; }
   section.portafolioInterna .content .part2 a {
     font-size: 22px;
     padding: 10px 38px; }
@@ -1492,8 +1770,12 @@ section.about .portafolio h3 {
   section.contact .form {
     padding-top: 35px; }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     line-height: inherit; }
   section.pagecontact .contenido-contacto {
@@ -1596,6 +1878,15 @@ section.about .portafolio h3 {
   footer .title h2 {
     font-size: 70px;
     line-height: 40px; } }
+
+@media (max-width: 790px) {
+  section.portafolioInterna {
+    padding: 24px 0px; }
+  section.portafolioInterna .by span {
+    font-size: 25px;
+    padding-right: 8px; }
+  section.portafolioInterna .by img {
+    width: 100px; } }
 
 @media (max-width: 1000px) {
   section.thankspage .text p {
@@ -1829,8 +2120,12 @@ section.about .portafolio h3 {
     height: calc(82px + 40px);
     margin-bottom: 66px; }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 20px; }
   section.contact #fs-frm [type="submit"],
@@ -1854,8 +2149,6 @@ section.about .portafolio h3 {
     padding: 40px 0; }
   section.pagecontact {
     padding: 40px 0 !important; }
-  section.portafolioInterna {
-    padding: 40px 0; }
   section.branding,
   section.marketing,
   section.disenoWeb {
@@ -1871,8 +2164,12 @@ section.about .portafolio h3 {
 
 @media (max-width: 768px) {
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 20px; }
   section.contact .form-group .form-label {
@@ -1881,10 +2178,14 @@ section.about .portafolio h3 {
     left: 0; }
   section.contact #fs-frm select,
   section.contact #fs-frm input[type="text"],
+  section.contact #fs-frm input[type="number"],
+  section.contact #fs-frm input[type="email"],
   section.contact #fs-frm fieldset,
   section.contact #fs-frm #card-element:disabled,
   section.contact #fs-frm2 select,
   section.contact #fs-frm2 input[type="text"],
+  section.contact #fs-frm2 input[type="number"],
+  section.contact #fs-frm2 input[type="email"],
   section.contact #fs-frm2 fieldset,
   section.contact #fs-frm2 #card-element:disabled {
     padding-top: 18px;
@@ -1910,7 +2211,18 @@ section.about .portafolio h3 {
     line-height: 32px; }
   section.portafolioInterna .content .part2 a {
     font-size: 18px;
-    padding: 10px 26px; } }
+    padding: 10px 26px; }
+  section.portafolioInterna .content .part2 p.bajada {
+    font-size: 20px;
+    line-height: 25px; }
+  section.portafolioInterna .content .part2 p.parrafo {
+    font-size: 20px;
+    margin: 6px 0;
+    margin-bottom: 19px; } }
+
+@media (max-width: 580px) {
+  section.portafolioInterna .content .part1, section.portafolioInterna .content .part2 {
+    width: 100% !important; } }
 
 @media (max-width: 602px) {
   .container {
@@ -2087,13 +2399,21 @@ section.about .portafolio h3 {
   section.thankspage .text img {
     width: 246px; }
   section.portafolioInterna {
-    padding: 36px 0; }
+    padding: 10px 0; }
   section.portafolioInterna .top img {
     width: 62px; }
   section.portafolioInterna .content {
     flex-direction: column; }
   section.portafolioInterna .content .part1 {
-    margin-bottom: 35px; }
+    margin-bottom: 0; }
+  section.portafolioInterna .content .part2 p.parrafo {
+    font-size: 18px;
+    line-height: 25px; }
+  section.portafolioInterna .content .part2 h4 {
+    font-size: 25px; }
+  section.portafolioInterna .content .part2 p.bajada {
+    font-size: 19px;
+    line-height: 25px; }
   section.portafolioInterna .content .part1 div#my-player {
     width: 100%;
     height: 200px !important; }
@@ -2412,14 +2732,22 @@ section.about .portafolio h3 {
   section.contact .form {
     padding-top: 35px; }
   section.contact #fs-frm [type="text"],
-  section.contact #fs-frm2 [type="text"] {
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
+  section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"] {
     margin-bottom: 1rem; }
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 textarea {
     height: 100px; }
   section.contact #fs-frm [type="text"],
+  section.contact #fs-frm [type="number"],
+  section.contact #fs-frm [type="email"],
   section.contact #fs-frm textarea,
   section.contact #fs-frm2 [type="text"],
+  section.contact #fs-frm2 [type="number"],
+  section.contact #fs-frm2 [type="email"],
   section.contact #fs-frm2 textarea {
     font-size: 18px; }
   section.contact {
