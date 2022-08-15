@@ -112,16 +112,19 @@
     </header>
     <section class="loading">
       <div class="boxes">        
-        <div class="box box1"><span>N</span></div>
-        <div class="box box2"><span>E</span></div>
-        <div class="box box3"><span>R</span></div>
-        <div class="box box4"><span>D</span></div>
+        <img src="../img/icon-ld.svg" alt="">
+        <div class="text">
+          <p class="active">Campañas </p>
+          <p>Social Media</p>
+          <p>Diseño Web</p>
+          <p>Branding</p>
+        </div>
       </div>
     </section>
     <main>
       <div class="snake"></div>
       <div class="ht-cursor">
-        <div class="ht-cursor-text">VER <br>MAS</div>
+        <div class="ht-cursor-text">VER <br>MÁS</div>
       </div>
       <section class="menupage">
         <div class="container">
@@ -243,7 +246,7 @@
         </div>
       </section>
       <section class="banner-portfolio-interna tinka">
-        <img src="../img/banner-tinka2.png" alt="">
+        <img src="../img/banner-tinka2.jpg" alt="">
       </section>
       <section class="info">
           <div class="container">
@@ -265,7 +268,8 @@
         <div class="container">
           <div class="galery-fotos-tinka">
             <div class="div1">
-                <img src="../img/interna-tinka-img.png" alt="">
+                <img class="default" src="../img/interna-tinka-img.jpg" alt="">
+                <img class="responsive" src="../img/interna-tinka-img-responsive.jpg" alt="">
             </div>
             <div class="div2">
               <lottie-player class="default" src="../json/NERD_Gato_Tinka.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
@@ -278,21 +282,14 @@
         <div class="circulo">
           <a href="item8.html">
             <div class="filtro"></div>
-            <img src="../img/neo-siguiente.png" alt="">
+            <img src="../img/proxneo.png" alt="">
             <div class="texto">
               <p>NEO PROJECTS</p>
               <img src="../img/flechaverde.svg" alt="">
             </div>
           </a>
         </div>
-        <div class="owl-carousel owl-theme siguienteProyecto">
-          <div class="item">
-            <p>SIGUIENTE PROYECTO</p>
-          </div>
-          <div class="item">
-            <p>SIGUIENTE PROYECTO</p>
-          </div>
-        </div>
+        <h3>SIGUIENTE PROYECTO</h3>
     </section>
       <footer>
         <div class="title">
@@ -300,22 +297,13 @@
           <img src="../img/nerds-azul.svg" alt="nerds" />
         </div>
         <div class="info">
-          <div class="owl-carousel owl-theme footer-info">
-            <div class="item box">
-              <a href="tel:+51 942 464 074">
-                <p class="telefono">+51 942 464 074</p></a>
-            </div>
-            <div class="item box">
-              <a href="mailto:hola@nermedia.pe"><p class="correo">hola@nerdmedia.pe</p></a>              
-            </div>
-            <div class="item box">
-              <a href="https://www.instagram.com/nerd_agencia/" target="_blank"><p class="instagram">Instagram</p></a>
-            </div>
-            <div class="item box">
-              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank"> <p class="linkedin">Linkedin</p></a>
-            </div>
-            <div class="item box">
-              <a href="https://www.facebook.com/NerdMedia" target="_blank"> <p class="facebook">Facebook</p></a>
+          <div class="marquee-with-options">
+            <div class="text">
+              <a href="tel:+51 942 464 074">+51 942 464 074</a>
+              <a href="mailto:hola@nermedia.pe">hola@nerdmedia.pe</a>
+              <a href="https://www.instagram.com/nerd_agencia/" target="_blank">Instagram</a>
+              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank">Linkedin</a>
+              <a href="https://www.facebook.com/NerdMedia" target="_blank">Facebook</a>
             </div>
           </div>
         </div>
@@ -334,6 +322,9 @@
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
     <script src="../slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="../js/jquery.pause.js" type="text/javascript"></script>
+		<script src="../js/jquery.easing.min.js" type="text/javascript"></script>
+		<script src="../js/jquery.marquee.js?v=3" type="text/javascript"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

@@ -79,7 +79,9 @@
     <!-- End Google Tag Manager (noscript) -->
     <header>
       <nav>
-        <a class="menubtn"><img src="img/Group 470.png" alt="menu" /></a>
+        <a class="menubtn">
+          <img src="img/menu.svg" alt="">
+        </a>
         <div class="btn-vertical">
           <a href="#sectionContacto"
             >Agenda una cita con un <span>NERD</span></a
@@ -105,13 +107,30 @@
       </nav>
       <div class="menu-movil">
         <div class="container container-menu">
-          <a href="https://nerd.pe/"> <img src="img/nerd-blanco.svg" alt="Nerd" /></a>
+          <a href="https://www.nerd.pe/"> <img src="img/nerd-blanco.svg" alt="Nerd" /></a>
           <a class="menubtn"><img src="img/menu-mobil.svg" alt="Menu" /></a>
         </div>
       </div>
     </header>
-
+    <section class="loading">
+      <div class="boxes">        
+        <img src="img/icon-ld.svg" alt="">
+        <div class="text">
+          <p class="active">Campañas </p>
+          <p>Social Media</p>
+          <p>Diseño Web</p>
+          <p>Branding</p>
+        </div>
+      </div>
+    </section>
     <main>
+      <div class="snake"></div>
+      <!-- <div class="cursor-eye">
+        <img src="img/vermasv2.png" alt="">
+      </div> -->
+      <div class="ht-cursor">
+        <div class="ht-cursor-text">VER <br>MÁS</div>
+      </div>
       <section class="menupage">
         <div class="container">
           <div class="top">
@@ -122,7 +141,7 @@
             <ul>
               <li><a class="cerrarr" href="#home">Home</a></li>
               <li><a class="cerrarr" href="nosotros.html">Nosotros</a></li>
-              <li><a class="cerrarr" href="#portafolio">Portafolio</a></li>
+              <li><a class="cerrarr" href="portafolio.html">Portafolio</a></li>
               <li><a class="cerrarr" href="servicios.html">Servicios</a></li>
               <li>
                 <a class="cerrarr" href="contacto.html">Contacto</a>
@@ -132,22 +151,19 @@
               <p>
                 <a href="mailto:francesca@nerdmedia.pe"
                   ><img
-                    src="img/correo.png"
+                    src="img/correo.svg"
                     alt="carta"
                   />francesca@nerdmedia.pe</a
                 >
               </p>
               <p><a href="tel:+51 942 464 074">                
-                <img src="img/telephone.png" alt="carta" />+51 942 464 074</p>
+                <img src="img/telephone.svg" alt="carta" />+51 942 464 074</p>
               </a>
-              <p>
-                <img src="img/Crop_location-white.svg" alt="carta" />Lima - Perú
-              </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- <section class="contact pagecontact">
+      <section class="contact pagecontact">
         <div class="container">
           <div class="btn-close">
             <a class="close-contact">
@@ -179,19 +195,35 @@
                   />
                   <label for="form-nombre" class="form-label">Tu nombre</label>
                 </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="telephone"
-                    id="telephone"
-                    placeholder=""
-                    required=""
-                    class="form-input"
-                  />
-                  <label for="form-nombre" class="form-label"
-                    >Teléfono o email</label
-                  >
+                <div class="colum">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="telephone"
+                      id="telephone"
+                      placeholder=""
+                      required=""
+                      class="form-input"
+                    />
+                    <label for="form-nombre" class="form-label"
+                      >Teléfono</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder=""
+                      required=""
+                      class="form-input"
+                    />
+                    <label for="form-nombre" class="form-label"
+                      >Email</label
+                    >
+                  </div>
                 </div>
+                
                 <input id="oculto" type="text" class="escondido" name="stopspam">
                 <div class="form-group">
                   <textarea
@@ -217,11 +249,11 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="branding">
         <div class="container">
           <div class="top">
-            <img src="img/logo.png" alt="icon" />
+            <img src="img/logo.png" alt="icon" class="logo" />
             <a class="closebranding">
               <img src="img/closemenu.svg" alt="close"
             /></a>
@@ -247,7 +279,7 @@
               </div>
             </div>
             <div class="btn">
-              <a class="contacto-page">Quiero que me contacten</a>
+              <a href="contacto.html">Quiero que me contacten</a>
             </div>
           </div>
         </div>
@@ -255,7 +287,7 @@
       <section class="marketing">
         <div class="container">
           <div class="top">
-            <img src="img/logo.png" alt="icon" />
+            <img src="img/logo.png" alt="icon" class="logo"/>
             <a class="closemarketing">
               <img src="img/closemenu.svg" alt="close"
             /></a>
@@ -279,7 +311,7 @@
               </div>
             </div>
             <div class="btn">
-              <a class="contacto-page">Quiero que me contacten</a>
+              <a href="contacto.html">Quiero que me contacten</a>
             </div>
           </div>
         </div>
@@ -287,7 +319,7 @@
       <section class="disenoWeb">
         <div class="container">
           <div class="top">
-            <img src="img/logo.png" alt="icon" />
+            <img src="img/logo.png" alt="icon" class="logo"/>
             <a class="closedisenoweb">
               <img src="img/closemenu.svg" alt="close"
             /></a>
@@ -308,26 +340,27 @@
               </div>
             </div>
             <div class="btn">
-              <a class="contacto-page">Quiero que me contacten</a>
+              <a href="contacto.html">Quiero que me contacten</a>
             </div>
           </div>
         </div>
       </section>
       <section id="home" class="home">
         <div class="container">
-          <a href="index.html">
+          <a href="https://www.nerd.pe/">
             <img class="logo" src="img/logo.png" alt="NERD-icon" /></a>
           <div class="homeContent">
             <h1>
-              Creamos <br />
+              <b id="equipo">Diseñamos</b> <br />
               <span class="typing"></span>
-              <br />digitales <span class="typing2"></span>
+              <br /><b>digitales</b><span class="typing2"></span>
             </h1>
-            <p>BRANDING - MARKETING - DISEÑO WEB</p>
+            <p><span class="brandingbtn">BRANDING</span> - <span class="marketingbtn">MARKETING</span> - <span class="disenowebbtn">DISEÑO WEB</span></p>
             <button class="contacto-page">Quiero que me contacten</button>
             <img class="flecha" src="img/flecha.svg" alt="scroll" />
           </div>
         </div>
+        <img class="gif" id="gif" src="img/Equipo2.gif" alt="">
       </section>
       <section class="about">
         <div class="container">
@@ -342,20 +375,20 @@
                 diseñar estrategias que funcionen y disfrutar del proceso
                 creativo.
               </p>
-              <h3>Conoce más sobre los <span>NERDs</span></h3>
+              <a href="nosotros.html">Conoce más sobre los <span>NERDs</span></a>
             </div>
             <div class="part2">
-              <img src="img/8-azul.png" alt="8años-de-experiencia" />
-              <img src="img/8-azul.png" alt="8años-de-experiencia" />
+              <img src="img/ochoaños.gif" alt="8años-de-experiencia" />
             </div>
           </div>
           <div id="portafolio" class="portafolio">
             <h2>Portafolio</h2>
             <h3>destacado</h3>
             <div class="gallery-container">
-              <div class="gallery__item openinterna">
+              <div class="gallery__item mostrarVermas">
+                <a href="portfolio/item.html">
                 <img
-                  src="img/statkraft.png"
+                  src="img/statkraft.jpg"
                   alt="statkraft"
                 />
                 <div class="textInfo">
@@ -365,9 +398,11 @@
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
                 </div>
+              </a>
               </div>
-              <div class="gallery__item openinterna">
-                <img src="img/ucal2.png" alt="ucal" />
+              <div class="gallery__item mostrarVermas">
+                <a href="portfolio/item3.html">
+                <img src="img/ucal2.jpg" alt="ucal" />
                 <div class="textInfo">
                   <div>
                     <span>Ucal Vocacional</span>
@@ -375,10 +410,12 @@
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
                 </div>
+              </a>
               </div>
-              <div class="gallery__item openinterna">
+              <div class="gallery__item mostrarVermas">
+                <a href="portfolio/item4.html">
                 <img
-                  src="img/yaw.png"
+                  src="img/yaw.jpg"
                   alt="yaw"
                 />
                 <div class="textInfo">
@@ -388,9 +425,11 @@
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
                 </div>
+              </a>
               </div>
-              <div class="gallery__item openinterna">
-                <img src="img/open.png" alt="open" />
+              <div class="gallery__item mostrarVermas">
+                <a href="portfolio/item2.html">
+                <img src="img/open.jpg" alt="open" />
                 <div class="textInfo">
                   <div>
                     <span>OPEN</span>
@@ -398,41 +437,17 @@
                     <p>Creatividad, Branding, UX, UI, Digital</p>
                   </div>
                 </div>
-              </div>
-              <div class="gallery__item openinterna mostrariten">
-                <img
-                  src="img/neo.png"
-                  alt="statkraft"
-                />
-                <div class="textInfo">
-                  <div>
-                    <span>NEO Projects</span>
-                    <h4>Conecta con el Futuro</h4>
-                    <p>Creatividad, Branding, UX, UI, Digital</p>
-                  </div>
-                </div>
-              </div>
-              <div class="gallery__item openinterna mostrariten1">
-                <img src="img/neo.png" alt="ucal" />
-                <div class="textInfo">
-                  <div>
-                    <span>NEO Projects</span>
-                    <h4>Conecta con el Futuro</h4>
-                    <p>Creatividad, Branding, UX, UI, Digital</p>
-                  </div>
-                </div>
+              </a>
               </div>
             </div>
             <div class="btn-mas">
-              <a id="vermasitems">
-                <img class="gallery__img" src="img/btn-mas.svg" alt="mas" />
-                <span id="btnmas">Ver más proyectos</span></a
+              <a id="vermasitems" href="portafolio.html">Ver más proyectos</a
               >
             </div>
           </div>
         </div>
       </section>
-      <section class="portafolioInterna">
+      <!-- <section class="portafolioInterna">
         <div class="container">
           <div class="top">
             <a class="closeinterna">
@@ -447,7 +462,6 @@
                 controls
                 preload="auto"
                 width="930px"
-                poster="/img/poster-video.png"
                 data-setup="{}"
               >
                 <source src="/video/prueba.mp4" type="video/mp4" />
@@ -470,7 +484,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section id="servicios" class="services">
         <div class="container">
           <div class="contenido">
@@ -479,7 +493,7 @@
             </p>
           </div>
           <div class="cards">
-            <div class="card brandingbtn">
+            <div class="card brandingbtn mostrarVermas">
               <h3>Branding</h3>
               <p>¿Necesitas construir una marca que impacte y venda?</p>
               <a>
@@ -487,7 +501,7 @@
                 <img src="img/btn-services-azul2.svg" alt="mas"
               /></a>
             </div>
-            <div class="card marketingbtn">
+            <div class="card marketingbtn mostrarVermas">
               <h3>Marketing</h3>
               <p>
                 ¿Necesitas estar en el lugar correcto para conseguir resultados?
@@ -498,7 +512,7 @@
                   alt="mas"
               /></a>
             </div>
-            <div class="card disenowebbtn">
+            <div class="card disenowebbtn mostrarVermas">
               <h3>Diseño web</h3>
               <p>
                 ¿Necesitas un sitio que atraiga más usuarios y te ayude a vender
@@ -664,8 +678,7 @@
                     >Email</label
                   >
                 </div>
-              </div>
-              
+              </div>              
               <input id="oculto2" type="text" class="escondido" name="stopspam">
               <div class="form-group">
                 <textarea
@@ -697,32 +710,24 @@
           <img src="img/nerds-azul.svg" alt="nerds" />
         </div>
         <div class="info">
-          <div class="owl-carousel owl-theme footer-info">
-            <div class="item box">
-              <a href="tel:+51 942 464 074">
-                <p class="telefono">+51 942 464 074</p></a>
-            </div>
-            <div class="item box">
-              <a href="mailto:hola@nermedia.pe"><p class="correo">hola@nerdmedia.pe</p></a>              
-            </div>
-            <div class="item box">
-              <a href="https://www.instagram.com/nerd_agencia/" target="_blank"><p class="instagram">Instagram</p></a>
-            </div>
-            <div class="item box">
-              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank"> <p class="linkedin">Linkedin</p></a>
-            </div>
-            <div class="item box">
-              <a href="https://www.facebook.com/NerdMedia" target="_blank"> <p class="facebook">Facebook</p></a>
+          <div class="marquee-with-options">
+            <div class="text">
+              <a href="tel:+51 942 464 074">+51 942 464 074</a>
+              <a href="mailto:hola@nermedia.pe">hola@nerdmedia.pe</a>
+              <a href="https://www.instagram.com/nerd_agencia/" target="_blank">Instagram</a>
+              <a href="https://www.linkedin.com/company/nerdmedia/posts/?feedView=all&viewAsMember=true" target="_blank">Linkedin</a>
+              <a href="https://www.facebook.com/NerdMedia" target="_blank">Facebook</a>
             </div>
           </div>
         </div>
         <div class="copy">
           <!-- <h3>Hecha con ❤️ Todos los derechos resevados © 2022 NERD ®</h3> -->
           <p class="corazon">Hecha con ❤️</p>
-          <p>Todos los derechos resevados © 2022 NERD ®</p>
+          <p>Todos los derechos reservados © 2022 NERD ®</p>
         </div>
       </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -730,6 +735,9 @@
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="js/jquery.pause.js" type="text/javascript"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript"></script>
+		<script src="js/jquery.marquee.js?v=3" type="text/javascript"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
